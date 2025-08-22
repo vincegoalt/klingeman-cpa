@@ -335,39 +335,49 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {/* Related Services */}
       {relatedServices.length > 0 && (
-        <section className="py-16">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
                 Related Services
               </h2>
+              <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                Explore our other professional services to help your business thrive
+              </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedServices.map((service) => (
-                  <Link
-                    key={service!.slug}
-                    href={`/services/${service!.slug}`}
-                    className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-                  >
-                    <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <span className="text-3xl">{service!.icon}</span>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedServices.map((service) => {
+                  const relatedIcon = serviceIcons[service!.slug] || serviceIcons.default;
+                  return (
+                    <Link
+                      key={service!.slug}
+                      href={`/services/${service!.slug}`}
+                      className="group bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-200"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                          <div className="text-white transform scale-75">
+                            {relatedIcon}
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            {service!.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                            {service!.description}
+                          </p>
+                          <span className="text-blue-600 font-semibold text-sm group-hover:text-blue-700 inline-flex items-center gap-1">
+                            Learn More
+                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </span>
                         </div>
                       </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service!.title}</h3>
-                      <p className="text-gray-600 mb-4">{service!.description}</p>
-                      <span className="text-blue-600 font-semibold group-hover:text-blue-700 flex items-center gap-2">
-                        Learn More
-                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
