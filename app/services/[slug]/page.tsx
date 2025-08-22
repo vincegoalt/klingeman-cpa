@@ -235,7 +235,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg border-4 border-white relative z-10">
                       <span className="text-2xl font-bold text-blue-600">{index + 1}</span>
                     </div>
-                    <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
+                    <h3 className="font-bold text-gray-900 mb-2">{step.step}</h3>
                     <p className="text-sm text-gray-600">{step.description}</p>
                   </div>
                 ))}
