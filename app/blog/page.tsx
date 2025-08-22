@@ -19,7 +19,8 @@ const blogPosts = [
     category: 'CPA Selection',
     readTime: '8 min read',
     publishDate: 'August 20, 2025',
-    featured: true
+    featured: true,
+    imageUrl: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&h=600&fit=crop' // Professional meeting
   },
   {
     title: 'Tulsa Small Business Tax Checklist (Free Download)',
@@ -28,7 +29,8 @@ const blogPosts = [
     category: 'Small Business',
     readTime: '6 min read',
     publishDate: 'August 18, 2025',
-    featured: true
+    featured: true,
+    imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop' // Checklist and calculator
   },
   {
     title: 'Top 10 Tax Deadlines Every Oklahoman Should Know',
@@ -37,7 +39,8 @@ const blogPosts = [
     category: 'Tax Planning',
     readTime: '5 min read',
     publishDate: 'August 15, 2025',
-    featured: false
+    featured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop' // Calendar
   },
   {
     title: 'Guía de impuestos para pequeños negocios en Tulsa',
@@ -46,7 +49,8 @@ const blogPosts = [
     category: 'Español',
     readTime: '7 min read',
     publishDate: 'August 12, 2025',
-    featured: false
+    featured: false,
+    imageUrl: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800&h=600&fit=crop' // Business owner working
   }
 ];
 
@@ -138,7 +142,7 @@ export default function BlogPage() {
                 >
                   <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 relative">
                     <Image
-                      src={`https://source.unsplash.com/800x600/?tax,business`}
+                      src={post.imageUrl}
                       alt={post.title}
                       fill
                       className="object-cover opacity-30 group-hover:opacity-40 transition-opacity"

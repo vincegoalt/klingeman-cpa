@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { generateMetadata as generateSEO, generateBreadcrumbSchema } from '@/components/SEO';
-import CTASection from '@/components/CTASection';
 import { BUSINESS_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEO({
@@ -34,17 +34,28 @@ export default function GuiaImpuestosNegociosPost() {
             </div>
 
             <header className="mb-12">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-semibold">
-                  Español
-                </span>
-                <span>12 de agosto, 2025</span>
-                <span>7 min de lectura</span>
+              <div className="relative h-[400px] mb-8 rounded-xl overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&h=400&fit=crop"
+                  alt="Empresario trabajando en impuestos"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                  <div className="flex items-center gap-4 mb-4 text-sm">
+                    <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-semibold">
+                      Español
+                    </span>
+                    <span>12 de agosto, 2025</span>
+                    <span>7 min de lectura</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold">
+                    Guía de impuestos para pequeños negocios en Tulsa
+                  </h1>
+                </div>
               </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Guía de impuestos para pequeños negocios en Tulsa
-              </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed">
                 Una guía completa en español para empresarios de Tulsa sobre planificación fiscal, 

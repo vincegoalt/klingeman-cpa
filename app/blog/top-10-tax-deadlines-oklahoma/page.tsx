@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { generateMetadata as generateSEO, generateBreadcrumbSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
-import { BUSINESS_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEO({
   title: 'Top 10 Tax Deadlines Every Oklahoman Should Know',
@@ -34,17 +34,28 @@ export default function Top10TaxDeadlinesPost() {
             </div>
 
             <header className="mb-12">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-semibold">
-                  Tax Planning
-                </span>
-                <span>August 15, 2025</span>
-                <span>5 min read</span>
+              <div className="relative h-[400px] mb-8 rounded-xl overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&h=400&fit=crop"
+                  alt="Calendar showing tax deadline dates"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                  <div className="flex items-center gap-4 mb-4 text-sm">
+                    <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-semibold">
+                      Tax Planning
+                    </span>
+                    <span>August 15, 2025</span>
+                    <span>5 min read</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold">
+                    Top 10 Tax Deadlines Every Oklahoman Should Know
+                  </h1>
+                </div>
               </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Top 10 Tax Deadlines Every Oklahoman Should Know
-              </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed">
                 Stay ahead of important tax deadlines with our comprehensive guide to federal and 

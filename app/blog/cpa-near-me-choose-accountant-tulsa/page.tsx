@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { generateMetadata as generateSEO, generateBreadcrumbSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
-import { BUSINESS_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEO({
   title: 'CPA Near Me: How to Choose the Right Accountant in Tulsa',
@@ -34,17 +34,28 @@ export default function CPANearMeBlogPost() {
             </div>
 
             <header className="mb-12">
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold">
-                  CPA Selection
-                </span>
-                <span>August 20, 2025</span>
-                <span>8 min read</span>
+              <div className="relative h-[400px] mb-8 rounded-xl overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&h=400&fit=crop"
+                  alt="Professional CPA consultation meeting"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                  <div className="flex items-center gap-4 mb-4 text-sm">
+                    <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full font-semibold">
+                      CPA Selection
+                    </span>
+                    <span>August 20, 2025</span>
+                    <span>8 min read</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold">
+                    CPA Near Me: How to Choose the Right Accountant in Tulsa
+                  </h1>
+                </div>
               </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                CPA Near Me: How to Choose the Right Accountant in Tulsa
-              </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed">
                 Finding the right CPA in Tulsa can make a significant difference in your financial success. 
