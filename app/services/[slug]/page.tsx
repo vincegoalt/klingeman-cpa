@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation';
 import { generateMetadata as generateSEO, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import LeadMagnet from '@/components/LeadMagnet';
 import { BUSINESS_INFO, SERVICES, FOUNDER_INFO } from '@/lib/constants';
 import { serviceContent } from '@/lib/service-content';
 
@@ -391,8 +390,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
-
-      <LeadMagnet />
       <CTASection />
     </>
   );

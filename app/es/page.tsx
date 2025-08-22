@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { generateMetadata as generateSEO, generateOrganizationSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import LeadMagnet from '@/components/LeadMagnet';
 import TrustBadges from '@/components/TrustBadges';
 import { BUSINESS_INFO, SERVICES, TRUST_BADGES, FOUNDER_INFO } from '@/lib/constants';
 
@@ -349,7 +348,6 @@ export default function SpanishHomePage() {
                   Acceda a nuestros recursos gratuitos en español para ayudarle con la planificación 
                   fiscal y el cumplimiento empresarial.
                 </p>
-                <LeadMagnet />
               </div>
 
               <div>

@@ -2,7 +2,6 @@
 
 import { generateBreadcrumbSchema, generateOrganizationSchema } from '@/components/SEO';
 import ContactForm from '@/components/ContactForm';
-import LeadMagnet from '@/components/LeadMagnet';
 import { BUSINESS_INFO } from '@/lib/constants';
 
 export default function ContactPage() {
@@ -146,7 +145,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <LeadMagnet />
               </div>
             </div>
           </div>

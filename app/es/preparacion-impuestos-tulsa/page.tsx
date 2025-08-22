@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { generateMetadata as generateSEO, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import LeadMagnet from '@/components/LeadMagnet';
 import { BUSINESS_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEO({
@@ -198,7 +197,6 @@ export default function PreparacionImpuestosTulsaPage() {
               </div>
 
               <div className="space-y-6">
-                <LeadMagnet />
                 
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold mb-3">Información de Contacto</h3>

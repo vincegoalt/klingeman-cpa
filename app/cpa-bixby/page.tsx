@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { generateMetadata as generateSEO, generateBreadcrumbSchema, generateOrganizationSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import LeadMagnet from '@/components/LeadMagnet';
 import TrustBadges from '@/components/TrustBadges';
 import { BUSINESS_INFO, SERVICES, TRUST_BADGES } from '@/lib/constants';
 
@@ -262,7 +261,6 @@ export default function BixbyCPAPage() {
               </div>
 
               <div className="space-y-6">
-                <LeadMagnet />
                 
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold mb-3">Office Information</h3>

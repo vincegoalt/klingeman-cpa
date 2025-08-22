@@ -5,7 +5,6 @@ import { generateMetadata as generateSEO } from '@/components/SEO';
 import { TrustBadgesCompact } from '@/components/TrustBadges';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import LeadMagnet from '@/components/LeadMagnet';
 import { SERVICES, BUSINESS_INFO, FOUNDER_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEO({
@@ -395,8 +394,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <LeadMagnet />
       <CTASection />
     </>
   );
