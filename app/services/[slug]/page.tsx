@@ -122,7 +122,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              {content.description}
+              {content.heroDescription}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -174,16 +174,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-xl leading-relaxed mb-6">{content.overview}</p>
                 
-                {/* Key Features Grid */}
+                {/* Key Benefits Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                  {content.keyFeatures?.slice(0, 4).map((feature, index) => (
+                  {content.benefits?.slice(0, 4).map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                         <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">{feature}</p>
+                      <p className="text-gray-700">{benefit}</p>
                     </div>
                   ))}
                 </div>
@@ -209,8 +209,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <p className="text-gray-700 leading-relaxed">{benefit}</p>
                 </div>
               ))}
             </div>
