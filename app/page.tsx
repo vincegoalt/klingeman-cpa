@@ -192,7 +192,7 @@ export default function HomePage() {
               >
                 <div className="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800">
                   <Image
-                    src={`https://source.unsplash.com/800x600/?${encodeURIComponent(service.keywords?.[0] || service.title)},office`}
+                    src={`https://source.unsplash.com/800x600/?${encodeURIComponent(service.title)},office`}
                     alt={service.title}
                     fill
                     className="object-cover opacity-30 group-hover:opacity-40 transition-opacity"
