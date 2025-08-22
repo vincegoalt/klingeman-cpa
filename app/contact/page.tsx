@@ -1,8 +1,14 @@
-'use client';
-
-import { generateBreadcrumbSchema, generateOrganizationSchema } from '@/components/SEO';
+import { Metadata } from 'next';
+import { generateMetadata as generateSEO, generateBreadcrumbSchema, generateOrganizationSchema } from '@/components/SEO';
 import ContactForm from '@/components/ContactForm';
+import CTASection from '@/components/CTASection';
 import { BUSINESS_INFO } from '@/lib/constants';
+
+export const metadata: Metadata = generateSEO({
+  title: 'Contact Your Tulsa CPA',
+  description: 'Contact Klingeman CPAs for expert tax preparation and business consulting services in Tulsa. Schedule your free consultation with our former IRS manager today.',
+  canonical: '/contact'
+});
 
 export default function ContactPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -23,34 +29,71 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
-      <section className="bg-gradient-to-b from-blue-50 to-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Contact Your Tulsa CPA
+            <div className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm mb-6">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              FREE CONSULTATION AVAILABLE
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Contact Your
+              <span className="block text-yellow-400">Tulsa CPA</span>
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
+            
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
               Ready to work with experienced CPAs who understand your needs? Schedule your free 
               consultation today and discover how our former IRS expertise can benefit you.
             </p>
             
-            <div className="inline-flex items-center gap-4 text-sm bg-white px-6 py-3 rounded-lg shadow-md">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+              <a
+                href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                className="group bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+              >
+                <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Call {BUSINESS_INFO.phone}
+              </a>
+              <button
+                onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+              >
+                Schedule Consultation
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-blue-100">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span>Available Now</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Free Consultation</span>
               </div>
-              <span className="text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>No Obligation</span>
               </div>
-              <span className="text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Same Day Response</span>
@@ -60,7 +103,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -73,7 +116,9 @@ export default function ContactPage() {
                   or give us a call, and we'll schedule your free consultation at a time that works for you.
                 </p>
                 
-                <ContactForm />
+                <div id="contact-form" className="bg-white p-8 rounded-xl shadow-lg">
+                  <ContactForm />
+                </div>
               </div>
 
               <div className="space-y-8">
@@ -324,6 +369,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      
+      <CTASection />
     </>
   );
 }

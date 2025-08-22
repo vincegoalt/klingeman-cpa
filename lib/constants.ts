@@ -51,55 +51,55 @@ export const SERVICES = [
     title: 'Tax Preparation',
     slug: 'tax-preparation-tulsa',
     description: 'Professional tax preparation services for individuals and businesses in Tulsa',
-    icon: '📊'
+    icon: 'tax-preparation'
   },
   {
     title: 'Bookkeeping',
     slug: 'bookkeeping-tulsa',
     description: 'Accurate bookkeeping and accounting services to keep your finances organized',
-    icon: '📚'
+    icon: 'bookkeeping'
   },
   {
     title: 'Payroll Services',
     slug: 'payroll-tulsa',
     description: 'Comprehensive payroll processing and compliance for Tulsa businesses',
-    icon: '💰'
+    icon: 'payroll'
   },
   {
     title: 'Audit & Assurance',
     slug: 'audit-assurance-tulsa',
     description: 'Professional audit and assurance services with IRS expertise',
-    icon: '🔍'
+    icon: 'audit'
   },
   {
     title: 'Business Formation',
     slug: 'business-formation-tulsa',
     description: 'Entity selection and business formation guidance for Oklahoma entrepreneurs',
-    icon: '🏢'
+    icon: 'business'
   },
   {
     title: 'Financial Statements',
     slug: 'financial-statements-tulsa',
     description: 'Preparation of accurate financial statements for business decision-making',
-    icon: '📈'
+    icon: 'financial'
   },
   {
     title: 'Estate & Trust Tax',
     slug: 'estate-trust-tax-tulsa',
     description: 'Specialized estate and trust tax planning and preparation services',
-    icon: '🏛️'
+    icon: 'estate'
   },
   {
     title: 'Real Estate Tax',
     slug: 'real-estate-tax-tulsa',
     description: 'Tax strategies for real estate investors and property owners',
-    icon: '🏠'
+    icon: 'real-estate'
   },
   {
     title: 'Tax Credits',
     slug: 'tax-credits-tulsa',
     description: 'Maximize your tax savings with available credits and deductions',
-    icon: '💳'
+    icon: 'tax-credits'
   },
   {
     title: 'Retirement Planning',

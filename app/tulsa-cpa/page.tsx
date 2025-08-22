@@ -6,6 +6,7 @@ import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
 import TrustBadges from '@/components/TrustBadges';
 import { SERVICES, BUSINESS_INFO, SUBURBS, FOUNDER_INFO } from '@/lib/constants';
+import { getServiceIcon } from '@/lib/icons';
 
 const faqs = [
   {
@@ -262,7 +263,9 @@ export default function TulsaCPAPage() {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                          <span className="text-3xl">{service.icon}</span>
+                          <div className="text-blue-600">
+                            {getServiceIcon(service.icon, "w-8 h-8")}
+                          </div>
                         </div>
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
                       </div>
