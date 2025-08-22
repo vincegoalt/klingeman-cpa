@@ -1,14 +1,9 @@
-import { Metadata } from 'next';
-import { generateMetadata as generateSEO, generateBreadcrumbSchema, generateOrganizationSchema } from '@/components/SEO';
+'use client';
+
+import { generateBreadcrumbSchema, generateOrganizationSchema } from '@/components/SEO';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
 import { BUSINESS_INFO } from '@/lib/constants';
-
-export const metadata: Metadata = generateSEO({
-  title: 'Contact Your Tulsa CPA',
-  description: 'Contact Klingeman CPAs for expert tax preparation and business consulting services in Tulsa. Schedule your free consultation with our former IRS manager today.',
-  canonical: '/contact'
-});
 
 export default function ContactPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
