@@ -124,7 +124,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              {content.description}
+              {content.heroDescription}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -251,17 +251,23 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {content.services.map((service, index) => (
-                <div key={index} className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
-              ))}
+              {content.relatedServices.map((serviceSlug) => {
+                const service = SERVICES.find(s => s.slug === serviceSlug);
+                if (!service) return null;
+                return (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 block"
+                  >
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <span className="text-2xl">{service.icon}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
