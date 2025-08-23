@@ -184,44 +184,56 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICES.slice(0, 6).map((service, index) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800">
-                  <Image
-                    src={`https://source.unsplash.com/800x600/?${encodeURIComponent(service.title)},office`}
-                    alt={service.title}
-                    fill
-                    className="object-cover opacity-30 group-hover:opacity-40 transition-opacity"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                        <div className="text-blue-600">
-                          {getServiceIcon(service.icon, "w-8 h-8")}
+            {SERVICES.slice(0, 6).map((service, index) => {
+              // Define specific images for each service
+              const serviceImages: Record<string, string> = {
+                'tax-preparation-tulsa': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
+                'bookkeeping-tulsa': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop',
+                'payroll-tulsa': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop',
+                'business-consulting-tulsa': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop',
+                'irs-tax-relief-tulsa': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop',
+                'financial-planning-tulsa': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=800&h=600&fit=crop'
+              };
+
+              return (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                >
+                  <div className="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800">
+                    <Image
+                      src={serviceImages[service.slug] || 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop'}
+                      alt={service.title}
+                      fill
+                      className="object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                          <div className="text-blue-600">
+                            {getServiceIcon(service.icon, "w-8 h-8")}
+                          </div>
                         </div>
+                        <h3 className="text-xl font-bold text-white">{service.title}</h3>
                       </div>
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
                     </div>
                   </div>
-                </div>
-                
-                <div className="p-6">
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
-                    Learn More
-                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                  
+                  <div className="p-6">
+                    <p className="text-gray-600 mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                      Learn More
+                      <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="text-center mt-12">

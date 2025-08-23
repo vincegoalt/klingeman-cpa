@@ -88,6 +88,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const icon = serviceIcons[resolvedParams.slug] || serviceIcons.default;
 
+  // Define hero images for each service
+  const serviceHeroImages: Record<string, string> = {
+    'tax-preparation-tulsa': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=400&fit=crop',
+    'bookkeeping-tulsa': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop',
+    'payroll-tulsa': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop',
+    'business-consulting-tulsa': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=400&fit=crop',
+    'irs-tax-relief-tulsa': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=1200&h=400&fit=crop',
+  };
+
+  const heroImage = serviceHeroImages[resolvedParams.slug] || 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=400&fit=crop';
+
   return (
     <>
       <script
@@ -103,28 +114,49 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Section with Gradient Background */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-28 overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full mb-6 shadow-lg">
-              <div className="text-blue-600">{icon}</div>
+      {/* Hero Section with Image */}
+      <section className="relative py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Breadcrumb */}
+            <div className="mb-8">
+              <Link href="/services" className="text-blue-700 hover:underline">
+                ← Back to Services
+              </Link>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {content.title}
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              {content.heroDescription}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            {/* Hero Image and Title */}
+            <div className="relative h-[400px] mb-12 rounded-xl overflow-hidden">
+              <Image
+                src={heroImage}
+                alt={content.title}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div className="max-w-4xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full">
+                      <div className="text-white">{icon}</div>
+                    </div>
+                    <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full font-semibold text-sm">
+                      Professional Service
+                    </span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    {content.title}
+                  </h1>
+                  <p className="text-xl text-gray-100 leading-relaxed max-w-3xl">
+                    {content.heroDescription}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
                 className="group bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
@@ -136,7 +168,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </a>
               <Link
                 href="/contact"
-                className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg border border-blue-200"
               >
                 Get Free Quote
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,16 +178,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-6 mt-8 text-sm text-blue-100">
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 mb-8">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                 </svg>
                 <span>Former IRS Management</span>
               </div>
-              <span className="text-yellow-400">•</span>
+              <span className="text-gray-400">•</span>
               <span>20+ Years Experience</span>
-              <span className="text-yellow-400">•</span>
+              <span className="text-gray-400">•</span>
               <span>Free Consultation</span>
             </div>
           </div>
