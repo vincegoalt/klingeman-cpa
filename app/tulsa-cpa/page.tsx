@@ -56,7 +56,7 @@ export default function TulsaCPAPage() {
       />
 
       {/* Hero Section with Professional Gradient */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 md:from-blue-900 md:via-blue-800 md:to-blue-900 py-20 md:py-32 overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
@@ -117,9 +117,9 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* Trust Indicators Bar */}
-      <section className="bg-gray-900 py-6">
+      <section className="bg-white py-6 border-y border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-white">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-900">
             <div className="flex items-center gap-3">
               <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
@@ -127,7 +127,7 @@ export default function TulsaCPAPage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">40+</div>
-                <div className="text-xs text-gray-400">Years Combined Experience</div>
+                <div className="text-xs text-gray-600">Years Combined Experience</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -136,7 +136,7 @@ export default function TulsaCPAPage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">500+</div>
-                <div className="text-xs text-gray-400">Happy Tulsa Clients</div>
+                <div className="text-xs text-gray-600">Happy Tulsa Clients</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -145,7 +145,7 @@ export default function TulsaCPAPage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">100%</div>
-                <div className="text-xs text-gray-400">IRS Audit Success Rate</div>
+                <div className="text-xs text-gray-600">IRS Audit Success Rate</div>
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
@@ -259,7 +259,7 @@ export default function TulsaCPAPage() {
                   href={`/services/${service.slug}`}
                   className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                 >
-                  <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 relative">
+                  <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-600 md:from-blue-600 md:to-blue-800 relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
