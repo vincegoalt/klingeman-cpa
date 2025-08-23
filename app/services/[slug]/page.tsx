@@ -143,12 +143,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent md:from-black/70 md:via-black/30"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-gray-900 md:text-white">
                 <div className="max-w-4xl">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full">
-                      <div className="text-white">{icon}</div>
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/60 md:bg-white/20 backdrop-blur-sm rounded-full">
+                      <div className="text-gray-900 md:text-white">{icon}</div>
                     </div>
                     <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full font-semibold text-sm">
                       Professional Service
@@ -157,7 +157,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     {content.title}
                   </h1>
-                  <p className="text-xl text-gray-100 leading-relaxed max-w-3xl">
+                  <p className="text-xl text-gray-700 md:text-gray-100 leading-relaxed max-w-3xl">
                     {content.heroDescription}
                   </p>
                 </div>
@@ -425,22 +425,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started with {content.title}?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Schedule your free consultation today and discover how we can help you save money and achieve your financial goals.
-            </p>
-            <div className="bg-white rounded-2xl p-8 shadow-2xl">
-              <ContactForm compact />
-            </div>
-          </div>
-        </div>
-      </section>
       <CTASection />
     </>
   );

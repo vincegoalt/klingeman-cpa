@@ -204,12 +204,12 @@ export default function Header() {
           <div className="overflow-y-auto h-full pb-20">
             <ul className="py-4">
               <li>
-                <Link href="/" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/tulsa-cpa" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/tulsa-cpa" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
                   Tulsa CPA
                 </Link>
               </li>
@@ -240,17 +240,17 @@ export default function Header() {
                 ))}
               </li>
               <li className="border-t border-gray-100">
-                <Link href="/blog" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/blog" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/contact" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/es" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/es" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
                   Español
                 </Link>
               </li>

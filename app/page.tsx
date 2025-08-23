@@ -125,9 +125,9 @@ export default function HomePage() {
       </section>
 
       {/* Trust Indicators Bar */}
-      <section className="bg-gray-900 py-6">
+      <section className="bg-white py-6 border-y border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-white">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-900">
             <div className="flex items-center gap-3">
               <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
@@ -135,7 +135,7 @@ export default function HomePage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">40+</div>
-                <div className="text-xs text-gray-400">Years Combined Experience</div>
+                <div className="text-xs text-gray-600">Years Combined Experience</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -144,7 +144,7 @@ export default function HomePage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">500+</div>
-                <div className="text-xs text-gray-400">Happy Clients</div>
+                <div className="text-xs text-gray-600">Happy Clients</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -153,7 +153,7 @@ export default function HomePage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">100%</div>
-                <div className="text-xs text-gray-400">IRS Audit Success Rate</div>
+                <div className="text-xs text-gray-600">IRS Audit Success Rate</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -162,7 +162,7 @@ export default function HomePage() {
               </svg>
               <div>
                 <div className="text-2xl font-bold">A+</div>
-                <div className="text-xs text-gray-400">BBB Rating</div>
+                <div className="text-xs text-gray-600">BBB Rating</div>
               </div>
             </div>
           </div>

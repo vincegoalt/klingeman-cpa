@@ -336,31 +336,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-12 bg-blue-900 text-white p-8 rounded-lg text-center">
-              <h3 className="text-2xl font-bold mb-4">
-                Ready to Get Started?
-              </h3>
-              <p className="text-lg mb-6">
-                Don't wait until tax season. The best time to start working with a CPA is right now.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  Call {BUSINESS_INFO.phone}
-                </a>
-                <button
-                  onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition inline-flex items-center justify-center gap-2"
-                >
-                  Fill Out Form Above
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
