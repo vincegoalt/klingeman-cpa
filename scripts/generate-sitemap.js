@@ -15,7 +15,8 @@ const staticRoutes = [
   '/cpa-bixby',
   '/cpa-jenks',
   '/cpa-owasso',
-  '/cpa-sand-springs'
+  '/cpa-sand-springs',
+  '/es'
 ];
 
 // Define service routes
@@ -43,12 +44,23 @@ const blogRoutes = [
   '/blog/guia-impuestos-pequenos-negocios-tulsa'
 ];
 
+// Define Spanish routes
+const spanishRoutes = [
+  '/es/preparacion-impuestos-tulsa',
+  '/es/contabilidad-empresarial-tulsa',
+  '/es/servicios-nomina-tulsa',
+  '/es/consultoria-negocios-tulsa',
+  '/es/alivio-fiscal-irs-tulsa',
+  '/es/planificacion-financiera-tulsa'
+];
+
 // Combine all routes
 const allRoutes = [
   ...staticRoutes,
   ...serviceRoutes,
   ...industryRoutes,
-  ...blogRoutes
+  ...blogRoutes,
+  ...spanishRoutes
 ];
 
 // Generate sitemap XML

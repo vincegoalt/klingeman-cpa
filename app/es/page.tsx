@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { generateMetadata as generateSEO, generateOrganizationSchema } from '@/components/SEO';
+import Image from 'next/image';
+import { generateMetadata as generateSEO, generateOrganizationSchema, generateBreadcrumbSchema } from '@/components/SEO';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import TrustBadges from '@/components/TrustBadges';
-import { BUSINESS_INFO, SERVICES, TRUST_BADGES, FOUNDER_INFO } from '@/lib/constants';
+import { BUSINESS_INFO, FOUNDER_INFO } from '@/lib/constants';
+import { getServiceIcon } from '@/lib/icons';
 
 export const metadata: Metadata = generateSEO({
   title: 'CPA Tulsa en Español | Servicios de Contabilidad e Impuestos',
@@ -18,25 +19,53 @@ export const metadata: Metadata = generateSEO({
 
 export default function SpanishHomePage() {
   const organizationSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Español', url: '/es' }
+  ]);
   
   const featuredServices = [
     {
       title: 'Preparación de Impuestos',
       slug: 'preparacion-impuestos-tulsa',
-      description: 'Servicios profesionales de preparación de impuestos para individuos y empresas en Tulsa',
-      icon: '📊'
+      description: 'Servicios profesionales de preparación de impuestos para individuos y empresas',
+      icon: 'tax-preparation',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop'
     },
     {
       title: 'Contabilidad Empresarial',
       slug: 'contabilidad-empresarial-tulsa',
       description: 'Servicios de contabilidad precisos para mantener sus finanzas organizadas',
-      icon: '📚'
+      icon: 'bookkeeping',
+      image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop'
     },
     {
-      title: 'Nómina',
+      title: 'Servicios de Nómina',
       slug: 'servicios-nomina-tulsa',
-      description: 'Procesamiento completo de nómina y cumplimiento para empresas de Tulsa',
-      icon: '💰'
+      description: 'Procesamiento completo de nómina y cumplimiento para empresas',
+      icon: 'payroll',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Consultoría de Negocios',
+      slug: 'consultoria-negocios-tulsa',
+      description: 'Asesoría estratégica para el crecimiento de su empresa',
+      icon: 'business-consulting',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Alivio Fiscal del IRS',
+      slug: 'alivio-fiscal-irs-tulsa',
+      description: 'Representación experta ante el IRS y resolución de problemas fiscales',
+      icon: 'irs-tax-relief',
+      image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Planificación Financiera',
+      slug: 'planificacion-financiera-tulsa',
+      description: 'Estrategias personalizadas para alcanzar sus metas financieras',
+      icon: 'financial-planning',
+      image: 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=800&h=600&fit=crop'
     }
   ];
 
@@ -46,407 +75,326 @@ export default function SpanishHomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
-      <section className="bg-gradient-to-b from-blue-50 to-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="mb-4">
-                  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
-                    Servicios en Español
-                  </span>
-                </div>
-                
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  CPA Profesional en Tulsa con Servicios en Español
-                </h1>
-                
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Servicios completos de contabilidad e impuestos en español para la comunidad hispana 
-                  de Tulsa. Con la experiencia única de un ex-gerente del IRS y más de 20 años de 
-                  práctica profesional.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                    className="bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition inline-flex items-center justify-center gap-2"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    Llamar {BUSINESS_INFO.phone}
-                  </a>
-                  <Link
-                    href="/contact"
-                    className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition inline-flex items-center justify-center gap-2"
-                  >
-                    Consulta Gratuita
-                  </Link>
-                </div>
-
-                <div className="flex items-center gap-6 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Ex-Gerente del IRS</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>20+ Años de Experiencia</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Servicios Bilingües</span>
-                  </div>
-                </div>
+      {/* Hero Section with Professional Gradient */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm mb-6">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                SERVICIOS EN ESPAÑOL
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                CPA en Tulsa con
+                <span className="block text-yellow-400">Servicios en Español</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+                Dirigidos por un ex-gerente del IRS con maestría en impuestos empresariales, 
+                brindamos servicios excepcionales de impuestos y contabilidad con la experiencia 
+                que solo el conocimiento interno puede proporcionar.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                  className="group bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                >
+                  <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Llamar {BUSINESS_INFO.phone}
+                </a>
+                <Link
+                  href="/contact"
+                  className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                >
+                  Consulta Gratuita
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-xl">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Programe Su Consulta Gratuita
-                </h2>
-                <ContactForm compact />
+              <div className="flex flex-wrap items-center gap-6 text-sm text-blue-100">
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                  <span>Ex-Gerente del IRS</span>
+                </div>
+                <span className="text-yellow-400">•</span>
+                <span>20+ Años de Experiencia</span>
+                <span className="text-yellow-400">•</span>
+                <span>Maestría en Impuestos</span>
+              </div>
+            </div>
+
+            {/* Contact Form Card */}
+            <div className="bg-white rounded-2xl shadow-2xl p-8 relative">
+              <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm">
+                ¡CONSULTA GRATIS!
+              </div>
+              
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Programe Su Consulta
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Hablamos su idioma y entendemos sus necesidades
+              </p>
+              
+              <ContactForm compact />
+              
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    <span>100% Seguro</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Respuesta en 24hrs</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
+      {/* Trust Indicators Bar */}
+      <section className="bg-gray-900 py-6">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Servicios Profesionales de CPA en Español
-              </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Ofrecemos servicios completos de contabilidad e impuestos en español, diseñados 
-                para satisfacer las necesidades únicas de la comunidad hispana de Tulsa.
-              </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 text-white">
+            <div className="flex items-center gap-3">
+              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h2a1 1 0 100-2 2 2 0 00-2 2v11a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v11z" clipRule="evenodd"/>
+              </svg>
+              <div>
+                <div className="text-2xl font-bold">40+</div>
+                <div className="text-xs text-gray-400">Años de Experiencia</div>
+              </div>
             </div>
+            <div className="flex items-center gap-3">
+              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+              </svg>
+              <div>
+                <div className="text-2xl font-bold">500+</div>
+                <div className="text-xs text-gray-400">Clientes Satisfechos</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <div>
+                <div className="text-2xl font-bold">100%</div>
+                <div className="text-xs text-gray-400">Éxito con el IRS</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+              </svg>
+              <div>
+                <div className="text-2xl font-bold">Bilingüe</div>
+                <div className="text-xs text-gray-400">Servicio Completo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {featuredServices.map((service) => (
-                <div
-                  key={service.slug}
-                  className="bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 text-center"
-                >
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link
-                    href={`/es/${service.slug}`}
-                    className="text-blue-700 font-semibold hover:underline inline-flex items-center gap-2"
-                  >
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Servicios Profesionales de CPA
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Desde preparación de impuestos hasta consultoría empresarial, brindamos la experiencia que necesita para tener éxito
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredServices.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/es/${service.slug}`}
+                className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <div className="text-blue-600">
+                          {getServiceIcon(service.icon, "w-8 h-8")}
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
                     Más Información
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="text-center">
-              <p className="text-gray-700 mb-4">
-                También ofrecemos servicios de auditoría, formación empresarial, estados financieros, 
-                planificación patrimonial y mucho más.
+      {/* About Section with Founder */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl opacity-10 blur-2xl"></div>
+              <div className="relative">
+                <Image
+                  src="/matt Klingeman.png"
+                  alt={FOUNDER_INFO.name}
+                  width={500}
+                  height={600}
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <h3 className="font-bold text-gray-900">{FOUNDER_INFO.name}</h3>
+                  <p className="text-sm text-gray-600">CPA, Ex-Gerente del IRS</p>
+                  <p className="text-xs text-gray-500 mt-1">Maestría en Impuestos Empresariales</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                ¿Por Qué Elegir Klingeman CPAs?
+              </h2>
+              
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Con más de 20 años de experiencia en impuestos y contabilidad, incluyendo tiempo como 
+                gerente del IRS, fundé Klingeman CPAs para brindar a empresas e individuos la experiencia 
+                interna que necesitan para navegar situaciones fiscales complejas con confianza.
               </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Experiencia Única del IRS</h4>
+                    <p className="text-gray-600">Conocimiento interno de procedimientos y estrategias del IRS</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Servicio Bilingüe Completo</h4>
+                    <p className="text-gray-600">Atención personalizada en español para toda la comunidad hispana</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Resultados Comprobados</h4>
+                    <p className="text-gray-600">100% de éxito en negociaciones y resoluciones con el IRS</p>
+                  </div>
+                </div>
+              </div>
+
               <Link
-                href="/services"
-                className="text-blue-700 font-semibold hover:underline"
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
               >
-                Ver todos nuestros servicios →
+                Comience Hoy
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                ¿Por qué elegir Klingeman CPAs?
-              </h2>
-              <p className="text-xl text-gray-700">
-                Nuestra experiencia única y enfoque personalizado nos distingue de otros CPAs en Tulsa.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Experiencia Única del IRS
-                </h3>
-                <p className="text-gray-700">
-                  Nuestro fundador es ex-gerente del IRS, proporcionando perspectivas invaluables 
-                  sobre cumplimiento tributario, defensa de auditorías y planificación estratégica 
-                  que otras firmas simplemente no pueden igualar.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Servicios Completamente Bilingües
-                </h3>
-                <p className="text-gray-700">
-                  Entendemos las necesidades únicas de la comunidad hispana y ofrecemos todos 
-                  nuestros servicios en español, desde consultas hasta preparación de documentos.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Conocimiento Local
-                </h3>
-                <p className="text-gray-700">
-                  Con décadas de experiencia sirviendo a Tulsa, conocemos las regulaciones locales, 
-                  incentivos fiscales y oportunidades específicas de Oklahoma.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Atención Personalizada
-                </h3>
-                <p className="text-gray-700">
-                  A diferencia de las grandes firmas corporativas, proporcionamos atención 
-                  personalizada y construimos relaciones a largo plazo con cada cliente.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <TrustBadges showAll />
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              ¿Listo para Comenzar?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Programe su consulta gratuita hoy y descubra cómo podemos ayudarlo a ahorrar dinero y alcanzar sus metas financieras.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Llamar Ahora: {BUSINESS_INFO.phone}
+              </a>
+              <Link
+                href="/contact"
+                className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+              >
+                Solicitar Consulta Gratuita
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Sobre Matt Klingeman, CPA
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-blue-100 w-48 h-48 rounded-lg mx-auto mb-8 flex items-center justify-center">
-                  <span className="text-6xl">👨‍💼</span>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {FOUNDER_INFO.name}, {FOUNDER_INFO.title}
-                </h3>
-                <p className="text-lg text-gray-700 mb-6">
-                  Matt Klingeman posee una Maestría en Tributación Empresarial y aporta experiencia 
-                  única como ex-gerente del IRS con más de 20 años de experiencia como CPA. Su 
-                  perspectiva desde ambos lados del sistema tributario proporciona a los clientes 
-                  ventajas incomparables en planificación fiscal y representación.
-                </p>
-                
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span className="text-gray-700">Maestría en Tributación Empresarial</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span className="text-gray-700">Ex-Gerente del IRS</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span className="text-gray-700">20+ años de experiencia como CPA</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span className="text-gray-700">Especialista en pequeñas empresas</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-blue-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Sirviendo a Toda el Área de Tulsa
-              </h2>
-              <p className="text-xl text-gray-700">
-                Nuestra oficina en {BUSINESS_INFO.address.street} está convenientemente ubicada 
-                para servir a clientes en toda el área metropolitana de Tulsa.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900">Tulsa</h3>
-                <p className="text-sm text-gray-600">Centro de operaciones</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900">Broken Arrow</h3>
-                <p className="text-sm text-gray-600">15 minutos</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900">Bixby</h3>
-                <p className="text-sm text-gray-600">20 minutos</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900">Owasso</h3>
-                <p className="text-sm text-gray-600">20 minutos</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900">Jenks</h3>
-                <p className="text-sm text-gray-600">15 minutos</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900">Sand Springs</h3>
-                <p className="text-sm text-gray-600">10 minutos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Recursos Gratuitos
-                </h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  Acceda a nuestros recursos gratuitos en español para ayudarle con la planificación 
-                  fiscal y el cumplimiento empresarial.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Información de Contacto
-                </h2>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <div>
-                      <p className="font-semibold text-gray-900">Teléfono</p>
-                      <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-blue-700 hover:underline">
-                        {BUSINESS_INFO.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <a href={`mailto:${BUSINESS_INFO.email}`} className="text-blue-700 hover:underline">
-                        {BUSINESS_INFO.email}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <div>
-                      <p className="font-semibold text-gray-900">Dirección</p>
-                      <p className="text-gray-700">
-                        {BUSINESS_INFO.address.street}<br />
-                        {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.stateAbbr} {BUSINESS_INFO.address.zip}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div>
-                      <p className="font-semibold text-gray-900">Horarios</p>
-                      <div className="text-gray-700 text-sm">
-                        <p>Lunes - Viernes: {BUSINESS_INFO.hours.weekdays}</p>
-                        <p>Sábado: {BUSINESS_INFO.hours.saturday}</p>
-                        <p>Domingo: {BUSINESS_INFO.hours.sunday}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-blue-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ¿Listo para trabajar con CPAs experimentados?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Programe su consulta gratuita hoy y descubra cómo nuestra experiencia del IRS puede beneficiarle.
-          </p>
-          
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <a
-              href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition inline-flex items-center gap-2"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Llamar {BUSINESS_INFO.phone}
-            </a>
-            
-            <Link
-              href="/contact"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition inline-flex items-center gap-2"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Programar Consulta
-            </Link>
-          </div>
-
-          <p className="mt-6 text-sm opacity-75">
-            Ex-Gerente del IRS • Más de 20 años de experiencia • Sirviendo a toda el área de Tulsa
-          </p>
         </div>
       </section>
     </>
