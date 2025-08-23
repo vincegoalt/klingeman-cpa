@@ -124,7 +124,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       />
 
       {/* Hero Section with Image */}
-      <section className="relative py-16 md:py-20">
+      <section className="relative py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
@@ -234,7 +234,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
@@ -286,10 +286,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Expertise Section with Founder */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 md:from-gray-900 md:to-gray-800 rounded-2xl overflow-hidden shadow-2xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
                 <div className="p-8 lg:p-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -335,7 +335,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent md:from-gray-900"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-2xl font-bold">{FOUNDER_INFO.name}</h3>
                     <p className="text-yellow-400">CPA, Former IRS Manager</p>
