@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-2">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-500 md:from-blue-900 md:to-blue-800 text-white py-2">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <span className="flex items-center gap-2">
