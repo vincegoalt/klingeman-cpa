@@ -1,0 +1,25 @@
+{
+  "name": "Klingeman CPAs - Tulsa CPA Firm",
+  "short_name": "Klingeman CPAs",
+  "description": "Professional CPA services in Tulsa, OK. Tax preparation, bookkeeping, and business consulting from former IRS management.",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#1e3a8a",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait",
+  "categories": ["business", "finance", "productivity"]
+}

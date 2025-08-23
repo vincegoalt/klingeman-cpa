@@ -72,6 +72,8 @@ export function generateOrganizationSchema() {
     '@id': 'https://klingemancpa.com/#organization',
     name: BUSINESS_INFO.name,
     url: 'https://klingemancpa.com',
+    logo: 'https://klingemancpa.com/logo.png',
+    image: 'https://klingemancpa.com/office-photo.jpg',
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,
     address: {
@@ -140,7 +142,52 @@ export function generateOrganizationSchema() {
         '@type': 'City',
         name: 'Sand Springs'
       }
-    ]
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'CPA Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Tax Preparation',
+            description: 'Professional tax preparation for individuals and businesses'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Bookkeeping',
+            description: 'Monthly bookkeeping and financial statement preparation'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Payroll Services',
+            description: 'Complete payroll processing and tax compliance'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'IRS Representation',
+            description: 'Expert IRS audit defense and tax resolution'
+          }
+        }
+      ]
+    }
   };
 }
 
