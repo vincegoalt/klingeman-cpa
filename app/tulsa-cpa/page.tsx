@@ -55,16 +55,23 @@ export default function TulsaCPAPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Section with Professional Gradient */}
-      <section className="relative bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 md:from-blue-900 md:via-blue-800 md:to-blue-900 py-20 md:py-32 overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+      {/* Hero Section with Tulsa Background */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/tulsa.jpg"
+            alt="Tulsa Skyline Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-white px-4 py-2 rounded-full font-bold text-sm mb-6 border border-white/20">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
@@ -73,10 +80,10 @@ export default function TulsaCPAPage() {
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Expert CPA Services in
-              <span className="block text-yellow-400">Tulsa, Oklahoma</span>
+              <span className="block bg-gradient-to-r from-gray-100 to-white bg-clip-text text-transparent">Tulsa, Oklahoma</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               Searching for "CPA near me" in Tulsa? Led by a former IRS manager with 20+ years experience, 
               we provide unmatched tax expertise and strategic financial guidance for businesses and individuals.
             </p>
@@ -84,7 +91,7 @@ export default function TulsaCPAPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="group bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                className="group bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
               >
                 <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -93,7 +100,7 @@ export default function TulsaCPAPage() {
               </a>
               <Link
                 href="/contact"
-                className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                className="group bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg border-2 border-white/30 backdrop-blur"
               >
                 Schedule Free Consultation
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +112,7 @@ export default function TulsaCPAPage() {
             {/* Location and Hours */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 inline-block">
               <p className="font-semibold text-white flex items-center justify-center gap-2">
-                <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -117,11 +124,11 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* Trust Indicators Bar */}
-      <section className="bg-white py-6 border-y border-gray-200">
+      <section className="bg-gray-50 py-6 border-y border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-900">
             <div className="flex items-center gap-3">
-              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                 <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h2a1 1 0 100-2 2 2 0 00-2 2v11a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v11z" clipRule="evenodd"/>
               </svg>
@@ -131,7 +138,7 @@ export default function TulsaCPAPage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
               </svg>
               <div>
@@ -140,7 +147,7 @@ export default function TulsaCPAPage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
               </svg>
               <div>
@@ -153,7 +160,7 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* About Section with Founder */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
@@ -175,12 +182,12 @@ export default function TulsaCPAPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                     <h3 className="text-3xl font-bold mb-2">{FOUNDER_INFO.name}</h3>
-                    <p className="text-yellow-400 font-semibold text-lg">CPA, Former IRS Manager</p>
+                    <p className="text-gray-300 font-semibold text-lg">CPA, Former IRS Manager</p>
                   </div>
                 </div>
                 
                 <div className="p-8 lg:p-12">
-                  <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                  <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-800 px-3 py-1 rounded-full font-semibold text-sm mb-4">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                     </svg>
@@ -199,7 +206,7 @@ export default function TulsaCPAPage() {
                   
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-gray-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <div>
@@ -208,7 +215,7 @@ export default function TulsaCPAPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-gray-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <div>
@@ -217,7 +224,7 @@ export default function TulsaCPAPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-gray-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <div>
@@ -229,7 +236,7 @@ export default function TulsaCPAPage() {
                   
                   <div className="flex flex-wrap gap-2">
                     {FOUNDER_INFO.credentials.map((cred, index) => (
-                      <span key={index} className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                      <span key={index} className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
                         {cred}
                       </span>
                     ))}
@@ -242,7 +249,7 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
@@ -259,11 +266,11 @@ export default function TulsaCPAPage() {
                   href={`/services/${service.slug}`}
                   className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                 >
-                  <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-600 md:from-blue-600 md:to-blue-800 relative">
+                  <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                          <div className="text-blue-600">
+                        <div className="w-16 h-16 bg-white/90 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                          <div className="text-gray-800">
                             {getServiceIcon(service.icon, "w-8 h-8")}
                           </div>
                         </div>
@@ -276,7 +283,7 @@ export default function TulsaCPAPage() {
                     <p className="text-gray-600 mb-4">
                       {service.description}
                     </p>
-                    <span className="text-blue-600 font-semibold group-hover:text-blue-700 flex items-center gap-2">
+                    <span className="text-gray-800 font-semibold group-hover:text-gray-900 flex items-center gap-2">
                       Learn More
                       <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -291,7 +298,7 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
@@ -304,7 +311,7 @@ export default function TulsaCPAPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <Link
                 href="/tulsa-cpa"
-                className="group bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-xl text-center font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-xl"
+                className="group bg-gradient-to-br from-gray-800 to-gray-900 text-white p-6 rounded-xl text-center font-semibold hover:from-gray-700 hover:to-gray-800 transition-all transform hover:scale-105 shadow-xl"
               >
                 <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
@@ -312,20 +319,20 @@ export default function TulsaCPAPage() {
                   </svg>
                 </div>
                 <span className="text-lg">Tulsa</span>
-                <div className="text-xs text-blue-100 mt-1">Main Office</div>
+                <div className="text-xs text-gray-300 mt-1">Main Office</div>
               </Link>
               {SUBURBS.map((suburb) => (
                 <Link
                   key={suburb.slug}
                   href={`/${suburb.slug}`}
-                  className="group bg-white p-6 rounded-xl text-center font-semibold hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 transition-all transform hover:scale-105 shadow-lg border-2 border-gray-100 hover:border-blue-200"
+                  className="group bg-white p-6 rounded-xl text-center font-semibold hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100 transition-all transform hover:scale-105 shadow-lg border-2 border-gray-100 hover:border-gray-200"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                    <svg className="w-6 h-6 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                    <svg className="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                     </svg>
                   </div>
-                  <span className="text-gray-800 group-hover:text-blue-700 transition-colors">{suburb.name}</span>
+                  <span className="text-gray-800 group-hover:text-gray-900 transition-colors">{suburb.name}</span>
                 </Link>
               ))}
             </div>
@@ -345,12 +352,12 @@ export default function TulsaCPAPage() {
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-start gap-3">
-                    <span className="text-blue-600 flex-shrink-0">Q:</span>
+                    <span className="text-gray-600 flex-shrink-0">Q:</span>
                     {faq.question}
                   </h3>
                   <div className="pl-8">
                     <p className="text-gray-700 leading-relaxed">
-                      <span className="text-blue-600 font-semibold">A:</span> {faq.answer}
+                      <span className="text-gray-600 font-semibold">A:</span> {faq.answer}
                     </p>
                   </div>
                 </div>
@@ -361,13 +368,13 @@ export default function TulsaCPAPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+      <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Work with Tulsa's Most Experienced CPA?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Schedule your free consultation today and discover how our former IRS expertise can save you money
             </p>
             <div className="bg-white rounded-2xl p-8 shadow-2xl">

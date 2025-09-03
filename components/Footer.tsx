@@ -4,33 +4,6 @@ import { BUSINESS_INFO, SERVICES, SUBURBS } from '@/lib/constants';
 export default function Footer() {
   return (
     <footer className="relative">
-      {/* Newsletter Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Stay Updated on Tax Law Changes
-            </h3>
-            <p className="text-blue-100 mb-8">
-              Get monthly tax tips and updates delivered to your inbox
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-white/30"
-              />
-              <button
-                type="submit"
-                className="bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="bg-gray-900 text-gray-300">
         <div className="container mx-auto px-4 py-16">

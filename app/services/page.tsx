@@ -38,21 +38,21 @@ export default function ServicesPage() {
             
             <div className="inline-flex items-center gap-4 text-sm bg-white px-6 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Former IRS Manager</span>
               </div>
               <span className="text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>20+ Years Experience</span>
               </div>
               <span className="text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Full-Service Firm</span>
@@ -98,7 +98,7 @@ export default function ServicesPage() {
                     href={`/services/${service.slug}`}
                     className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                   >
-                    <div className="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800">
+                    <div className="relative h-48 bg-gradient-to-br from-gray-800 to-gray-900">
                       <Image
                         src={serviceImages[service.slug] || 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop'}
                         alt={service.title}
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center">
                           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                            <div className="text-blue-600">
+                            <div className="text-gray-800">
                               {getServiceIcon(service.icon, "w-8 h-8")}
                             </div>
                           </div>
@@ -121,7 +121,7 @@ export default function ServicesPage() {
                       <p className="text-gray-600 mb-4">
                         {service.description}
                       </p>
-                      <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                      <div className="flex items-center text-gray-800 font-semibold group-hover:text-gray-700">
                         Learn More
                         <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -195,7 +195,7 @@ export default function ServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2"
+                  className="bg-white text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                 </a>
                 <Link
                   href="/contact"
-                  className="bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition inline-flex items-center justify-center gap-2"
+                  className="bg-gray-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition inline-flex items-center justify-center gap-2"
                 >
                   Schedule Consultation
                 </Link>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
             </p>
             <Link
               href="/tulsa-cpa"
-              className="text-blue-700 font-semibold hover:underline"
+              className="text-gray-700 font-semibold hover:underline"
             >
               Learn more about our Tulsa CPA services →
             </Link>

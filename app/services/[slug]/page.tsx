@@ -129,7 +129,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <div className="mb-8">
-              <Link href="/services" className="text-blue-700 hover:underline">
+              <Link href="/services" className="text-gray-700 hover:underline">
                 ← Back to Services
               </Link>
             </div>
@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-white/60 md:bg-white/20 backdrop-blur-sm rounded-full">
                       <div className="text-gray-900 md:text-white">{icon}</div>
                     </div>
-                    <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full font-semibold text-sm">
+                    <span className="bg-white text-gray-900 px-3 py-1 rounded-full font-semibold text-sm">
                       Professional Service
                     </span>
                   </div>
@@ -168,7 +168,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="group bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                className="group bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
               >
                 <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -177,7 +177,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </a>
               <Link
                 href="/contact"
-                className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg border border-blue-200"
+                className="group bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg border border-gray-200"
               >
                 Get Free Quote
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -218,8 +218,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                   {content.benefits?.slice(0, 4).map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
@@ -244,7 +244,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {content.benefits.map((benefit, index) => (
                 <div key={index} className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
@@ -273,7 +273,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {content.process.map((step, index) => (
                   <div key={index} className="text-center relative">
                     <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg border-4 border-white relative z-10">
-                      <span className="text-2xl font-bold text-blue-600">{index + 1}</span>
+                      <span className="text-2xl font-bold text-gray-800">{index + 1}</span>
                     </div>
                     <h3 className="font-bold text-gray-900 mb-2">{step.step}</h3>
                     <p className="text-sm text-gray-600">{step.description}</p>
@@ -289,7 +289,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 md:from-gray-900 md:to-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-gray-800 to-gray-900 md:from-gray-900 md:to-gray-800 rounded-2xl overflow-hidden shadow-2xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
                 <div className="p-8 lg:p-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -300,19 +300,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </p>
                   <ul className="space-y-4 mb-8">
                     <li className="flex items-start gap-3 text-white">
-                      <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-white flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>Former IRS Manager with insider knowledge</span>
                     </li>
                     <li className="flex items-start gap-3 text-white">
-                      <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-white flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>Master's degree in Business Taxation</span>
                     </li>
                     <li className="flex items-start gap-3 text-white">
-                      <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-white flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>100% success rate in IRS negotiations</span>
@@ -320,7 +320,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </ul>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg"
+                    className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
                   >
                     Schedule Free Consultation
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -338,7 +338,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent md:from-gray-900"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-2xl font-bold">{FOUNDER_INFO.name}</h3>
-                    <p className="text-yellow-400">CPA, Former IRS Manager</p>
+                    <p className="text-white">CPA, Former IRS Manager</p>
                   </div>
                 </div>
               </div>
@@ -359,12 +359,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               {content.faqs.map((faq, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-start gap-3">
-                    <span className="text-blue-600 flex-shrink-0">Q:</span>
+                    <span className="text-gray-800 flex-shrink-0">Q:</span>
                     {faq.question}
                   </h3>
                   <div className="pl-8">
                     <p className="text-gray-700 leading-relaxed">
-                      <span className="text-blue-600 font-semibold">A:</span> {faq.answer}
+                      <span className="text-gray-800 font-semibold">A:</span> {faq.answer}
                     </p>
                   </div>
                 </div>
@@ -393,22 +393,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <Link
                       key={service!.slug}
                       href={`/services/${service!.slug}`}
-                      className="group bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-200"
+                      className="group bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-gray-200"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <div className="w-14 h-14 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                           <div className="text-white transform scale-75">
                             {relatedIcon}
                           </div>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors">
                             {service!.title}
                           </h3>
                           <p className="text-gray-600 text-sm leading-relaxed mb-3">
                             {service!.description}
                           </p>
-                          <span className="text-blue-600 font-semibold text-sm group-hover:text-blue-700 inline-flex items-center gap-1">
+                          <span className="text-gray-800 font-semibold text-sm group-hover:text-gray-700 inline-flex items-center gap-1">
                             Learn More
                             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

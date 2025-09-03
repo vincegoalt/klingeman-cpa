@@ -34,7 +34,7 @@ export default function BrokenArrowCPAPage() {
       />
 
       {/* Hero Section with Professional Gradient */}
-      <section className="relative bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 md:from-blue-900 md:via-blue-800 md:to-blue-900 py-20 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900  py-20 md:py-32 overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
@@ -42,7 +42,7 @@ export default function BrokenArrowCPAPage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm mb-6">
+            <div className="inline-flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-6">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
@@ -51,10 +51,10 @@ export default function BrokenArrowCPAPage() {
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Expert CPA Services in
-              <span className="block text-yellow-400">Broken Arrow, Oklahoma</span>
+              <span className="block text-white">Broken Arrow, Oklahoma</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               Professional accounting and tax services for Broken Arrow residents and businesses. 
               Located just 15 minutes away in Tulsa, led by a former IRS manager with 20+ years experience.
             </p>
@@ -62,7 +62,7 @@ export default function BrokenArrowCPAPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="group bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                className="group bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
               >
                 <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -71,7 +71,7 @@ export default function BrokenArrowCPAPage() {
               </a>
               <Link
                 href="/contact"
-                className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                className="group bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
               >
                 Schedule Free Consultation
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export default function BrokenArrowCPAPage() {
             {/* Location and Hours */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 inline-block">
               <p className="font-semibold text-white flex items-center justify-center gap-2">
-                <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -99,7 +99,7 @@ export default function BrokenArrowCPAPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-900">
             <div className="flex items-center gap-3">
-              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                 <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h2a1 1 0 100-2 2 2 0 00-2 2v11a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v11z" clipRule="evenodd"/>
               </svg>
@@ -109,7 +109,7 @@ export default function BrokenArrowCPAPage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
               </svg>
               <div>
@@ -118,7 +118,7 @@ export default function BrokenArrowCPAPage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
               </svg>
               <div>
@@ -148,11 +148,11 @@ export default function BrokenArrowCPAPage() {
                   href={`/services/${service.slug}`}
                   className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                 >
-                  <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-600 md:from-blue-600 md:to-blue-800 relative">
+                  <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900  relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center">
                             <span className="text-2xl text-gray-900">{service.icon}</span>
                           </div>
                         </div>
@@ -165,7 +165,7 @@ export default function BrokenArrowCPAPage() {
                     <p className="text-gray-600 mb-4">
                       {service.description}
                     </p>
-                    <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                    <div className="flex items-center text-gray-800 font-semibold group-hover:text-gray-700">
                       Learn More
                       <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -179,7 +179,7 @@ export default function BrokenArrowCPAPage() {
             <div className="text-center mt-12">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg"
               >
                 View All Services
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,23 +266,23 @@ export default function BrokenArrowCPAPage() {
                   <h3 className="text-xl font-bold mb-3">Office Information</h3>
                   <div className="space-y-3 text-gray-700">
                     <p className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="hover:text-blue-700">
+                      <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="hover:text-gray-700">
                         {BUSINESS_INFO.phone}
                       </a>
                     </p>
                     <p className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:text-blue-700">
+                      <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:text-gray-700">
                         {BUSINESS_INFO.email}
                       </a>
                     </p>
                     <p className="flex items-start gap-2">
-                      <svg className="w-5 h-5 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-gray-800 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
@@ -293,7 +293,7 @@ export default function BrokenArrowCPAPage() {
                       </span>
                     </p>
                     <p className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>

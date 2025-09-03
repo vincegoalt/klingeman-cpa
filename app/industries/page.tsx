@@ -42,21 +42,21 @@ export default function IndustriesPage() {
             
             <div className="inline-flex items-center gap-4 text-sm bg-white px-6 py-3 rounded-lg shadow-md">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Industry Expertise</span>
               </div>
               <span className="text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Former IRS Experience</span>
               </div>
               <span className="text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Tailored Solutions</span>
@@ -90,7 +90,7 @@ export default function IndustriesPage() {
                     {industry.slug === 'oil-gas' && '⚡'}
                     {industry.slug === 'nonprofits' && '🤝'}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-700 transition text-center">
                     {industry.title}
                   </h3>
                   <p className="text-gray-600 mb-6 text-center">{industry.description}</p>
@@ -99,19 +99,19 @@ export default function IndustriesPage() {
                     {industry.slug === 'restaurants' && (
                       <>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>POS System Integration</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Tip Reporting Compliance</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Food Cost Management</span>
@@ -122,19 +122,19 @@ export default function IndustriesPage() {
                     {industry.slug === 'construction' && (
                       <>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Job Costing & Project Tracking</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>WIP Reporting</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Bonding Assistance</span>
@@ -145,19 +145,19 @@ export default function IndustriesPage() {
                     {industry.slug === 'oil-gas' && (
                       <>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Depletion Calculations</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Joint Venture Accounting</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Severance Tax Compliance</span>
@@ -168,19 +168,19 @@ export default function IndustriesPage() {
                     {industry.slug === 'nonprofits' && (
                       <>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Form 990 Preparation</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Grant Compliance</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span>Fund Accounting</span>
@@ -189,7 +189,7 @@ export default function IndustriesPage() {
                     )}
                   </div>
                   
-                  <div className="flex items-center justify-center text-blue-700 font-semibold">
+                  <div className="flex items-center justify-center text-gray-700 font-semibold">
                     Learn More About {industry.title}
                     <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -261,7 +261,7 @@ export default function IndustriesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2"
+                  className="bg-white text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -270,7 +270,7 @@ export default function IndustriesPage() {
                 </a>
                 <Link
                   href="/contact"
-                  className="bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition inline-flex items-center justify-center gap-2"
+                  className="bg-gray-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition inline-flex items-center justify-center gap-2"
                 >
                   Schedule Industry Consultation
                 </Link>
@@ -292,7 +292,7 @@ export default function IndustriesPage() {
             </p>
             <Link
               href="/services"
-              className="text-blue-700 font-semibold hover:underline"
+              className="text-gray-700 font-semibold hover:underline"
             >
               View all our CPA services →
             </Link>
