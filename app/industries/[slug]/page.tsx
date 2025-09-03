@@ -27,6 +27,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 // Industry icons mapping
+const industryBackgrounds: Record<string, string> = {
+  'restaurants': 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop',
+  'construction': 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop',
+  'oil-gas': 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&h=1080&fit=crop',
+  'nonprofits': 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920&h=1080&fit=crop'
+};
+
 const industryIcons: Record<string, React.ReactElement> = {
   'restaurants': (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,9 +107,17 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={industryBackgrounds[resolvedParams.slug] || industryBackgrounds.construction}
+            alt={`${content.title} Background`}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
