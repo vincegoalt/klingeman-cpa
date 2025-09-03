@@ -100,7 +100,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
         </div>
@@ -199,9 +199,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
               
               {/* Challenges & Solutions Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div className="bg-red-50 rounded-xl p-6">
+                <div className="bg-gray-50 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                     Common Challenges
@@ -209,14 +209,14 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                   <ul className="space-y-2">
                     {content.challenges.slice(0, 4).map((challenge, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="text-red-600 mt-1">•</span>
+                        <span className="text-gray-600 mt-1">•</span>
                         <span className="text-gray-700">{challenge}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="bg-green-50 rounded-xl p-6">
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

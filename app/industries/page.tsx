@@ -251,11 +251,11 @@ export default function IndustriesPage() {
               </div>
             </div>
 
-            <div className="mt-12 bg-blue-900 text-white p-8 rounded-lg text-center">
+            <div className="mt-12 bg-gray-900 text-white p-8 rounded-lg text-center">
               <h3 className="text-2xl font-bold mb-4">
                 Get Industry-Specific CPA Services Today
               </h3>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-gray-300">
                 Don't trust your specialized industry needs to generalists. Work with CPAs who understand your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
