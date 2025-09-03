@@ -1,24 +1,78 @@
 # Robots.txt for klingemancpa.com
-# Allow all web crawlers
+# Professional CPA Services in Tulsa, Oklahoma
 
+# Default crawler rules
 User-agent: *
 Allow: /
+Allow: /services/
+Allow: /industries/
+Allow: /blog/
+Allow: /es/
+Allow: /tulsa-cpa
+Allow: /cpa-*
 Disallow: /api/
-Disallow: /_next/
+Disallow: /_next/static/
+Disallow: /_next/image
 Disallow: /admin/
+Disallow: *.json$
+Disallow: /*?*
+Disallow: /*#*
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://klingemancpa.com/sitemap.xml
+Sitemap: https://klingemancpa.com/sitemap-index.xml
 
-# Crawl-delay for responsible crawling
-Crawl-delay: 1
-
-# Google specific
+# Search engine specific rules
 User-agent: Googlebot
 Allow: /
+Allow: /_next/static/
+Allow: /_next/image
 Crawl-delay: 0
 
-# Bing specific
 User-agent: Bingbot
 Allow: /
+Allow: /_next/static/
+Allow: /_next/image
 Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
