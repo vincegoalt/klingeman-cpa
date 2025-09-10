@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { BUSINESS_INFO, SERVICES, SUBURBS } from '@/lib/constants';
 
 export default function Footer() {
@@ -10,14 +11,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
             <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">KC</span>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-white">Klingeman</div>
-                  <div className="text-xs text-blue-500 font-semibold">CPAs & ADVISORS</div>
-                </div>
+              <div className="mb-6">
+                <Image
+                  src="/KLINGEMANLOGO.png"
+                  alt="Klingeman CPAs & Advisors"
+                  width={180}
+                  height={54}
+                  className="h-12 w-auto brightness-0 invert"
+                />
               </div>
               
               <p className="text-sm mb-6 leading-relaxed">

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { BUSINESS_INFO, SERVICES, INDUSTRIES } from '@/lib/constants';
 
@@ -55,14 +56,15 @@ export default function Header() {
       <header className={`bg-white sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}>
         <nav className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                <span className="text-white font-bold text-xl">KC</span>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900">Klingeman</div>
-                <div className="text-xs text-blue-600 font-semibold tracking-wider">CPAs & ADVISORS</div>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/KLINGEMANLOGO.png"
+                alt="Klingeman CPAs & Advisors"
+                width={200}
+                height={60}
+                className="h-14 w-auto"
+                priority
+              />
             </Link>
 
             <button
