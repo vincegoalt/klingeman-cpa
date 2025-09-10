@@ -55,14 +55,14 @@ export default function Header() {
 
       <header className={`bg-white sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}>
         <nav className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-2">
             <Link href="/" className="flex items-center">
               <Image
                 src="/KLINGEMANLOGO.png"
                 alt="Klingeman CPAs & Advisors"
-                width={200}
-                height={60}
-                className="h-14 w-auto"
+                width={280}
+                height={84}
+                className="h-20 w-auto"
                 priority
               />
             </Link>
