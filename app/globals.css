@@ -3,11 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #171C8F;
+  --light-gray: #F4F4F4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-blue: var(--primary-blue);
+  --color-light-gray: var(--light-gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +27,70 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom color utilities */
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.text-primary-blue {
+  color: var(--primary-blue);
+}
+
+.border-primary-blue {
+  border-color: var(--primary-blue);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+/* Override blue-600 with new primary blue */
+.bg-blue-600, .from-blue-600, .to-blue-600 {
+  background-color: var(--primary-blue) !important;
+}
+
+.text-blue-600, .hover\:text-blue-600:hover {
+  color: var(--primary-blue) !important;
+}
+
+.border-blue-600 {
+  border-color: var(--primary-blue) !important;
+}
+
+/* Override blue-700 with darker shade */
+.bg-blue-700, .from-blue-700, .to-blue-700, .hover\:bg-blue-700:hover {
+  background-color: #0f1460 !important;
+}
+
+/* Override blue-800 with even darker shade */
+.bg-blue-800, .from-blue-800, .to-blue-800, .hover\:bg-blue-800:hover, .hover\:to-blue-800:hover {
+  background-color: #0a0d3f !important;
+}
+
+/* Override gray-800 and gray-900 with light gray */
+.bg-gray-800, .from-gray-800, .to-gray-800 {
+  background-color: var(--light-gray) !important;
+}
+
+.bg-gray-900, .from-gray-900, .to-gray-900 {
+  background-color: var(--light-gray) !important;
+}
+
+.text-gray-800, .text-gray-900 {
+  color: #333333 !important;
+}
+
+/* Update hover states */
+.hover\:bg-gray-800:hover {
+  background-color: #e0e0e0 !important;
+}
+
+.hover\:bg-gray-900:hover {
+  background-color: #e0e0e0 !important;
 }

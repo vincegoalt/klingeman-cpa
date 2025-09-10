@@ -330,7 +330,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
                 <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
                   <Image
-                    src="/matt Klingeman.png"
+                    src="/matt%20Klingeman.png"
                     alt={FOUNDER_INFO.name}
                     fill
                     className="object-cover"

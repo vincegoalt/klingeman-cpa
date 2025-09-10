@@ -79,11 +79,6 @@ export default function Header() {
 
             <ul className="hidden lg:flex items-center gap-1">
               <li>
-                <Link href="/" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
-                  Home
-                </Link>
-              </li>
-              <li>
                 <Link href="/tulsa-cpa" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
                   Tulsa CPA
                 </Link>
@@ -104,14 +99,7 @@ export default function Header() {
                   onMouseLeave={() => setIsServicesOpen(false)}
                   className={`absolute top-full left-0 bg-white shadow-xl rounded-lg py-3 w-72 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 >
-                  <Link
-                    href="/services"
-                    className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 font-semibold text-gray-900 border-b border-gray-100"
-                  >
-                    All Services →
-                  </Link>
-                  <div className="max-h-96 overflow-y-auto">
-                    {SERVICES.map((service) => (
+                  {SERVICES.map((service) => (
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
@@ -120,7 +108,6 @@ export default function Header() {
                         {service.title}
                       </Link>
                     ))}
-                  </div>
                 </div>
               </li>
               <li className="relative group">
@@ -139,12 +126,6 @@ export default function Header() {
                   onMouseLeave={() => setIsIndustriesOpen(false)}
                   className={`absolute top-full left-0 bg-white shadow-xl rounded-lg py-3 w-64 transition-all duration-200 ${isIndustriesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 >
-                  <Link
-                    href="/industries"
-                    className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 font-semibold text-gray-900 border-b border-gray-100"
-                  >
-                    All Industries →
-                  </Link>
                   {INDUSTRIES.map((industry) => (
                     <Link
                       key={industry.slug}
@@ -157,18 +138,13 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <Link href="/blog" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
-                  Blog
+                <Link href="/team" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
+                  Our Team
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/es" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
-                  Spanish
                 </Link>
               </li>
               <li className="ml-4">
@@ -244,11 +220,6 @@ export default function Header() {
               <li>
                 <Link href="/contact" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/es" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
-                  Español
                 </Link>
               </li>
               <li className="p-6 border-t border-gray-100">
