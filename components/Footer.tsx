@@ -15,9 +15,9 @@ export default function Footer() {
                 <Image
                   src="/KLINGEMANLOGO.png"
                   alt="Klingeman CPAs & Advisors"
-                  width={180}
-                  height={54}
-                  className="h-12 w-auto brightness-0 invert"
+                  width={320}
+                  height={96}
+                  className="h-24 w-auto brightness-0 invert"
                 />
               </div>
               
