@@ -158,6 +158,20 @@ export default function ContactPage() {
                       </div>
                     </div>
 
+                    <div className="flex items-center gap-4">
+                      <div className="bg-gray-100 p-3 rounded-lg">
+                        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900">Fax</p>
+                        <p className="text-gray-700">
+                          {BUSINESS_INFO.fax}
+                        </p>
+                      </div>
+                    </div>
+
                     <div className="flex items-start gap-4">
                       <div className="bg-gray-100 p-3 rounded-lg">
                         <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,10 +180,25 @@ export default function ContactPage() {
                         </svg>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900">Address</p>
+                        <p className="font-semibold text-gray-900">Office Address</p>
                         <p className="text-gray-700">
                           {BUSINESS_INFO.address.street}<br />
                           {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.stateAbbr} {BUSINESS_INFO.address.zip}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gray-100 p-3 rounded-lg">
+                        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900">Mailing Address</p>
+                        <p className="text-gray-700">
+                          {BUSINESS_INFO.mailingAddress.po}<br />
+                          {BUSINESS_INFO.mailingAddress.city}, {BUSINESS_INFO.mailingAddress.stateAbbr} {BUSINESS_INFO.mailingAddress.zip}
                         </p>
                       </div>
                     </div>
@@ -244,7 +273,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-96 w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.8947!2d-95.9016!3d36.1156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6eb5bb5bb5bb5%3A0x1234567890abcdef!2s6539%20E%2031st%20St%2C%20Tulsa%2C%20OK%2074136!5e0!3m2!1sen!2sus!4v1234567890123"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.8947!2d-95.9016!3d36.1156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6eb5bb5bb5bb5%3A0x1234567890abcdef!2s6539%20E%2031st%20St%2C%20Tulsa%2C%20OK%2074145!5e0!3m2!1sen!2sus!4v1234567890123"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

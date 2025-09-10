@@ -3,14 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { generateMetadata as generateSEO, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/components/SEO';
-import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
 import { BUSINESS_INFO, SERVICES, FOUNDER_INFO } from '@/lib/constants';
 import { serviceContent } from '@/lib/service-content';
 
 export async function generateStaticParams() {
-  return Object.keys(serviceContent).map((slug) => ({
-    slug: slug,
+  return SERVICES.map((service) => ({
+    slug: service.slug,
   }));
 }
 
@@ -28,29 +27,59 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 // Service icons mapping
 const serviceIcons: Record<string, React.ReactElement> = {
-  'tax-preparation-tulsa': (
+  'business-tax-accounting': (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
     </svg>
   ),
-  'bookkeeping-tulsa': (
+  'tax-planning-preparation': (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
     </svg>
   ),
-  'payroll-tulsa': (
+  'tax-write-offs-deductions': (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
   ),
-  'business-consulting-tulsa': (
+  'irs-audit-representation': (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>
+  ),
+  'estate-trust-tax': (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    </svg>
+  ),
+  'business-entity-selection': (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   ),
-  'irs-tax-relief-tulsa': (
+  'real-estate-tax': (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+  ),
+  'payroll-services': (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+  ),
+  'bookkeeping-services': (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+  ),
+  'financial-statements': (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>
+  ),
+  'retirement-planning': (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
     </svg>
   ),
   'default': (
@@ -90,20 +119,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   // Define hero images for each service
   const serviceHeroImages: Record<string, string> = {
-    'tax-preparation-tulsa': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=400&fit=crop',
-    'bookkeeping-tulsa': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop',
-    'payroll-tulsa': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop',
-    'audit-assurance-tulsa': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=400&fit=crop',
-    'business-formation-tulsa': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=400&fit=crop',
-    'financial-statements-tulsa': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=400&fit=crop',
-    'estate-trust-tax-tulsa': 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?w=1200&h=400&fit=crop',
-    'real-estate-tax-tulsa': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=400&fit=crop',
-    'tax-credits-tulsa': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=1200&h=400&fit=crop',
-    'retirement-planning-tulsa': 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=1200&h=400&fit=crop',
-    'succession-planning-tulsa': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=400&fit=crop',
-    'business-consulting-tulsa': 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=400&fit=crop',
-    'irs-tax-relief-tulsa': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=1200&h=400&fit=crop',
-    'financial-planning-tulsa': 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200&h=400&fit=crop'
+    'business-tax-accounting': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=400&fit=crop',
+    'tax-planning-preparation': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop',
+    'tax-write-offs-deductions': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=1200&h=400&fit=crop',
+    'irs-audit-representation': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=1200&h=400&fit=crop',
+    'estate-trust-tax': 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?w=1200&h=400&fit=crop',
+    'business-entity-selection': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=400&fit=crop',
+    'real-estate-tax': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=400&fit=crop',
+    'payroll-services': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop',
+    'bookkeeping-services': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop',
+    'financial-statements': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=400&fit=crop',
+    'retirement-planning': 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=1200&h=400&fit=crop'
   };
 
   const heroImage = serviceHeroImages[resolvedParams.slug] || 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=400&fit=crop';
@@ -333,7 +359,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     src="/matt%20Klingeman.png"
                     alt={FOUNDER_INFO.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent md:from-gray-900"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -425,7 +452,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      <CTASection />
     </>
   );
 }

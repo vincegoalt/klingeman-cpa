@@ -52,7 +52,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="group bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg"
+                  className="group bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg border-2 border-white/30 backdrop-blur"
                 >
                   <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -193,20 +193,17 @@ export default function HomePage() {
             {SERVICES.slice(0, 6).map((service, index) => {
               // Define specific images for each service
               const serviceImages: Record<string, string> = {
-                'tax-preparation-tulsa': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
-                'bookkeeping-tulsa': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop',
-                'payroll-tulsa': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop',
-                'audit-assurance-tulsa': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
-                'business-formation-tulsa': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop',
-                'financial-statements-tulsa': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
-                'estate-trust-tax-tulsa': 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?w=800&h=600&fit=crop',
-                'real-estate-tax-tulsa': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
-                'tax-credits-tulsa': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=800&h=600&fit=crop',
-                'retirement-planning-tulsa': 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=800&h=600&fit=crop',
-                'succession-planning-tulsa': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop',
-                'business-consulting-tulsa': 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop',
-                'irs-tax-relief-tulsa': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop',
-                'financial-planning-tulsa': 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=800&h=600&fit=crop'
+                'business-tax-accounting': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
+                'tax-planning-preparation': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop',
+                'tax-write-offs-deductions': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=800&h=600&fit=crop',
+                'irs-audit-representation': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop',
+                'estate-trust-tax': 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?w=800&h=600&fit=crop',
+                'business-entity-selection': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop',
+                'real-estate-tax': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+                'payroll-services': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop',
+                'bookkeeping-services': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop',
+                'financial-statements': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
+                'retirement-planning': 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=800&h=600&fit=crop'
               };
 
               return (
@@ -253,7 +250,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg border-2 border-gray-900"
             >
               View All Services
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -296,8 +293,11 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Klingeman CPAs?
               </h2>
-              <p className="text-xl text-gray-700 mb-8">
-                {FOUNDER_INFO.bio}
+              <p className="text-xl text-gray-700 mb-6">
+                At Klingeman CPAs, we provide big-firm expertise with a personalized approach to help businesses and individuals optimize their finances.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                With over 40 years of combined CPA experience, we specialize in tax strategies, proactive financial planning, and IRS representation, ensuring our clients stay compliant while maximizing tax savings. We are committed to providing personalized attention and tailored advice to each client, ensuring that your financial health and business growth are our top priorities.
               </p>
               
               <div className="space-y-6">
@@ -308,9 +308,9 @@ export default function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Former IRS Management Experience</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Track Record in IRS Audits & Negotiations</h3>
                     <p className="text-gray-600">
-                      Navigate complex tax situations with confidence. Our insider knowledge helps protect you during audits and ensures compliance.
+                      Navigate complex tax situations with confidence. Our former IRS management experience and insider knowledge helps protect you during audits and ensures compliance.
                     </p>
                   </div>
                 </div>
@@ -322,9 +322,9 @@ export default function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Maximum Tax Savings</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Specialized Tax & Accounting Strategies for Small Business</h3>
                     <p className="text-gray-600">
-                      We identify every deduction and credit you qualify for, ensuring you keep more of your hard-earned money.
+                      We offer comprehensive tax & accounting services tailored to business owners, real estate investors, and individuals. Every deduction and credit you qualify for is identified.
                     </p>
                   </div>
                 </div>
@@ -336,9 +336,9 @@ export default function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Personalized Service</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Personalized, Relationship Based Services</h3>
                     <p className="text-gray-600">
-                      You're not just a number. We take time to understand your unique situation and provide tailored solutions.
+                      You're not just a number. We take time to understand your unique situation and provide tailored solutions. Trusted CPA firm for businesses & individuals, serving Tulsa & beyond.
                     </p>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ export default function HomePage() {
               <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg"
+                  className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg border-2 border-gray-900"
                 >
                   Schedule Your Free Consultation
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

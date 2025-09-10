@@ -131,15 +131,17 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
         >
           <option value="">Select a Service</option>
-          <option value="tax-preparation">Tax Preparation</option>
-          <option value="bookkeeping">Bookkeeping</option>
-          <option value="payroll">Payroll Services</option>
-          <option value="audit">Audit & Assurance</option>
-          <option value="business-formation">Business Formation</option>
-          <option value="financial-statements">Financial Statements</option>
-          <option value="estate-trust">Estate & Trust Tax</option>
-          <option value="real-estate">Real Estate Tax</option>
-          <option value="retirement">Retirement Planning</option>
+          <option value="business-tax-accounting">Business Tax & Accounting Services</option>
+          <option value="tax-return-preparation">Individual & Business Tax Return Preparation</option>
+          <option value="bookkeeping-payroll">Bookkeeping & Payroll Services</option>
+          <option value="irs-representation">IRS Representation & Tax Resolution</option>
+          <option value="tax-planning">Strategic Tax Planning & Consulting</option>
+          <option value="estate-trust-tax">Estate & Trust Tax Services</option>
+          <option value="retirement-planning">Retirement & Financial Planning</option>
+          <option value="real-estate-tax">Real Estate Tax Services</option>
+          <option value="business-advisory">Business Advisory & CFO Services</option>
+          <option value="audit-review">Audit, Review & Compilation Services</option>
+          <option value="quickbooks-services">QuickBooks Setup & Training</option>
           <option value="other">Other</option>
         </select>
       </div>
