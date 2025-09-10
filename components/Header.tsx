@@ -213,8 +213,8 @@ export default function Header() {
                 ))}
               </li>
               <li className="border-t border-gray-100">
-                <Link href="/blog" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
-                  Blog
+                <Link href="/team" className="block px-6 py-3 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>
+                  Our Team
                 </Link>
               </li>
               <li>
