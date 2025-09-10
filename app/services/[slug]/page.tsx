@@ -346,7 +346,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </ul>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg"
+                    className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
                   >
                     Schedule Free Consultation
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
