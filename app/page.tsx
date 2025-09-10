@@ -269,7 +269,7 @@ export default function HomePage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-gray-600 to-gray-400 rounded-2xl opacity-10 blur-2xl"></div>
               <div className="relative">
                 <Image
-                  src="/matt Klingeman.png"
+                  src="/matt-klingeman.png"
                   alt={FOUNDER_INFO.name}
                   width={600}
                   height={750}

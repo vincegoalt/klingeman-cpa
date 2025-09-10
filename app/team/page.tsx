@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
     name: 'Matt Klingeman',
     title: 'Founder and CPA',
     bio: 'Matt holds a Master\'s in Business Taxation and is a former IRS manager with over 20 years of experience as a practicing CPA. His leadership and expertise guide our firm\'s day-to-day operations, with a primary focus on consulting and taxes.',
-    image: '/matt%20Klingeman.png'
+    image: '/matt-klingeman.png'
   },
   {
     name: 'Mitch Ross',

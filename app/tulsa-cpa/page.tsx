@@ -174,7 +174,7 @@ export default function TulsaCPAPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
                   <Image
-                    src="/matt Klingeman.png"
+                    src="/matt-klingeman.png"
                     alt={FOUNDER_INFO.name}
                     fill
                     className="object-cover"
@@ -261,22 +261,19 @@ export default function TulsaCPAPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {SERVICES.map((service, index) => {
-                // Define specific images for each service
+                // Define specific images for each service - unique for each
                 const serviceImages: Record<string, string> = {
-                  'tax-preparation-tulsa': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
-                  'bookkeeping-tulsa': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop',
-                  'payroll-tulsa': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop',
-                  'audit-assurance-tulsa': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
-                  'business-formation-tulsa': 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop',
-                  'financial-statements-tulsa': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
-                  'estate-trust-tax-tulsa': 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?w=800&h=600&fit=crop',
-                  'real-estate-tax-tulsa': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
-                  'tax-credits-tulsa': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=800&h=600&fit=crop',
-                  'retirement-planning-tulsa': 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=800&h=600&fit=crop',
-                  'succession-planning-tulsa': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop',
-                  'business-consulting-tulsa': 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop',
-                  'irs-tax-relief-tulsa': 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop',
-                  'financial-planning-tulsa': 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=800&h=600&fit=crop'
+                  'business-tax-accounting': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
+                  'tax-return-preparation': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+                  'bookkeeping-payroll': 'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&h=600&fit=crop',
+                  'irs-representation': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop',
+                  'tax-planning': 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=800&h=600&fit=crop',
+                  'estate-trust-tax': 'https://images.unsplash.com/photo-1560472355-536de3962603?w=800&h=600&fit=crop',
+                  'retirement-planning': 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=800&h=600&fit=crop',
+                  'real-estate-tax': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+                  'business-advisory': 'https://images.unsplash.com/photo-1664906225771-ad3c3c585c4a?w=800&h=600&fit=crop',
+                  'audit-review': 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop',
+                  'quickbooks-services': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop'
                 };
 
                 return (

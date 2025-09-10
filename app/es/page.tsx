@@ -287,7 +287,7 @@ export default function SpanishHomePage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl opacity-10 blur-2xl"></div>
               <div className="relative">
                 <Image
-                  src="/matt Klingeman.png"
+                  src="/matt-klingeman.png"
                   alt={FOUNDER_INFO.name}
                   width={500}
                   height={600}
