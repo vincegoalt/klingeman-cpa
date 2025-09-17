@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 // Create reusable transporter
 const createTransporter = () => {
   // Using Gmail as an example - you'll need to configure this with your email service
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER,
