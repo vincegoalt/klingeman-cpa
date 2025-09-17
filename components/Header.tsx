@@ -152,7 +152,7 @@ export default function Header() {
               <li className="ml-4">
                 <Link
                   href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg hover:from-blue-700 hover:to-blue-800 transition shadow-md hover:shadow-lg font-semibold"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg hover:from-blue-700 hover:to-blue-800 transition shadow-md hover:shadow-lg font-semibold whitespace-nowrap"
                 >
                   Free Consultation
                 </Link>
