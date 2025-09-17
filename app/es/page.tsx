@@ -58,7 +58,7 @@ export default function SpanishHomePage() {
       slug: 'alivio-fiscal-irs-tulsa',
       description: 'Representación experta ante el IRS y resolución de problemas fiscales',
       icon: 'irs-tax-relief',
-      image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop'
+      image: 'https://images.unsplash.com/photo-1732767751346-cb97d4eee70d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=600&fit=crop'
     },
     {
       title: 'Planificación Financiera',

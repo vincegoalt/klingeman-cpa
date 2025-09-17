@@ -54,7 +54,7 @@ export default function Header() {
       </div>
 
       <header className={`bg-white sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}>
-        <nav className="container mx-auto px-4">
+        <nav className="container mx-auto px-2 sm:px-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center">
               <Image
@@ -79,9 +79,9 @@ export default function Header() {
               </div>
             </button>
 
-            <ul className="hidden lg:flex items-center gap-1">
+            <ul className="hidden lg:flex items-center gap-0">
               <li>
-                <Link href="/tulsa-cpa" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
+                <Link href="/tulsa-cpa" className="px-3 py-2 text-gray-700 hover:text-blue-600 transition font-medium whitespace-nowrap">
                   Tulsa CPA
                 </Link>
               </li>
@@ -89,7 +89,7 @@ export default function Header() {
                 <button
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium"
+                  className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-blue-600 transition font-medium whitespace-nowrap"
                 >
                   Services
                   <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ export default function Header() {
                 <button
                   onMouseEnter={() => setIsIndustriesOpen(true)}
                   onMouseLeave={() => setIsIndustriesOpen(false)}
-                  className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium"
+                  className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-blue-600 transition font-medium whitespace-nowrap"
                 >
                   Industries
                   <svg className={`w-4 h-4 transition-transform ${isIndustriesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,19 +140,19 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <Link href="/team" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
+                <Link href="/team" className="px-3 py-2 text-gray-700 hover:text-blue-600 transition font-medium whitespace-nowrap">
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition font-medium">
+                <Link href="/contact" className="px-3 py-2 text-gray-700 hover:text-blue-600 transition font-medium whitespace-nowrap">
                   Contact
                 </Link>
               </li>
-              <li className="ml-4">
+              <li className="ml-2">
                 <Link
                   href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg hover:from-blue-700 hover:to-blue-800 transition shadow-md hover:shadow-lg font-semibold whitespace-nowrap"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition shadow-md hover:shadow-lg font-semibold whitespace-nowrap text-sm"
                 >
                   Free Consultation
                 </Link>
