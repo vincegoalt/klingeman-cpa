@@ -119,7 +119,7 @@ export default function TeamPage() {
                     </p>
                     <div className="flex gap-4">
                       <a 
-                        href="mailto:contact@klingemancpa.com" 
+                        href="mailto:contact@klingemancpas.com" 
                         className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
                         aria-label="Email Matt Klingeman"
                       >
@@ -164,7 +164,7 @@ export default function TeamPage() {
                   </p>
                   <div className="flex gap-4 pt-4 border-t border-gray-200">
                     <a 
-                      href="mailto:contact@klingemancpa.com" 
+                      href="mailto:contact@klingemancpas.com" 
                       className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
                       aria-label={`Email ${member.name}`}
                     >

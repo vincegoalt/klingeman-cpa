@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 
 export async function GET() {
-  const baseUrl = 'https://klingemancpa.com';
+  const baseUrl = 'https://www.klingemancpas.com';
   
   const robots = `User-agent: *
 Allow: /

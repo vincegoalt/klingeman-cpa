@@ -69,11 +69,11 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'AccountingService',
-    '@id': 'https://klingemancpa.com/#organization',
+    '@id': 'https://www.klingemancpas.com/#organization',
     name: BUSINESS_INFO.name,
-    url: 'https://klingemancpa.com',
-    logo: 'https://klingemancpa.com/logo.png',
-    image: 'https://klingemancpa.com/office-photo.jpg',
+    url: 'https://www.klingemancpas.com',
+    logo: 'https://www.klingemancpas.com/logo.png',
+    image: 'https://www.klingemancpas.com/office-photo.jpg',
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,
     address: {
@@ -244,7 +244,7 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://klingemancpa.com${item.url}`
+      item: `https://www.klingemancpas.com${item.url}`
     }))
   };
 }

@@ -65,7 +65,7 @@ const allRoutes = [
 
 // Generate sitemap XML
 function generateSitemap() {
-  const baseUrl = 'https://klingemancpa.com';
+  const baseUrl = 'https://www.klingemancpas.com';
   const today = new Date().toISOString().split('T')[0];
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -110,7 +110,7 @@ console.log('✅ Sitemap generated successfully at public/sitemap.xml');
 const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://klingemancpa.com/sitemap.xml</loc>
+    <loc>https://www.klingemancpas.com/sitemap.xml</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
   </sitemap>
 </sitemapindex>`;

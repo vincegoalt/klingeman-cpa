@@ -5,7 +5,7 @@ import { industryContent } from '@/lib/industry-content';
 export const dynamic = 'force-static';
 
 export async function GET() {
-  const baseUrl = 'https://klingemancpa.com';
+  const baseUrl = 'https://www.klingemancpas.com';
   
   const staticPages = [
     '',

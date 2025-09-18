@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Tulsa CPA | Klingeman CPAs - Former IRS Management Experience",
   description: "Professional CPA services in Tulsa, OK. Former IRS manager with 20+ years experience. Tax preparation, bookkeeping, payroll, and business consulting.",
-  metadataBase: new URL('https://klingemancpa.com'),
+  metadataBase: new URL('https://www.klingemancpas.com'),
   icons: {
     icon: [
       { url: '/favicon.ico' },

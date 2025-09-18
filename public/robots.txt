@@ -1,4 +1,4 @@
-# Robots.txt for klingemancpa.com
+# Robots.txt for www.klingemancpas.com
 # Professional CPA Services in Tulsa, Oklahoma
 
 # Default crawler rules
@@ -19,8 +19,8 @@ Disallow: /*?*
 Disallow: /*#*
 
 # Sitemap locations
-Sitemap: https://klingemancpa.com/sitemap.xml
-Sitemap: https://klingemancpa.com/sitemap-index.xml
+Sitemap: https://www.klingemancpas.com/sitemap.xml
+Sitemap: https://www.klingemancpas.com/sitemap-index.xml
 
 # Search engine specific rules
 User-agent: Googlebot
