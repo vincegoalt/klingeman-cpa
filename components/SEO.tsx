@@ -128,36 +128,6 @@ export function generateOrganizationSchema() {
       BUSINESS_INFO.social.google
     ],
     priceRange: '$$',
-    areaServed: [
-      {
-        '@type': 'City',
-        name: 'Tulsa',
-        containedInPlace: {
-          '@type': 'State',
-          name: 'Oklahoma'
-        }
-      },
-      {
-        '@type': 'City',
-        name: 'Broken Arrow'
-      },
-      {
-        '@type': 'City',
-        name: 'Bixby'
-      },
-      {
-        '@type': 'City',
-        name: 'Owasso'
-      },
-      {
-        '@type': 'City',
-        name: 'Jenks'
-      },
-      {
-        '@type': 'City',
-        name: 'Sand Springs'
-      }
-    ],
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
