@@ -185,21 +185,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent md:from-black/70 md:via-black/30"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-gray-900 md:text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <div className="max-w-4xl">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/60 md:bg-white/20 backdrop-blur-sm rounded-full">
-                      <div className="text-gray-900 md:text-white">{icon}</div>
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full">
+                      <div className="text-white">{icon}</div>
                     </div>
-                    <span className="bg-white text-gray-900 px-3 py-1 rounded-full font-semibold text-sm">
+                    <span className="bg-white/90 text-gray-900 px-3 py-1 rounded-full font-semibold text-sm">
                       Professional Service
                     </span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
                     {content.title}
                   </h1>
-                  <p className="text-xl text-gray-700 md:text-gray-100 leading-relaxed max-w-3xl">
+                  <p className="text-xl text-gray-100 leading-relaxed max-w-3xl">
                     {content.heroDescription}
                   </p>
                 </div>
