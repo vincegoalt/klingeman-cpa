@@ -132,6 +132,41 @@ export const SERVICES = [
     description: 'Tax-advantaged retirement strategies for individuals and business owners',
     fullDescription: 'Our retirement planning services help individuals and business owners develop tax-advantaged strategies for long-term wealth accumulation. We optimize 401(k)s, IRAs, and other retirement vehicles to minimize taxes while maximizing growth.',
     icon: '🌴'
+  },
+  {
+    title: 'QuickBooks Cleanup & Catch-Up',
+    slug: 'quickbooks-cleanup',
+    description: 'Fix months or years of past-due books with fast, fixed-fee QuickBooks cleanup',
+    fullDescription: 'Behind on your books? We\'ll catch you up fast. Our Tulsa CPA team reconciles historical months, fixes your chart of accounts, and delivers clean, tax-ready financial statements—often in just 2-4 weeks.',
+    icon: '🔧'
+  },
+  {
+    title: 'QuickBooks Setup & Training',
+    slug: 'quickbooks-setup-training',
+    description: 'Expert QuickBooks setup, integration, and customized training for your team',
+    fullDescription: 'Get your QuickBooks set up right from the start, or optimize your existing file for better reporting. Our Tulsa team provides expert setup, custom training, and ongoing support to maximize your QuickBooks investment.',
+    icon: '🎓'
+  },
+  {
+    title: 'Bookkeeping - Broken Arrow',
+    slug: 'bookkeeping-broken-arrow',
+    description: 'QuickBooks bookkeeping for Broken Arrow businesses with local expertise',
+    fullDescription: 'Professional bookkeeping services for Broken Arrow businesses. From Rose District retailers to Bass Pro area contractors, we keep your QuickBooks current and tax-ready with local expertise you can trust.',
+    icon: '📚'
+  },
+  {
+    title: 'Bookkeeping - Owasso',
+    slug: 'bookkeeping-owasso',
+    description: 'Monthly bookkeeping services for Owasso\'s growing business community',
+    fullDescription: 'Expert bookkeeping for Owasso\'s fastest-growing businesses. From Main Street shops to Highway 169 contractors, we provide QuickBooks management and monthly financial reporting tailored to Owasso companies.',
+    icon: '📊'
+  },
+  {
+    title: 'Bookkeeping - Bixby',
+    slug: 'bookkeeping-bixby',
+    description: 'Local bookkeeping services for Bixby businesses and agricultural operations',
+    fullDescription: 'Reliable bookkeeping services for Bixby businesses. From downtown Bixby to the Memorial corridor, we provide expert QuickBooks management and financial reporting for local companies.',
+    icon: '💼'
   }
 ];
 

@@ -360,45 +360,60 @@ export const serviceContent: Record<string, ServiceContent> = {
 
   'bookkeeping-services': {
     slug: 'bookkeeping-services',
-    title: 'Bookkeeping Services',
-    metaTitle: 'Bookkeeping Services Tulsa | Professional Business Bookkeeping',
-    metaDescription: 'Professional bookkeeping services in Tulsa. Accurate financial records, accounts payable/receivable, bank reconciliation from experienced bookkeepers.',
-    h1: 'Professional Bookkeeping Services',
+    title: 'Bookkeeping Services Tulsa | QuickBooks-Powered Monthly Books',
+    metaTitle: 'Bookkeeping Services Tulsa | Monthly Books, Payroll & QuickBooks',
+    metaDescription: 'Tulsa bookkeeping by CPAs: monthly reconciliations, payroll, 1099s, sales tax & financial statements. QuickBooks-based, flat monthly plans. Free file health check.',
+    h1: 'Bookkeeping Services in Tulsa (QuickBooks Online)',
     icon: '📚',
-    heroDescription: 'Our professional bookkeeping services provide accurate, up-to-date financial records essential for business decision-making.',
-    overview: 'Good bookkeeping is the foundation of sound business management and tax compliance. Our professional bookkeepers maintain your financial records with meticulous attention to detail, ensuring you always have accurate, current information for decision-making. We handle all aspects of bookkeeping from transaction recording to financial reporting, giving you clear visibility into your business\'s financial health.',
+    heroDescription: 'Get accurate monthly books, tax-ready financials, and clear cash insights. Our Tulsa CPA team manages your QuickBooks, closes the month on time, and keeps you audit-ready—so you can run the business, not the books.',
+    overview: 'Our QuickBooks-powered bookkeeping services provide accurate financial records, monthly reconciliations, and real-time reporting for Tulsa businesses. With former IRS management on our team and deep expertise across industries like construction, restaurants, and oil & gas, we deliver more than just data entry—we provide financial clarity that drives better business decisions. Our flat-rate monthly plans include everything from daily transaction recording to year-end 1099 preparation, all accessible through secure cloud-based QuickBooks Online.',
     benefits: [
-      'Daily transaction recording and categorization',
-      'Accounts payable and receivable management',
-      'Bank and credit card reconciliation',
-      'Inventory tracking and management',
-      'Sales tax compliance and filing',
-      'Monthly financial statement preparation',
-      'Cash flow tracking and reporting',
-      'QuickBooks setup and training',
-      'Cloud-based access to your books'
+      'Monthly bank and credit card reconciliations',
+      'QuickBooks Online setup and optimization',
+      'Payroll processing coordination (Gusto, ADP, QuickBooks)',
+      'Accounts receivable and payable management',
+      'Sales tax filing (Oklahoma multi-jurisdiction)',
+      'Monthly financial statements with KPI dashboard',
+      'Year-end 1099 and W-2 preparation',
+      'Inventory tracking and COGS reconciliation',
+      'Integration with Stripe, Square, Shopify, and more',
+      'Monthly video review calls with your CPA team',
+      'Audit-ready documentation and receipt management',
+      'Free QuickBooks health check assessment'
     ],
     process: [
-      { step: 'Assessment', description: 'Evaluate current bookkeeping state and needs' },
-      { step: 'Setup/Cleanup', description: 'Organize books and implement best practices' },
-      { step: 'Ongoing Maintenance', description: 'Regular bookkeeping and reconciliation' },
-      { step: 'Monthly Reporting', description: 'Deliver financial statements and insights' }
+      { step: 'Free Health Check', description: '15-minute discovery call and QuickBooks assessment checklist' },
+      { step: 'Fixed Quote', description: 'Transparent monthly pricing based on transaction volume and complexity' },
+      { step: 'Cleanup & Onboarding', description: 'Fix historical issues and set up optimized chart of accounts (2-4 weeks)' },
+      { step: 'Monthly Rhythm', description: 'Books closed by the 10th with financial statements and insights delivered' }
     ],
     faqs: [
       {
-        question: 'How often should bookkeeping be done?',
-        answer: 'We recommend weekly or bi-weekly bookkeeping for most businesses to maintain current records. This frequency ensures timely financial information, catches errors quickly, and keeps you ready for tax filing or funding opportunities.'
+        question: 'How much does monthly bookkeeping cost in Tulsa?',
+        answer: 'Our monthly bookkeeping plans typically range from $400-1,500 based on transaction volume and complexity. After a free QuickBooks health check, we provide a fixed monthly quote. Most small businesses with 200-400 monthly transactions fall in the $600-800 range.'
       },
       {
-        question: 'Can you clean up messy books?',
-        answer: 'Yes, we frequently help businesses clean up months or years of neglected bookkeeping. We\'ll get your books current, reconciled, and organized, then implement systems to keep them maintained going forward.'
+        question: 'Can you clean up years of messy QuickBooks files?',
+        answer: 'Yes, we regularly clean up and catch up 12-36 months of neglected bookkeeping. Most cleanup projects are completed within 2-4 weeks once we have access to your bank statements and QuickBooks file. We provide a fixed-fee quote for cleanup work.'
       },
       {
-        question: 'What bookkeeping software do you use?',
-        answer: 'We work with QuickBooks Online, QuickBooks Desktop, Xero, and other major platforms. We can help you choose the best software for your needs or work with your existing system.'
+        question: 'Do you work with QuickBooks Desktop or just Online?',
+        answer: 'We primarily work with QuickBooks Online for its superior integration capabilities and real-time access. However, we can support QuickBooks Desktop users and help with migrations to QBO when beneficial. We also work with Xero for certain industries.'
+      },
+      {
+        question: 'How do you handle Oklahoma sales tax for multiple cities?',
+        answer: 'We manage multi-jurisdiction sales tax compliance including state, county, and city rates. Our team tracks nexus requirements, files returns, and maintains exemption certificates. We integrate with Avalara and TaxJar for automated calculations when needed.'
+      },
+      {
+        question: 'Can you work with my existing CPA for taxes?',
+        answer: 'Absolutely. If you have a tax CPA you love, we\'re happy to handle just the monthly bookkeeping and provide them with clean, tax-ready books. We can also handle your taxes in-house with our experienced tax team.'
+      },
+      {
+        question: 'What industries do you specialize in for bookkeeping?',
+        answer: 'We have deep expertise in construction (job costing, WIP), restaurants (daily cash reconciliation, tip reporting), oil & gas (JIB, revenue distribution), nonprofits (restricted funds, Form 990), and e-commerce (inventory, multi-channel sales).'
       }
     ],
-    relatedServices: ['financial-statements', 'business-tax-accounting', 'payroll-services']
+    relatedServices: ['quickbooks-cleanup', 'financial-statements', 'payroll-services', 'business-tax-accounting']
   },
 
   'financial-statements': {
@@ -485,5 +500,271 @@ export const serviceContent: Record<string, ServiceContent> = {
       }
     ],
     relatedServices: ['tax-planning-preparation', 'estate-trust-tax', 'financial-statements']
+  },
+
+  'quickbooks-cleanup': {
+    slug: 'quickbooks-cleanup',
+    title: 'QuickBooks Cleanup & Catch-Up Tulsa',
+    metaTitle: 'QuickBooks Cleanup & Catch-Up Tulsa | Fix Past-Due Books Fast',
+    metaDescription: 'Behind on bookkeeping? We clean & reconcile months/years of QuickBooks, fix chart of accounts, and prepare tax-ready financials. Fixed-fee quotes.',
+    h1: 'QuickBooks Cleanup & Catch-Up Services',
+    icon: '🔧',
+    heroDescription: 'Behind on your books? We\'ll catch you up fast. Our Tulsa CPA team reconciles historical months, fixes your chart of accounts, and delivers clean, tax-ready financial statements—often in just 2-4 weeks.',
+    overview: 'Fallen behind on bookkeeping? It happens to successful businesses more often than you\'d think. Whether you\'re facing a tax deadline, loan application, or just need to understand your numbers, we\'ll get your QuickBooks file cleaned up and caught up quickly. Our systematic approach reconciles every account, categorizes transactions correctly, and delivers accurate financial statements you can trust. With fixed-fee pricing and fast turnaround, you\'ll know exactly what to expect.',
+    benefits: [
+      'Complete reconciliation of all bank and credit card accounts',
+      'Fix and optimize chart of accounts structure',
+      'Accurate categorization of all transactions',
+      'Clean up accounts receivable and payable aging',
+      'Reconcile sales tax liabilities across jurisdictions',
+      'Prepare accurate P&L and balance sheets',
+      'Identify and resolve duplicate transactions',
+      'Fix inventory and COGS discrepancies',
+      'Prepare prior year 1099s if needed',
+      'Set up going-forward bookkeeping systems',
+      'Document cleanup decisions for tax preparer',
+      'Train your team on proper QuickBooks usage'
+    ],
+    process: [
+      { step: 'Quick Assessment', description: 'Upload bank statements and QuickBooks access for review' },
+      { step: 'Fixed Quote', description: 'Receive transparent pricing based on months behind and complexity' },
+      { step: 'Cleanup Sprint', description: 'Dedicated team works through reconciliation and categorization' },
+      { step: 'Quality Review', description: 'CPA reviews all work and prepares final financial statements' }
+    ],
+    faqs: [
+      {
+        question: 'How much does QuickBooks cleanup cost?',
+        answer: 'Cleanup projects typically range from $1,500-5,000 depending on months behind, transaction volume, and complexity. After reviewing your QuickBooks file and bank statements, we provide a fixed quote so there are no surprises. Most 12-month cleanups for small businesses cost $2,000-3,000.'
+      },
+      {
+        question: 'How fast can you clean up 12+ months of bookkeeping?',
+        answer: 'Most cleanup projects are completed within 2-4 weeks once we have all necessary access and documents. Simple cleanups can be done in 1-2 weeks, while complex multi-entity situations may take 4-6 weeks. We\'ll provide a timeline with your quote.'
+      },
+      {
+        question: 'What do you need from me to start the cleanup?',
+        answer: 'We need: (1) QuickBooks access (accountant user), (2) bank and credit card statements for the cleanup period, (3) any tax returns filed during that period, (4) major vendor invoices and customer contracts if applicable, and (5) access to your point-of-sale or e-commerce platform if relevant.'
+      },
+      {
+        question: 'Will the cleanup be done correctly for taxes?',
+        answer: 'Yes, our CPAs ensure everything is categorized properly for tax purposes. We document any assumptions or decisions made during cleanup and can work directly with your tax preparer to ensure smooth filing. Many clients have us handle both cleanup and tax preparation.'
+      },
+      {
+        question: 'What happens after the cleanup is complete?',
+        answer: 'Once caught up, we can transition you to monthly bookkeeping services to stay current, or train your in-house team on proper maintenance. We provide a cleanup summary report and best practices guide to prevent falling behind again.'
+      }
+    ],
+    relatedServices: ['bookkeeping-services', 'quickbooks-setup-training', 'financial-statements', 'business-tax-accounting']
+  },
+
+  'quickbooks-setup-training': {
+    slug: 'quickbooks-setup-training',
+    title: 'QuickBooks Setup & Training Tulsa',
+    metaTitle: 'QuickBooks ProAdvisor Tulsa | Setup, Training & Support',
+    metaDescription: 'QuickBooks Online help in Tulsa: new file setup, historical cleanup, integrations, and 1:1 staff training. Same-week onboarding from QuickBooks specialists.',
+    h1: 'QuickBooks Setup, Training & Support',
+    icon: '🎓',
+    heroDescription: 'Get your QuickBooks set up right from the start, or optimize your existing file for better reporting. Our Tulsa team provides expert setup, custom training, and ongoing support to maximize your QuickBooks investment.',
+    overview: 'QuickBooks is powerful software, but only when it\'s set up correctly for your specific business needs. We help Tulsa businesses implement QuickBooks Online with proper chart of accounts structure, workflow automation, and integration with your other business tools. Whether you\'re starting fresh, switching from another system, or need to optimize your existing setup, our certified team ensures QuickBooks works for you, not against you. We also provide customized training for your team to maintain clean books going forward.',
+    benefits: [
+      'New QuickBooks Online file setup and configuration',
+      'Chart of accounts design for your industry',
+      'Migration from QuickBooks Desktop or other software',
+      'Integration with banks and credit cards',
+      'Connect payment processors (Stripe, Square, PayPal)',
+      'E-commerce platform sync (Shopify, Amazon, WooCommerce)',
+      'Payroll system integration (Gusto, ADP, Paychex)',
+      'Custom reporting setup and KPI dashboards',
+      'Automated invoice and bill workflows',
+      'Multi-location or class tracking setup',
+      'Job costing configuration for contractors',
+      'Sales tax automation setup',
+      '1-on-1 and team training sessions',
+      'Written SOPs and closing checklists'
+    ],
+    process: [
+      { step: 'Discovery Call', description: '30-minute call to understand your business needs and workflows' },
+      { step: 'Setup Plan', description: 'Custom implementation plan with timeline and training schedule' },
+      { step: 'Implementation', description: 'Configure QuickBooks, migrate data, and establish integrations' },
+      { step: 'Training & Handoff', description: 'Train your team with hands-on sessions and documentation' }
+    ],
+    faqs: [
+      {
+        question: 'How much does QuickBooks setup and training cost?',
+        answer: 'Basic setup starts at $750 for simple businesses, with typical projects ranging $1,500-3,000 depending on complexity, integrations, and training needs. Enterprise setups with multiple entities or complex workflows may be $3,000-5,000. Training is $150-200/hour or we offer half-day workshops for $750.'
+      },
+      {
+        question: 'Should I use QuickBooks Online or Desktop?',
+        answer: 'We recommend QuickBooks Online for 95% of businesses due to superior integrations, real-time access, automatic backups, and continuous updates. Desktop may be better for manufacturing with complex inventory or businesses with poor internet. We can help you evaluate and migrate if needed.'
+      },
+      {
+        question: 'How long does QuickBooks setup take?',
+        answer: 'Basic setup can be completed in 2-3 days. Full implementation with data migration, integrations, and training typically takes 1-2 weeks. Complex multi-entity setups may take 3-4 weeks. We work around your schedule to minimize business disruption.'
+      },
+      {
+        question: 'Can you train my existing bookkeeper?',
+        answer: 'Yes, we provide customized training for in-house bookkeepers and business owners. Sessions cover daily workflows, month-end procedures, report generation, and troubleshooting. We also create written SOPs and video tutorials specific to your business processes.'
+      },
+      {
+        question: 'What QuickBooks integrations do you recommend?',
+        answer: 'Common valuable integrations include: Gusto or ADP for payroll, Bill.com for AP automation, Stripe/Square for payment processing, Shopify for e-commerce, Expensify for expense tracking, and TaxJar for sales tax. We help evaluate and implement the right stack for your needs.'
+      }
+    ],
+    relatedServices: ['bookkeeping-services', 'quickbooks-cleanup', 'payroll-services', 'business-tax-accounting']
+  },
+
+  'bookkeeping-broken-arrow': {
+    slug: 'bookkeeping-broken-arrow',
+    title: 'Bookkeeping Services Broken Arrow',
+    metaTitle: 'Bookkeeping Services Broken Arrow | QuickBooks Monthly Books',
+    metaDescription: 'Broken Arrow bookkeeping services: QuickBooks monthly reconciliations, payroll, sales tax. Serving Rose District & Bass Pro area businesses. Free consultation.',
+    h1: 'Bookkeeping Services for Broken Arrow Businesses',
+    icon: '📚',
+    heroDescription: 'Professional bookkeeping services for Broken Arrow businesses. From Rose District retailers to Bass Pro area contractors, we keep your QuickBooks current and tax-ready with local expertise you can trust.',
+    overview: 'Broken Arrow businesses face unique challenges with rapid growth and multi-jurisdiction sales tax. With over 500 retail businesses and 300+ contractors in the area, proper bookkeeping is essential for success. Our team specializes in QuickBooks management for Broken Arrow companies, understanding the local business landscape from the Rose District to the Creek Turnpike corridor. We handle everything from daily transaction recording to Oklahoma multi-city sales tax compliance, with same-day response times and monthly meetings available at your Broken Arrow location.',
+    benefits: [
+      'Local Broken Arrow business expertise since 2010',
+      'On-site consultations available in BA',
+      'Rose District retail specialist experience',
+      'Bass Pro area contractor bookkeeping',
+      'Broken Arrow sales tax compliance',
+      'QuickBooks Online with mobile access',
+      'Integration with BA business tools',
+      'Monthly meetings at your BA office',
+      'Support for BA Chamber members',
+      'Quick access from Highway 169 & Creek Turnpike'
+    ],
+    process: [
+      { step: 'Local Consultation', description: 'Meet at your Broken Arrow location or our Tulsa office (15 minutes away)' },
+      { step: 'BA-Specific Setup', description: 'Configure QuickBooks for Broken Arrow tax rates and business needs' },
+      { step: 'Monthly Service', description: 'Regular bookkeeping with BA sales tax filings and reporting' },
+      { step: 'Quarterly Reviews', description: 'In-person reviews at your Broken Arrow business location' }
+    ],
+    faqs: [
+      {
+        question: 'Do you work with Broken Arrow retail businesses?',
+        answer: 'Yes, we specialize in Broken Arrow retail, particularly Rose District shops and Bass Pro area stores. We handle complex multi-location sales tax, inventory tracking, and POS system integration. Many BA retailers use our monthly bookkeeping services.'
+      },
+      {
+        question: 'How do you handle Broken Arrow sales tax?',
+        answer: 'We manage the complete BA sales tax process: 4.5% state, 2% Tulsa County, and 4.167% City of Broken Arrow rates. We file monthly returns, track exemptions, and handle use tax for out-of-state purchases. Our team stays current with BA tax code changes.'
+      },
+      {
+        question: 'Can you meet at our Broken Arrow office?',
+        answer: 'Absolutely. We regularly meet clients at their Broken Arrow locations, from downtown BA to the Highway 51 corridor. Our Tulsa office is just 15 minutes away via the Creek Turnpike, making regular in-person meetings convenient.'
+      },
+      {
+        question: 'What Broken Arrow industries do you serve?',
+        answer: 'We work with BA contractors, Rose District retailers, restaurants, professional services, and healthcare providers. Our expertise includes construction job costing, retail inventory, restaurant daily cash reconciliation, and medical practice management.'
+      },
+      {
+        question: 'How quickly can you clean up our Broken Arrow business books?',
+        answer: 'Most Broken Arrow business cleanups are completed in 2-3 weeks. We understand BA businesses often need quick turnaround for SBA loans through local banks or year-end tax preparation. We provide fixed quotes and fast service.'
+      }
+    ],
+    relatedServices: ['bookkeeping-services', 'quickbooks-cleanup', 'business-tax-accounting', 'payroll-services']
+  },
+
+  'bookkeeping-owasso': {
+    slug: 'bookkeeping-owasso',
+    title: 'Bookkeeping Services Owasso',
+    metaTitle: 'Bookkeeping Services Owasso | QuickBooks & Monthly Accounting',
+    metaDescription: 'Owasso bookkeeping services for growing businesses. QuickBooks setup, monthly books, payroll & sales tax. Serving Smith Farm, Bailey Ranch & Main Street.',
+    h1: 'Professional Bookkeeping Services in Owasso',
+    icon: '📊',
+    heroDescription: 'Expert bookkeeping for Owasso\'s fastest-growing businesses. From Main Street shops to Highway 169 contractors, we provide QuickBooks management and monthly financial reporting tailored to Owasso companies.',
+    overview: 'Owasso is one of Oklahoma\'s fastest-growing cities, and local businesses need bookkeeping that keeps pace. With over 400 small businesses along the Highway 169 corridor and historic Main Street, proper financial management is crucial. Our team understands Owasso\'s unique business environment, from established Main Street merchants to new developments in Smith Farm and Bailey Ranch. We provide comprehensive QuickBooks bookkeeping with local expertise, handling everything from daily transactions to complex multi-state sales tax for businesses serving both Oklahoma and Kansas customers.',
+    benefits: [
+      'Owasso business specialist since 2012',
+      'Main Street merchant experience',
+      'Highway 169 corridor expertise',
+      'Smith Farm business park clients',
+      'Bailey Ranch area coverage',
+      'Multi-state tax compliance (OK/KS)',
+      'Quick access via Highway 169',
+      'Owasso Chamber member support',
+      'Local bank relationship management',
+      'Same-day response for Owasso clients'
+    ],
+    process: [
+      { step: 'Owasso Consultation', description: 'Initial meeting at your Owasso location or video call' },
+      { step: 'Local Setup', description: 'QuickBooks configuration for Owasso and multi-state needs' },
+      { step: 'Ongoing Support', description: 'Monthly bookkeeping with Owasso-specific tax compliance' },
+      { step: 'Regular Reviews', description: 'Quarterly meetings at your convenience in Owasso' }
+    ],
+    faqs: [
+      {
+        question: 'Do you understand Owasso\'s business environment?',
+        answer: 'Yes, we\'ve served Owasso businesses since 2012, from Main Street retailers to Highway 169 service companies. We understand the unique challenges of Owasso\'s rapid growth, including managing expansion, multi-state sales, and scaling financial systems.'
+      },
+      {
+        question: 'How do you handle Owasso sales tax filing?',
+        answer: 'We manage complete Owasso sales tax compliance: 4.5% state, 2% Tulsa County, and 3.5% City of Owasso rates. For businesses selling into Kansas, we also handle multi-state nexus issues. Monthly filings are submitted electronically on time.'
+      },
+      {
+        question: 'Can you work with Owasso contractors?',
+        answer: 'Absolutely. We serve many Owasso construction companies with job costing, progress billing, and WIP reporting. Our QuickBooks setup includes proper class tracking for jobs and integration with common contractor software like Buildertrend.'
+      },
+      {
+        question: 'What about Owasso retail and restaurants?',
+        answer: 'We specialize in Owasso retail and food service, with expertise in POS integration (Square, Clover, Toast), inventory management, tip reporting, and daily cash reconciliation. Many Main Street merchants use our services.'
+      },
+      {
+        question: 'How accessible are you for Owasso businesses?',
+        answer: 'Very accessible. Our Tulsa office is just 12 minutes from downtown Owasso via Highway 169. We offer in-person meetings at your Owasso location, video calls, and same-day response to urgent bookkeeping needs.'
+      }
+    ],
+    relatedServices: ['bookkeeping-services', 'quickbooks-cleanup', 'payroll-services', 'business-tax-accounting']
+  },
+
+  'bookkeeping-bixby': {
+    slug: 'bookkeeping-bixby',
+    title: 'Bookkeeping Services Bixby',
+    metaTitle: 'Bookkeeping Services Bixby | QuickBooks Monthly Accounting',
+    metaDescription: 'Bixby bookkeeping services for local businesses. QuickBooks expertise, monthly reconciliation, payroll & tax compliance. Serving downtown to South Bixby.',
+    h1: 'Bookkeeping Services for Bixby Businesses',
+    icon: '💼',
+    heroDescription: 'Reliable bookkeeping services for Bixby businesses. From downtown Bixby to the Memorial corridor, we provide expert QuickBooks management and financial reporting for local companies.',
+    overview: 'Bixby businesses benefit from a strong local economy and strategic location between Tulsa and Broken Arrow. With over 300 small businesses from historic downtown to the growing Memorial Drive corridor, accurate bookkeeping is essential for growth. Our team specializes in serving Bixby companies, understanding the unique mix of agricultural businesses, retail shops, professional services, and growing tech companies. We provide comprehensive QuickBooks bookkeeping tailored to Bixby\'s business community, including specialized support for agricultural operations and Memorial area medical practices.',
+    benefits: [
+      'Bixby specialist team since 2011',
+      'Downtown Bixby merchant support',
+      'Memorial Drive business expertise',
+      'Agricultural business bookkeeping',
+      'Bixby school vendor compliance',
+      'Local sales tax management',
+      'Quick access from Highway 67',
+      'Bixby Chamber member rates',
+      'South Tulsa County coverage',
+      'In-person Bixby meetings available'
+    ],
+    process: [
+      { step: 'Bixby Consultation', description: 'Meet at your Bixby location or our nearby Tulsa office' },
+      { step: 'Customized Setup', description: 'Configure QuickBooks for your Bixby business needs' },
+      { step: 'Monthly Bookkeeping', description: 'Regular service with Bixby tax compliance' },
+      { step: 'Local Support', description: 'Quarterly reviews and year-round Bixby business support' }
+    ],
+    faqs: [
+      {
+        question: 'Do you work with Bixby agricultural businesses?',
+        answer: 'Yes, we have extensive experience with Bixby agricultural operations, including farm accounting, equipment depreciation, crop/livestock tracking, and agricultural tax benefits. We understand the unique bookkeeping needs of Bixby\'s farming community.'
+      },
+      {
+        question: 'How do you handle Bixby sales tax?',
+        answer: 'We manage complete Bixby tax compliance: 4.5% Oklahoma state, 1.367% Tulsa County, and 3% City of Bixby rates. We file returns electronically, manage exemption certificates, and stay current with Bixby municipal code changes.'
+      },
+      {
+        question: 'Can you help Bixby medical practices?',
+        answer: 'Absolutely. We serve several Memorial Drive medical and dental practices with specialized bookkeeping including insurance reconciliation, patient account management, and HIPAA-compliant financial systems. We understand healthcare bookkeeping requirements.'
+      },
+      {
+        question: 'What about downtown Bixby retailers?',
+        answer: 'We support many downtown Bixby shops with retail bookkeeping, including POS integration, inventory management, and seasonal cash flow planning. Our team understands the unique needs of Bixby\'s historic downtown businesses.'
+      },
+      {
+        question: 'How quickly can you respond to Bixby businesses?',
+        answer: 'We\'re just 10 minutes from Bixby via Memorial Drive. We offer same-day response for urgent needs, regular in-person meetings at your Bixby location, and dedicated support for Bixby Chamber members.'
+      }
+    ],
+    relatedServices: ['bookkeeping-services', 'quickbooks-cleanup', 'financial-statements', 'business-tax-accounting']
   }
 };

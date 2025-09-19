@@ -97,10 +97,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  // Determine area served for city-specific pages
+  let areaServed = undefined;
+  if (resolvedParams.slug.includes('broken-arrow')) {
+    areaServed = 'Broken Arrow';
+  } else if (resolvedParams.slug.includes('owasso')) {
+    areaServed = 'Owasso';
+  } else if (resolvedParams.slug.includes('bixby')) {
+    areaServed = 'Bixby';
+  }
+
   const serviceSchema = generateServiceSchema({
     name: content.title,
     description: content.overview,
-    url: `/services/${resolvedParams.slug}`
+    url: `/services/${resolvedParams.slug}`,
+    areaServed
   });
 
   const faqSchema = generateFAQSchema(content.faqs);
@@ -128,6 +139,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     'real-estate-tax': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=400&fit=crop',
     'payroll-services': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop',
     'bookkeeping-services': 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop',
+    'quickbooks-cleanup': 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=400&fit=crop',
+    'quickbooks-setup-training': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop',
+    'bookkeeping-broken-arrow': 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&h=400&fit=crop',
+    'bookkeeping-owasso': 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&h=400&fit=crop',
+    'bookkeeping-bixby': 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&h=400&fit=crop',
     'financial-statements': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=400&fit=crop',
     'retirement-planning': 'https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=1200&h=400&fit=crop'
   };

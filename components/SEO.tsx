@@ -68,7 +68,7 @@ export function generateMetadata({
 export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'AccountingService',
+    '@type': ['AccountingService', 'LocalBusiness'],
     '@id': 'https://www.klingemancpas.com/#organization',
     name: BUSINESS_INFO.name,
     url: 'https://www.klingemancpas.com',
@@ -89,6 +89,14 @@ export function generateOrganizationSchema() {
       latitude: 36.1156,
       longitude: -95.9016
     },
+    areaServed: [
+      {'@type': 'City', 'name': 'Tulsa'},
+      {'@type': 'City', 'name': 'Broken Arrow'},
+      {'@type': 'City', 'name': 'Owasso'},
+      {'@type': 'City', 'name': 'Bixby'},
+      {'@type': 'City', 'name': 'Jenks'},
+      {'@type': 'City', 'name': 'Sand Springs'}
+    ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -96,6 +104,13 @@ export function generateOrganizationSchema() {
         opens: '08:00',
         closes: '17:00'
       }
+    ],
+    makesOffer: [
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Monthly Bookkeeping'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'QuickBooks Cleanup'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'QuickBooks Training'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Tax Preparation'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'IRS Audit Representation'}}
     ],
     founder: {
       '@type': 'Person',
@@ -195,6 +210,7 @@ export function generateServiceSchema(service: {
   name: string;
   description: string;
   url: string;
+  areaServed?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -212,12 +228,22 @@ export function generateServiceSchema(service: {
         postalCode: BUSINESS_INFO.address.zip
       }
     },
-    areaServed: {
+    areaServed: service.areaServed ? {
       '@type': 'City',
-      name: 'Tulsa'
-    },
+      name: service.areaServed
+    } : [
+      {'@type': 'City', 'name': 'Tulsa'},
+      {'@type': 'City', 'name': 'Broken Arrow'},
+      {'@type': 'City', 'name': 'Owasso'},
+      {'@type': 'City', 'name': 'Bixby'}
+    ],
     description: service.description,
-    url: service.url
+    url: service.url,
+    offers: {
+      '@type': 'Offer',
+      priceRange: '$$',
+      availability: 'https://schema.org/InStock'
+    }
   };
 }
 
