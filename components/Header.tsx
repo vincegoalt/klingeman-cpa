@@ -68,14 +68,14 @@ export default function Header() {
             </Link>
 
             <button
-              className="lg:hidden relative z-50 p-2"
+              className="lg:hidden relative z-50 p-3 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
               <div className="w-6 h-5 relative flex flex-col justify-between">
-                <span className={`block h-0.5 w-full bg-gray-900 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                <span className={`block h-0.5 w-full bg-gray-900 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block h-0.5 w-full bg-gray-900 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                <span className={`block h-1 w-full bg-gray-800 rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                <span className={`block h-1 w-full bg-gray-800 rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`block h-1 w-full bg-gray-800 rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
               </div>
             </button>
 
