@@ -12,7 +12,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/services/tax-preparation-tulsa',
     es: '/es/preparacion-impuestos-tulsa'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function PreparacionImpuestosTulsaPage() {

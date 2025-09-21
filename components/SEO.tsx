@@ -11,6 +11,7 @@ interface SEOProps {
     en?: string;
     es?: string;
   };
+  locale?: 'en_US' | 'es_ES' | 'es_MX';
 }
 
 export function generateMetadata({
@@ -18,10 +19,11 @@ export function generateMetadata({
   description,
   canonical,
   ogImage = '/og-image.jpg',
-  hreflang
+  hreflang,
+  locale = 'en_US'
 }: SEOProps): Metadata {
   const fullTitle = `${title} | Klingeman CPAs`;
-  
+
   return {
     title: fullTitle,
     description,
@@ -42,7 +44,7 @@ export function generateMetadata({
           alt: 'Klingeman CPAs - Tulsa CPA Firm'
         }
       ],
-      locale: 'en_US',
+      locale: locale,
       type: 'website',
     },
     twitter: {

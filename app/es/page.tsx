@@ -14,7 +14,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/',
     es: '/es'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function SpanishHomePage() {

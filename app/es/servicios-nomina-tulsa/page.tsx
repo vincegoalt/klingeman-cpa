@@ -14,7 +14,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/services/payroll-tulsa',
     es: '/es/servicios-nomina-tulsa'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function ServiciosNominaPage() {

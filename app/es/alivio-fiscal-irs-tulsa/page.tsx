@@ -14,7 +14,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/services/irs-tax-relief-tulsa',
     es: '/es/alivio-fiscal-irs-tulsa'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function AlivioFiscalIRSPage() {

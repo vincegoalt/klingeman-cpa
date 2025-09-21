@@ -14,7 +14,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/services/financial-planning-tulsa',
     es: '/es/planificacion-financiera-tulsa'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function PlanificacionFinancieraPage() {

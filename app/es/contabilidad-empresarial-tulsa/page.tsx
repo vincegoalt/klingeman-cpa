@@ -14,7 +14,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/services/bookkeeping-tulsa',
     es: '/es/contabilidad-empresarial-tulsa'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function ContabilidadEmpresarialPage() {

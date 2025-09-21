@@ -10,12 +10,17 @@ export async function GET() {
   const staticPages = [
     '',
     '/services',
-    '/industries', 
+    '/industries',
     '/contact',
     '/blog',
     '/tulsa-cpa',
     '/es',
-    '/es/preparacion-impuestos-tulsa'
+    '/es/preparacion-impuestos-tulsa',
+    '/es/contabilidad-empresarial-tulsa',
+    '/es/servicios-nomina-tulsa',
+    '/es/consultoria-negocios-tulsa',
+    '/es/alivio-fiscal-irs-tulsa',
+    '/es/planificacion-financiera-tulsa'
   ];
 
   const servicePages = Object.keys(serviceContent).map(slug => `/services/${slug}`);

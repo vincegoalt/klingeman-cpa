@@ -14,7 +14,8 @@ export const metadata: Metadata = generateSEO({
   hreflang: {
     en: '/services/business-consulting-tulsa',
     es: '/es/consultoria-negocios-tulsa'
-  }
+  },
+  locale: 'es_ES'
 });
 
 export default function ConsultoriaEmpresarialPage() {
