@@ -1,17 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-// Create reusable transporter
-const createTransporter = () => {
-  // Using Gmail as an example - you'll need to configure this with your email service
-  return nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_APP_PASSWORD, // Use app-specific password for Gmail
-    },
-  });
-};
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -26,13 +16,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter
-    const transporter = createTransporter();
+    const businessEmail = process.env.BUSINESS_EMAIL || 'Matt.Klingeman@klingemancpas.com';
 
     // Email to business owner
-    const businessMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.BUSINESS_EMAIL || 'info@klingemancpas.com',
+    await resend.emails.send({
+      from: 'Klingeman CPAs <onboarding@resend.dev>', // Resend's default sending domain
+      to: businessEmail,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -83,12 +72,13 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    };
+    });
 
     // Confirmation email to the user
-    const userMailOptions = {
-      from: process.env.EMAIL_USER,
+    await resend.emails.send({
+      from: 'Klingeman CPAs <onboarding@resend.dev>',
       to: email,
+      replyTo: businessEmail,
       subject: 'Thank you for contacting Klingeman CPAs & Advisors',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -158,11 +148,7 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    };
-
-    // Send emails
-    await transporter.sendMail(businessMailOptions);
-    await transporter.sendMail(userMailOptions);
+    });
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
