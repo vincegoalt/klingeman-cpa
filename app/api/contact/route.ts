@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('Contact API called');
+
     // Check if Resend API key is configured
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not configured');
@@ -12,8 +13,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    console.log('RESEND_API_KEY is present');
+
+    // Import Resend dynamically to avoid module-level errors
+    const { Resend } = await import('resend');
+    console.log('Resend imported successfully');
+
     // Initialize Resend inside the handler to ensure env vars are loaded
     const resend = new Resend(process.env.RESEND_API_KEY);
+    console.log('Resend initialized successfully');
 
     const body = await request.json();
     const { name, email, phone, service, message } = body;
