@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     // Check if Resend API key is configured
@@ -13,6 +11,9 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    // Initialize Resend inside the handler to ensure env vars are loaded
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const body = await request.json();
     const { name, email, phone, service, message } = body;
@@ -30,7 +31,7 @@ export async function POST(request: NextRequest) {
     console.log('Attempting to send emails via Resend...');
 
     // Email to business owner
-    await resend.emails.send({
+    const businessEmailResult = await resend.emails.send({
       from: 'Klingeman CPAs <onboarding@resend.dev>', // Resend's default sending domain
       to: businessEmail,
       subject: `New Contact Form Submission from ${name}`,
@@ -85,8 +86,10 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    console.log('Business email sent:', businessEmailResult);
+
     // Confirmation email to the user
-    await resend.emails.send({
+    const confirmationEmailResult = await resend.emails.send({
       from: 'Klingeman CPAs <onboarding@resend.dev>',
       to: email,
       replyTo: businessEmail,
@@ -161,7 +164,8 @@ export async function POST(request: NextRequest) {
       `,
     });
 
-    console.log('Emails sent successfully via Resend');
+    console.log('Confirmation email sent:', confirmationEmailResult);
+    console.log('All emails sent successfully via Resend');
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
@@ -169,11 +173,26 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error('Error sending email:', error);
-    console.error('Error details:', error instanceof Error ? error.message : 'Unknown error');
+
+    // Extract detailed error information
+    let errorMessage = 'Unknown error';
+    let errorDetails = '';
+
+    if (error instanceof Error) {
+      errorMessage = error.message;
+      errorDetails = error.stack || '';
+    } else if (typeof error === 'object' && error !== null) {
+      errorMessage = JSON.stringify(error);
+    }
+
+    console.error('Error details:', errorMessage);
+    console.error('Error stack:', errorDetails);
+
     return NextResponse.json(
       {
         error: 'Failed to send email',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        details: errorMessage,
+        debug: process.env.NODE_ENV === 'development' ? errorDetails : undefined
       },
       { status: 500 }
     );
