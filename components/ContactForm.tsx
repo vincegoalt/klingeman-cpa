@@ -33,8 +33,10 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error(data.details || data.error || 'Failed to send message');
       }
 
       setSubmitStatus('success');
@@ -47,7 +49,8 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
-      setErrorMessage('Failed to send your message. Please try again or call us directly at (918) 922-1019.');
+      const errorMsg = error instanceof Error ? error.message : 'Failed to send your message';
+      setErrorMessage(`${errorMsg}. Please try again or call us directly at (918) 922-1019.`);
     } finally {
       setIsSubmitting(false);
     }

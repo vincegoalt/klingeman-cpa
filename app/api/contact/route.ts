@@ -5,6 +5,15 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if Resend API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact us at (918) 922-1019.' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     const { name, email, phone, service, message } = body;
 
@@ -17,6 +26,8 @@ export async function POST(request: NextRequest) {
     }
 
     const businessEmail = process.env.BUSINESS_EMAIL || 'Matt.Klingeman@klingemancpas.com';
+
+    console.log('Attempting to send emails via Resend...');
 
     // Email to business owner
     await resend.emails.send({
@@ -150,14 +161,20 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    console.log('Emails sent successfully via Resend');
+
     return NextResponse.json(
       { message: 'Email sent successfully' },
       { status: 200 }
     );
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', error instanceof Error ? error.message : 'Unknown error');
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      {
+        error: 'Failed to send email',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     );
   }
