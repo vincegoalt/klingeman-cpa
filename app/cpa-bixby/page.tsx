@@ -344,21 +344,240 @@ export default function BixbyCPAPage() {
 
       <section className="bg-blue-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              About Bixby, Oklahoma
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-center">
+              Your Trusted CPA in Bixby, Oklahoma
             </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Bixby is a charming community south of Tulsa with over 28,000 residents who value 
-              quality education, family-friendly neighborhoods, and strong community ties. Known for 
-              excellent schools and a growing business district, Bixby represents the best of 
-              Oklahoma living.
+
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-lg mb-6 opacity-90">
+                Bixby is one of the fastest-growing communities in the Tulsa metropolitan area, with over 28,000 residents who value quality education, family-friendly neighborhoods, and strong community ties. As your dedicated <strong>CPA in Bixby</strong>, we understand the unique financial needs of this thriving community and provide comprehensive accounting and tax services tailored to local residents and businesses.
+              </p>
+
+              <p className="text-base mb-6 opacity-90">
+                Our firm serves the diverse economic landscape of Bixby, from educators working in the highly-rated Bixby Public Schools to retail business owners along Memorial Drive, and from small family-owned enterprises to growing professional services firms. As a <strong>Bixby tax preparation</strong> specialist, we recognize that this community's growth brings both opportunities and financial planning challenges that require expert guidance.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">Serving Bixby's Growing Business Community</h3>
+
+              <p className="text-base mb-4 opacity-90">
+                Bixby's economic expansion has created a vibrant business environment, particularly in retail, education, healthcare, and small business sectors. Whether you're opening a new retail store in downtown Bixby, managing a service-based business, or operating a home-based enterprise, our <strong>business accountant near Bixby</strong> services provide the financial expertise you need to succeed. We help local entrepreneurs with business entity selection, tax planning strategies, bookkeeping services, and financial statement preparation.
+              </p>
+
+              <p className="text-base mb-6 opacity-90">
+                Many Bixby businesses operate in the retail and service industries, serving the community's growing population. From restaurants and specialty shops to professional services and contractors, we understand the specific tax considerations and deduction opportunities available to local business owners. Our team helps you maximize deductions for inventory, equipment purchases, home office expenses, vehicle usage, and employee benefits while ensuring full compliance with federal and Oklahoma state tax regulations.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">Specialized Tax Services for Bixby Educators</h3>
+
+              <p className="text-base mb-6 opacity-90">
+                Bixby Public Schools is one of the area's premier school districts, employing hundreds of teachers, administrators, and staff members. As a <strong>CPA in Bixby</strong>, we specialize in helping educators maximize their tax deductions for classroom supplies, continuing education, professional development, and unreimbursed employee expenses. We also provide retirement planning guidance for Teachers' Retirement System (TRS) participants and help educators make informed decisions about 403(b) contributions, Roth IRAs, and other tax-advantaged retirement savings options.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">Personal Tax Preparation for Bixby Families</h3>
+
+              <p className="text-base mb-6 opacity-90">
+                Bixby families benefit from our comprehensive <strong>Bixby tax preparation</strong> services, which address everything from straightforward W-2 returns to complex situations involving investment income, rental properties, side businesses, and multi-state tax obligations. We help families plan for major life events including marriage, home purchases, college savings through 529 plans, and retirement planning. Our proactive approach to tax planning helps Bixby residents minimize their tax burden while building long-term wealth.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">Why Choose Our Bixby CPA Services</h3>
+
+              <p className="text-base mb-4 opacity-90">
+                Led by Matt Klingeman, a former IRS Revenue Officer with over 20 years of experience, our firm brings big-city expertise with a personal touch that resonates with Bixby's community values. We understand the importance of building long-term relationships with our clients, providing year-round support rather than just appearing at tax time. Our Tulsa office is conveniently located just 20 minutes from Bixby, making it easy for you to schedule in-person consultations while maintaining the accessibility and responsiveness you expect from a trusted financial advisor.
+              </p>
+
+              <p className="text-base mb-6 opacity-90">
+                Whether you need assistance with individual tax returns, business accounting, IRS audit representation, estate planning, or ongoing financial guidance, our comprehensive services are designed to meet the diverse needs of the Bixby community. We stay current with constantly changing tax laws and regulations to ensure you receive accurate, up-to-date advice that protects your interests and maximizes your financial success.
+              </p>
+
+              <p className="text-base opacity-90">
+                Contact us today to schedule your free consultation and discover how our <strong>Bixby tax preparation</strong> and accounting services can help you achieve your financial goals. We're committed to serving this wonderful community with integrity, expertise, and personalized attention to your unique needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12">
+              Common questions from Bixby clients about our CPA services
             </p>
-            <p className="text-base opacity-80">
-              Whether you're a longtime Bixby resident or new to the community, our CPA services 
-              help you navigate tax obligations, plan for retirement, and make sound financial 
-              decisions for your family's future.
+
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you serve small businesses in Bixby?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we specialize in serving small businesses throughout Bixby, including retail shops, restaurants, service providers, contractors, and professional practices. We offer comprehensive services including business tax preparation, bookkeeping, payroll processing, QuickBooks setup and cleanup, and strategic tax planning. Our team understands the unique challenges facing Bixby's growing business community and provides personalized solutions to help you succeed.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What industries do you specialize in for Bixby clients?
+                </h3>
+                <p className="text-gray-700">
+                  We serve a diverse range of industries prominent in the Bixby area, including education (teachers and school district employees), retail businesses, restaurants and hospitality, healthcare providers, construction and contracting, real estate professionals, and service-based businesses. Our experience spans both individual tax preparation and business accounting across these sectors, allowing us to provide industry-specific guidance and maximize available deductions.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Can you help educators with tax deductions?
+                </h3>
+                <p className="text-gray-700">
+                  Absolutely. We have extensive experience working with Bixby Public Schools educators and understand the unique tax situations teachers face. We help maximize deductions for classroom supplies (up to $300 for eligible educators), continuing education expenses, professional development, home office expenses for remote work, and unreimbursed employee expenses where applicable. We also provide guidance on retirement planning for Teachers' Retirement System participants and help optimize 403(b) contributions and other tax-advantaged savings strategies.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How far is your office from Bixby?
+                </h3>
+                <p className="text-gray-700">
+                  Our office is conveniently located in Tulsa, approximately 20 minutes from Bixby via Highway 64 or Memorial Drive. We offer flexible scheduling to accommodate your busy lifestyle, including evening and Saturday appointments during tax season. We also provide virtual consultation options for clients who prefer remote meetings, along with secure document upload capabilities for your convenience.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What makes your firm different from other CPAs serving Bixby?
+                </h3>
+                <p className="text-gray-700">
+                  Our firm is led by Matt Klingeman, a former IRS Revenue Officer with over 20 years of experience, giving us unique insights into IRS procedures and audit processes. This inside knowledge allows us to provide superior tax planning strategies and unparalleled audit representation. We combine sophisticated tax expertise with personalized service, offering year-round support rather than just appearing during tax season. Our deep understanding of both Bixby's community values and complex tax regulations sets us apart.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you offer services beyond tax preparation for Bixby businesses?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we provide comprehensive financial services including monthly bookkeeping, payroll processing, QuickBooks setup and training, financial statement preparation, business entity formation and selection, strategic tax planning, cash flow management, and ongoing financial advisory services. We serve as a trusted partner to help your Bixby business grow and thrive, providing the expertise you need at every stage of your business journey.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              CPA Services Throughout the Tulsa Metro Area
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12">
+              In addition to serving Bixby, we proudly provide expert CPA and accounting services to neighboring communities
             </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <Link
+                href="/cpa-broken-arrow"
+                className="group bg-gray-50 hover:bg-blue-50 p-6 rounded-lg border-2 border-gray-200 hover:border-blue-500 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700">
+                  CPA Services in Broken Arrow
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  Comprehensive tax and accounting services for Broken Arrow residents and businesses
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center">
+                  Learn more
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-jenks"
+                className="group bg-gray-50 hover:bg-blue-50 p-6 rounded-lg border-2 border-gray-200 hover:border-blue-500 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700">
+                  CPA Services in Jenks
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  Expert tax preparation and business accounting for the Jenks community
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center">
+                  Learn more
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-owasso"
+                className="group bg-gray-50 hover:bg-blue-50 p-6 rounded-lg border-2 border-gray-200 hover:border-blue-500 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700">
+                  CPA Services in Owasso
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  Professional accounting and tax services for Owasso families and businesses
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center">
+                  Learn more
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-sand-springs"
+                className="group bg-gray-50 hover:bg-blue-50 p-6 rounded-lg border-2 border-gray-200 hover:border-blue-500 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700">
+                  CPA Services in Sand Springs
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  Trusted CPA services for Sand Springs individuals and small businesses
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center">
+                  Learn more
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
+
+            <div className="text-center">
+              <p className="text-gray-700 mb-6">
+                Explore our comprehensive range of accounting and tax services
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
+                >
+                  View All Services
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg"
+                >
+                  Contact Us Today
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

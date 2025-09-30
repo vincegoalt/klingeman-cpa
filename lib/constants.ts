@@ -202,5 +202,71 @@ export const SUBURBS = [
     slug: 'cpa-sand-springs',
     population: '19,912',
     distance: '10 minutes from Tulsa'
+  },
+  {
+    name: 'Claremore',
+    slug: 'cpa-claremore',
+    population: '19,580',
+    distance: '30 minutes from Tulsa'
+  },
+  {
+    name: 'Sapulpa',
+    slug: 'cpa-sapulpa',
+    population: '21,929',
+    distance: '20 minutes from Tulsa'
+  },
+  {
+    name: 'Collinsville',
+    slug: 'cpa-collinsville',
+    population: '8,114',
+    distance: '25 minutes from Tulsa'
+  },
+  {
+    name: 'Coweta',
+    slug: 'cpa-coweta',
+    population: '10,191',
+    distance: '30 minutes from Tulsa'
+  },
+  {
+    name: 'Muskogee',
+    slug: 'cpa-muskogee',
+    population: '36,878',
+    distance: '50 minutes from Tulsa'
+  },
+  {
+    name: 'Bartlesville',
+    slug: 'cpa-bartlesville',
+    population: '37,290',
+    distance: '50 minutes from Tulsa'
+  },
+  {
+    name: 'Okmulgee',
+    slug: 'cpa-okmulgee',
+    population: '11,322',
+    distance: '40 minutes from Tulsa'
+  },
+  {
+    name: 'Midtown Tulsa',
+    slug: 'cpa-midtown-tulsa',
+    population: '',
+    distance: '10 minutes from office'
+  },
+  {
+    name: 'Downtown Tulsa',
+    slug: 'cpa-downtown-tulsa',
+    population: '',
+    distance: '5 minutes from office'
+  },
+  {
+    name: 'South Tulsa',
+    slug: 'cpa-south-tulsa',
+    population: '',
+    distance: '15 minutes from office'
+  },
+  {
+    name: 'Cherry Street / Brookside',
+    slug: 'cpa-cherry-street-tulsa',
+    population: '',
+    distance: '10 minutes from office'
   }
 ];

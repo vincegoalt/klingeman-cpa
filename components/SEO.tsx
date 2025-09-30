@@ -92,12 +92,27 @@ export function generateOrganizationSchema() {
       longitude: -95.9016
     },
     areaServed: [
-      {'@type': 'City', 'name': 'Tulsa'},
-      {'@type': 'City', 'name': 'Broken Arrow'},
-      {'@type': 'City', 'name': 'Owasso'},
-      {'@type': 'City', 'name': 'Bixby'},
-      {'@type': 'City', 'name': 'Jenks'},
-      {'@type': 'City', 'name': 'Sand Springs'}
+      // Primary Cities
+      {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Broken Arrow', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Bixby', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Jenks', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Owasso', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Sand Springs', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      // Secondary Cities
+      {'@type': 'City', 'name': 'Claremore', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Sapulpa', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Collinsville', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Coweta', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Muskogee', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Bartlesville', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Okmulgee', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      // Tulsa Neighborhoods
+      {'@type': 'Place', 'name': 'Midtown Tulsa', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'Downtown Tulsa', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'South Tulsa', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'Cherry Street', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'Brookside', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}}
     ],
     openingHoursSpecification: [
       {
@@ -195,12 +210,31 @@ export function generateServiceSchema(service: {
     },
     areaServed: service.areaServed ? {
       '@type': 'City',
-      name: service.areaServed
+      name: service.areaServed,
+      addressRegion: 'OK',
+      addressCountry: 'US'
     } : [
-      {'@type': 'City', 'name': 'Tulsa'},
-      {'@type': 'City', 'name': 'Broken Arrow'},
-      {'@type': 'City', 'name': 'Owasso'},
-      {'@type': 'City', 'name': 'Bixby'}
+      // Primary Cities
+      {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Broken Arrow', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Bixby', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Jenks', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Owasso', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Sand Springs', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      // Secondary Cities
+      {'@type': 'City', 'name': 'Claremore', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Sapulpa', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Collinsville', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Coweta', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Muskogee', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Bartlesville', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      {'@type': 'City', 'name': 'Okmulgee', 'addressRegion': 'OK', 'addressCountry': 'US'},
+      // Tulsa Neighborhoods
+      {'@type': 'Place', 'name': 'Midtown Tulsa', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'Downtown Tulsa', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'South Tulsa', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'Cherry Street', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}},
+      {'@type': 'Place', 'name': 'Brookside', 'containedInPlace': {'@type': 'City', 'name': 'Tulsa', 'addressRegion': 'OK'}}
     ],
     description: service.description,
     url: service.url,

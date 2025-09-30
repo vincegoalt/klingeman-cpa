@@ -222,13 +222,31 @@ export default function JenksCPAPage() {
               Why Jenks Residents Choose Klingeman CPAs
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="prose max-w-none mb-12">
+              <p className="text-lg text-gray-700 mb-6">
+                Jenks has grown into one of the Tulsa metro area's most desirable communities, known for its outstanding educational system, thriving tourism industry centered around the Oklahoma Aquarium, and strong retail and hospitality sectors. As your local certified public accountant serving Jenks, we understand the unique financial landscape of this dynamic community and provide comprehensive tax preparation, business accounting, and financial planning services tailored to meet your specific needs.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                Our CPA firm works extensively with Jenks business owners in the hospitality and tourism industry, helping restaurants, hotels, and entertainment venues navigate complex sales tax issues, seasonal revenue management, and industry-specific deductions. Whether you operate a retail establishment in Jenks' growing downtown district or manage a tourism-related business near the Riverwalk Crossing, our accounting professionals understand the financial challenges you face and deliver strategic tax planning solutions that maximize your profitability.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                Education is at the heart of Jenks' identity, with the Jenks Public Schools system consistently ranking among Oklahoma's best. We serve many educators, administrators, and school district employees with specialized tax services that take advantage of educator expense deductions, retirement plan optimization for Oklahoma Teachers' Retirement System participants, and strategic financial planning for professionals in the education sector. Our tax accountants stay current on all available tax credits and deductions for teachers and educational professionals.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                The retail sector in Jenks continues to expand, particularly around the Oklahoma Aquarium area and along major corridors. Our accounting services for retail businesses include inventory management systems, point-of-sale reconciliation, sales tax compliance, and financial statement preparation. We help Jenks retailers streamline their bookkeeping processes, implement effective internal controls, and develop tax strategies that support sustainable business growth throughout the year.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Educational Community Focus
                 </h3>
                 <p className="text-gray-700">
-                  Jenks is known for excellent schools and educational achievement. We help 
+                  Jenks is known for excellent schools and educational achievement. We help
                   educators and school employees with specialized tax benefits and retirement planning.
                 </p>
               </div>
@@ -238,7 +256,7 @@ export default function JenksCPAPage() {
                   Riverfront Community
                 </h3>
                 <p className="text-gray-700">
-                  As a community along the Arkansas River, many Jenks residents enjoy outdoor 
+                  As a community along the Arkansas River, many Jenks residents enjoy outdoor
                   recreation and tourism businesses. We understand these unique business needs.
                 </p>
               </div>
@@ -248,7 +266,7 @@ export default function JenksCPAPage() {
                   Growing Business District
                 </h3>
                 <p className="text-gray-700">
-                  With the Oklahoma Aquarium and growing retail sector, Jenks businesses need 
+                  With the Oklahoma Aquarium and growing retail sector, Jenks businesses need
                   CPA services that understand hospitality and retail accounting.
                 </p>
               </div>
@@ -258,7 +276,7 @@ export default function JenksCPAPage() {
                   Family-Oriented Services
                 </h3>
                 <p className="text-gray-700">
-                  Jenks families value quality education and community involvement. We help with 
+                  Jenks families value quality education and community involvement. We help with
                   education savings plans, family tax strategies, and generational planning.
                 </p>
               </div>
@@ -266,6 +284,186 @@ export default function JenksCPAPage() {
 
             <div className="mt-12">
               <TrustBadges showAll />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Frequently Asked Questions - Jenks CPA Services
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What CPA services do you provide for Jenks businesses?
+                </h3>
+                <p className="text-gray-700">
+                  We provide comprehensive accounting services for Jenks businesses including business tax preparation, monthly bookkeeping, payroll processing, financial statement preparation, QuickBooks setup and training, sales tax compliance, and strategic tax planning. Our CPA firm has extensive experience working with retail stores, restaurants, hospitality businesses, and tourism-related companies in the Jenks area. We understand the unique challenges facing local business owners and provide personalized accounting solutions that help you minimize taxes and maximize profitability.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you offer tax preparation services for Jenks educators and teachers?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we specialize in tax preparation for educators, teachers, and school district employees in Jenks. Our tax accountants are well-versed in educator expense deductions, classroom supply deductions, and the specific tax benefits available to education professionals. We also provide retirement planning guidance for Oklahoma Teachers' Retirement System participants and help educators maximize their tax refunds through strategic planning and thorough documentation of all eligible deductions.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How can your CPA firm help my Jenks restaurant or hospitality business?
+                </h3>
+                <p className="text-gray-700">
+                  Our accounting firm provides specialized services for restaurants, hotels, and hospitality businesses in Jenks. We handle tip reporting compliance, sales tax management, inventory cost tracking, seasonal revenue planning, and point-of-sale system integration. We understand the unique financial challenges of the hospitality industry, including managing cash flow during slow seasons, optimizing labor costs, and navigating complex sales tax regulations. Our CPAs help you implement robust accounting systems and develop tax strategies that support long-term business success.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What are the tax benefits of operating a business near the Oklahoma Aquarium area?
+                </h3>
+                <p className="text-gray-700">
+                  Businesses located in the Oklahoma Aquarium area and Riverwalk Crossing district may qualify for various tax incentives and deductions. Our CPA team can help you identify eligible tax credits for business improvement investments, analyze the tax implications of commercial property ownership, and structure your business operations to maximize deductions for marketing, facility maintenance, and capital improvements. We stay current on local tax incentives and economic development programs that benefit Jenks business owners.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How far is your office from Jenks, and do you offer virtual services?
+                </h3>
+                <p className="text-gray-700">
+                  Our Tulsa office is conveniently located just 15 minutes from Jenks, making in-person meetings easy and accessible. We also offer comprehensive virtual CPA services including secure document upload, video consultations, electronic signatures, and remote bookkeeping support. Whether you prefer face-to-face meetings at our office or the convenience of virtual appointments, we provide flexible service options that work with your schedule. Many of our Jenks clients appreciate the combination of local proximity and modern digital convenience.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What makes your firm different from other CPAs serving Jenks?
+                </h3>
+                <p className="text-gray-700">
+                  Our lead CPA is a former IRS manager with over 20 years of tax experience, giving us unique insight into IRS procedures, audit processes, and tax law interpretation. We combine this specialized expertise with personalized service and deep knowledge of the Jenks business community. Unlike large national firms, we take time to understand your specific financial situation and develop customized tax strategies. Our clients benefit from responsive communication, proactive tax planning, and the confidence that comes from working with experienced professionals who genuinely care about their financial success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Linking Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              CPA Services in Nearby Communities
+            </h2>
+
+            <p className="text-lg text-gray-700 text-center mb-8">
+              We proudly serve clients throughout the greater Tulsa area. Explore our CPA services in these nearby cities:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link
+                href="/cpa-tulsa"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Tulsa</h3>
+                <p className="text-gray-600 mb-3">
+                  Comprehensive accounting and tax services in downtown Tulsa and surrounding areas.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-broken-arrow"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Broken Arrow</h3>
+                <p className="text-gray-600 mb-3">
+                  Expert CPA services for Broken Arrow families and businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-bixby"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Bixby</h3>
+                <p className="text-gray-600 mb-3">
+                  Professional accounting solutions for the Bixby community.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-owasso"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Owasso</h3>
+                <p className="text-gray-600 mb-3">
+                  Trusted tax and accounting services for Owasso residents and businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-sand-springs"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Sand Springs</h3>
+                <p className="text-gray-600 mb-3">
+                  Specialized CPA services for Sand Springs manufacturing and industrial businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-glenpool"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Glenpool</h3>
+                <p className="text-gray-600 mb-3">
+                  Quality accounting and tax preparation for Glenpool area clients.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
             </div>
           </div>
         </div>

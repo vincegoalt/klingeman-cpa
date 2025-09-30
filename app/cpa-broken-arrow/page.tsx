@@ -344,21 +344,229 @@ export default function BrokenArrowCPAPage() {
 
       <section className="bg-blue-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              About Broken Arrow, Oklahoma
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-center">
+              Your Trusted CPA in Broken Arrow, Oklahoma
             </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Broken Arrow is a thriving suburb of Tulsa with a population of over 113,000 residents. 
-              Known for its excellent schools, family-friendly neighborhoods, and strong business community, 
-              Broken Arrow residents and business owners deserve professional CPA services that understand 
-              their unique needs.
+
+            <div className="space-y-6 text-lg leading-relaxed">
+              <p>
+                As Broken Arrow continues to grow and thrive as one of Oklahoma's premier communities, local residents and business owners need reliable, expert financial guidance. Klingeman CPAs brings over 20 years of professional accounting experience to serve the Broken Arrow community, offering comprehensive tax preparation, business accounting, and financial planning services tailored to your unique needs.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">
+                Serving Broken Arrow's Diverse Business Community
+              </h3>
+
+              <p>
+                Broken Arrow's economy is built on a diverse foundation of retail businesses, service industries, small businesses, and professional services. From the bustling commercial corridors along Kenosha Street and Elm Place to the thriving restaurant and hospitality sector, we understand the unique financial challenges facing Broken Arrow business owners. Whether you're running a local retail shop, managing a growing service company, or operating a healthcare practice, our team provides specialized <strong>business accountant services near Broken Arrow</strong> that help you navigate complex tax regulations while maximizing profitability.
+              </p>
+
+              <p>
+                Our <strong>Broken Arrow tax preparation</strong> services extend beyond simple form filing. We take a proactive approach to tax planning, helping small business owners identify strategic deductions, optimize their entity structure, and plan for quarterly estimated payments. With our founder's background as a former IRS manager, we bring insider knowledge that helps protect your business from audits while ensuring full compliance with federal and state tax laws.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">
+                Comprehensive Personal Tax Services for Broken Arrow Residents
+              </h3>
+
+              <p>
+                Broken Arrow homeowners face unique tax situations, from property tax considerations to Oklahoma state tax credits and deductions. Whether you're a first-time homebuyer taking advantage of mortgage interest deductions, a growing family maximizing child tax credits, or a professional managing complex investment income, our <strong>CPA in Broken Arrow</strong> services provide the expertise you need. We stay current on Oklahoma-specific tax benefits and ensure you're taking advantage of every available deduction and credit.
+              </p>
+
+              <p>
+                For Broken Arrow residents with multiple income sources, rental properties, or side businesses, tax preparation becomes increasingly complex. Our team specializes in multi-state tax filings for clients who work remotely or own property in multiple states, ensuring proper tax allocation and avoiding double taxation. We also provide year-round tax planning services, not just seasonal preparation, helping you make informed financial decisions throughout the year that positively impact your tax situation.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">
+                Why Location Matters: Convenient Access from Broken Arrow
+              </h3>
+
+              <p>
+                Located just 15 minutes from Broken Arrow in midtown Tulsa, Klingeman CPAs offers the perfect balance of accessibility and expertise. We're close enough for convenient in-person meetings when needed, yet far enough from the corporate chains to provide truly personalized service. Many of our clients appreciate the ease of scheduling appointments during their commute or combining their visit with other errands in Tulsa. We also offer flexible meeting options, including virtual consultations for busy professionals who prefer the convenience of remote services.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">
+                Specialized Services for Broken Arrow's Growing Economy
+              </h3>
+
+              <p>
+                As Broken Arrow continues to attract new businesses and residents, the demand for specialized accounting services grows. We provide comprehensive bookkeeping services for local businesses, QuickBooks setup and cleanup, payroll processing, and financial statement preparation. For retail businesses dealing with inventory management and sales tax compliance, we offer targeted solutions that simplify complex accounting requirements. Service industry professionals benefit from our expertise in expense tracking, contractor management, and profit optimization strategies.
+              </p>
+
+              <p>
+                Real estate investors and property managers in Broken Arrow require specialized tax planning to maximize depreciation deductions, properly categorize rental income and expenses, and navigate 1031 exchanges. Our team brings deep expertise in real estate taxation, helping property owners build wealth while minimizing tax liability. Whether you own a single rental property or manage a portfolio of investment properties, we provide the guidance you need to succeed.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-8 mb-4">
+                Building Long-Term Relationships with Broken Arrow Clients
+              </h3>
+
+              <p>
+                At Klingeman CPAs, we don't view our role as simply preparing tax returns each April. Instead, we strive to build lasting relationships with Broken Arrow families and businesses, serving as trusted financial advisors who understand your goals and help you achieve them. Our clients appreciate our responsive communication, proactive planning approach, and commitment to delivering exceptional value. When you work with a <strong>CPA in Broken Arrow</strong> from our firm, you gain a financial partner dedicated to your long-term success.
+              </p>
+
+              <p>
+                Whether you're launching a new business in Broken Arrow, growing an existing company, planning for retirement, or simply looking for more strategic tax preparation, Klingeman CPAs has the expertise and local market knowledge to serve you well. Contact us today to schedule a free consultation and discover how professional accounting services can benefit your financial future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you work with small businesses in Broken Arrow?
+                </h3>
+                <p className="text-gray-700">
+                  Absolutely! We specialize in serving small businesses throughout Broken Arrow, including retail shops, restaurants, service providers, professional practices, and home-based businesses. We understand the unique challenges facing local entrepreneurs and provide comprehensive business accounting, tax preparation, bookkeeping, and financial planning services. Our team helps Broken Arrow business owners navigate complex tax regulations, optimize their entity structure, and implement accounting systems that support growth.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How far is your office from Broken Arrow?
+                </h3>
+                <p className="text-gray-700">
+                  Our office is located in midtown Tulsa, just 15 minutes from Broken Arrow via Highway 51 or the BA Expressway. The convenient location makes it easy for Broken Arrow residents and business owners to visit us for in-person consultations. We're accessible from all parts of Broken Arrow, whether you're coming from the historic downtown area, south Broken Arrow, or the growing east side of the city. We also offer virtual consultations for clients who prefer remote meetings.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Can you help with multi-state tax filings?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we regularly assist Broken Arrow clients with multi-state tax situations. Whether you work remotely for an out-of-state employer, own rental properties in multiple states, operate a business across state lines, or relocated during the tax year, we have the expertise to handle complex multi-state filings. We ensure proper tax allocation, help you avoid double taxation, and identify opportunities to minimize your overall tax burden while maintaining full compliance with each state's requirements.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What makes your firm different from other CPAs serving Broken Arrow?
+                </h3>
+                <p className="text-gray-700">
+                  Our founder's background as a former IRS manager sets us apart from other accounting firms. This insider perspective allows us to provide proactive audit protection strategies and maximize legitimate tax deductions with confidence. We combine this specialized expertise with personalized service that large corporate firms can't match. Unlike seasonal tax preparation chains, we build long-term relationships with our clients and provide year-round support. We're locally owned, understand the Broken Arrow community, and treat every client's financial situation with the attention it deserves.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you offer bookkeeping services for Broken Arrow businesses?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we provide comprehensive bookkeeping services tailored to Broken Arrow businesses. Our services include monthly bookkeeping, QuickBooks setup and training, QuickBooks cleanup and catch-up services, accounts payable and receivable management, bank reconciliation, financial statement preparation, and payroll processing. We work with businesses of all sizes, from sole proprietors and startups to established companies with complex accounting needs. Our goal is to provide accurate, timely financial information that helps you make better business decisions.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  When should I start working with a CPA for my Broken Arrow business?
+                </h3>
+                <p className="text-gray-700">
+                  The best time to engage a CPA is before you launch your business. We can help you select the optimal business entity structure (LLC, S-Corp, C-Corp, or Partnership), set up proper accounting systems from day one, and establish tax planning strategies that support long-term success. However, it's never too late to get professional help. If you're already in business and struggling with bookkeeping, missing tax deadlines, or unsure about your financial position, reaching out now can help you get back on track and avoid costly mistakes. Many Broken Arrow business owners find that the money saved through strategic tax planning more than pays for our services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              CPA Services in Nearby Communities
+            </h2>
+
+            <p className="text-lg text-gray-700 text-center mb-8">
+              In addition to serving Broken Arrow, we provide professional CPA and accounting services to clients throughout the greater Tulsa area. Explore our location-specific pages to learn more about our services in your community.
             </p>
-            <p className="text-base opacity-80">
-              Whether you're a Broken Arrow homeowner looking for tax preparation services or a business 
-              owner needing comprehensive accounting support, Klingeman CPAs provides the expertise and 
-              personalized attention you deserve.
-            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <Link href="/cpa-bixby" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  CPA Services in Bixby
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </h3>
+                <p className="text-gray-600">
+                  Professional tax and accounting services for Bixby residents and businesses, just minutes from our Tulsa office.
+                </p>
+              </Link>
+
+              <Link href="/cpa-jenks" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  CPA Services in Jenks
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </h3>
+                <p className="text-gray-600">
+                  Expert CPA services for Jenks families and businesses, including tax preparation, bookkeeping, and financial planning.
+                </p>
+              </Link>
+
+              <Link href="/cpa-owasso" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  CPA Services in Owasso
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </h3>
+                <p className="text-gray-600">
+                  Comprehensive accounting and tax services for Owasso's growing community of residents and business owners.
+                </p>
+              </Link>
+
+              <Link href="/cpa-sand-springs" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  CPA Services in Sand Springs
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </h3>
+                <p className="text-gray-600">
+                  Local CPA expertise for Sand Springs businesses and individuals, with personalized service and tax strategies.
+                </p>
+              </Link>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-md"
+                >
+                  Explore All Our Services
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all shadow-md"
+                >
+                  Contact Us Today
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -3,12 +3,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { BUSINESS_INFO, SERVICES, INDUSTRIES } from '@/lib/constants';
+import { BUSINESS_INFO, SERVICES, INDUSTRIES, SUBURBS } from '@/lib/constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isLocationsOpen, setIsLocationsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -96,12 +97,15 @@ export default function Header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div 
+                <div
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                   className={`absolute top-full left-0 bg-white shadow-xl rounded-lg py-3 w-72 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 >
-                  {SERVICES.map((service) => (
+                  <Link href="/services" className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-gray-900 font-semibold transition border-b border-gray-100">
+                    View All Services
+                  </Link>
+                  {SERVICES.slice(0, 8).map((service) => (
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
@@ -123,7 +127,7 @@ export default function Header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div 
+                <div
                   onMouseEnter={() => setIsIndustriesOpen(true)}
                   onMouseLeave={() => setIsIndustriesOpen(false)}
                   className={`absolute top-full left-0 bg-white shadow-xl rounded-lg py-3 w-64 transition-all duration-200 ${isIndustriesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
@@ -135,6 +139,54 @@ export default function Header() {
                       className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition"
                     >
                       {industry.title}
+                    </Link>
+                  ))}
+                </div>
+              </li>
+              <li className="relative group">
+                <button
+                  onMouseEnter={() => setIsLocationsOpen(true)}
+                  onMouseLeave={() => setIsLocationsOpen(false)}
+                  className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-blue-600 transition font-medium whitespace-nowrap"
+                >
+                  Locations
+                  <svg className={`w-4 h-4 transition-transform ${isLocationsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div
+                  onMouseEnter={() => setIsLocationsOpen(true)}
+                  onMouseLeave={() => setIsLocationsOpen(false)}
+                  className={`absolute top-full left-0 bg-white shadow-xl rounded-lg py-3 w-64 max-h-96 overflow-y-auto transition-all duration-200 ${isLocationsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                >
+                  <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Metro Cities</div>
+                  {SUBURBS.filter(s => !s.slug.includes('tulsa')).slice(0, 5).map((location) => (
+                    <Link
+                      key={location.slug}
+                      href={`/${location.slug}`}
+                      className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition"
+                    >
+                      {location.name}
+                    </Link>
+                  ))}
+                  <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-3">Surrounding Areas</div>
+                  {SUBURBS.filter(s => !s.slug.includes('tulsa')).slice(5, 12).map((location) => (
+                    <Link
+                      key={location.slug}
+                      href={`/${location.slug}`}
+                      className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition text-sm"
+                    >
+                      {location.name}
+                    </Link>
+                  ))}
+                  <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-3">Tulsa Neighborhoods</div>
+                  {SUBURBS.filter(s => s.slug.includes('tulsa')).map((location) => (
+                    <Link
+                      key={location.slug}
+                      href={`/${location.slug}`}
+                      className="block px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-gray-700 transition text-sm"
+                    >
+                      {location.name}
                     </Link>
                   ))}
                 </div>
@@ -211,6 +263,42 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {industry.title}
+                  </Link>
+                ))}
+              </li>
+              <li className="border-t border-gray-100">
+                <div className="px-6 py-3 font-semibold text-gray-900">Service Areas</div>
+                <div className="px-8 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide">Metro Cities</div>
+                {SUBURBS.filter(s => !s.slug.includes('tulsa')).slice(0, 5).map((location) => (
+                  <Link
+                    key={location.slug}
+                    href={`/${location.slug}`}
+                    className="block px-8 py-2 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {location.name}
+                  </Link>
+                ))}
+                <div className="px-8 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2">Surrounding Areas</div>
+                {SUBURBS.filter(s => !s.slug.includes('tulsa')).slice(5, 12).map((location) => (
+                  <Link
+                    key={location.slug}
+                    href={`/${location.slug}`}
+                    className="block px-8 py-2 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {location.name}
+                  </Link>
+                ))}
+                <div className="px-8 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2">Tulsa Neighborhoods</div>
+                {SUBURBS.filter(s => s.slug.includes('tulsa')).map((location) => (
+                  <Link
+                    key={location.slug}
+                    href={`/${location.slug}`}
+                    className="block px-8 py-2 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {location.name}
                   </Link>
                 ))}
               </li>

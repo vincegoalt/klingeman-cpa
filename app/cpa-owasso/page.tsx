@@ -230,13 +230,31 @@ export default function OwassoCPAPage() {
               Why Owasso Residents Choose Klingeman CPAs
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="prose max-w-none mb-12">
+              <p className="text-lg text-gray-700 mb-6">
+                Owasso has emerged as one of Oklahoma's fastest-growing suburban communities, attracting young families, established professionals, and thriving businesses across diverse industries including aerospace, manufacturing, retail, and professional services. As a trusted CPA firm serving Owasso, we provide comprehensive tax preparation, business accounting, bookkeeping, and financial planning services designed to support this dynamic community's unique economic landscape and help residents achieve their financial goals.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                The aerospace and advanced manufacturing sectors play a significant role in Owasso's economy, with many residents employed in technical and engineering fields. Our accounting firm understands the specialized tax considerations for aerospace professionals, including stock option taxation, relocation expense planning, retirement account optimization for 401(k) and pension plans, and strategic deductions for continuing education and professional development. We help high-earning professionals in these industries maximize their after-tax income through sophisticated tax planning strategies.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                Owasso's rapid growth has created abundant opportunities for family-owned businesses and local entrepreneurs. We specialize in helping new business owners navigate the critical early stages of business formation, including entity selection (LLC, S-Corporation, or C-Corporation), obtaining an EIN, setting up accounting systems, establishing payroll processes, and implementing tax-efficient business structures. Our CPA team provides ongoing support as your business grows, offering monthly bookkeeping services, quarterly tax planning consultations, annual business tax preparation, and strategic guidance for long-term business success.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                The suburban nature of Owasso means many families are in their peak earning years, balancing career advancement with raising children and planning for the future. We provide comprehensive personal financial planning services including retirement planning strategies, education savings plans like 529 accounts, tax-efficient investment approaches, estate planning coordination, and multi-generational wealth transfer strategies. Our tax accountants help Owasso families minimize their tax burden while building financial security for the future, ensuring you keep more of what you earn to invest in your family's dreams.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Supporting Owasso's Growth
                 </h3>
                 <p className="text-gray-700">
-                  As one of Oklahoma's fastest-growing cities, Owasso needs CPA services that 
+                  As one of Oklahoma's fastest-growing cities, Owasso needs CPA services that
                   understand both established families and new residents' financial needs.
                 </p>
               </div>
@@ -246,7 +264,7 @@ export default function OwassoCPAPage() {
                   Community-Focused Service
                 </h3>
                 <p className="text-gray-700">
-                  We appreciate Owasso's strong community spirit and provide personalized service 
+                  We appreciate Owasso's strong community spirit and provide personalized service
                   that reflects these same values of trust and reliability.
                 </p>
               </div>
@@ -256,7 +274,7 @@ export default function OwassoCPAPage() {
                   Business Development Support
                 </h3>
                 <p className="text-gray-700">
-                  With new businesses opening regularly in Owasso, we help entrepreneurs with 
+                  With new businesses opening regularly in Owasso, we help entrepreneurs with
                   formation, tax planning, and growth strategies.
                 </p>
               </div>
@@ -266,7 +284,7 @@ export default function OwassoCPAPage() {
                   Family Financial Planning
                 </h3>
                 <p className="text-gray-700">
-                  Many Owasso families are in their prime earning years. We help with tax 
+                  Many Owasso families are in their prime earning years. We help with tax
                   optimization, retirement planning, and education funding strategies.
                 </p>
               </div>
@@ -274,6 +292,186 @@ export default function OwassoCPAPage() {
 
             <div className="mt-12">
               <TrustBadges showAll />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Frequently Asked Questions - Owasso CPA Services
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What types of businesses do you serve in Owasso?
+                </h3>
+                <p className="text-gray-700">
+                  We serve a diverse range of Owasso businesses including family-owned retail stores, professional services firms, restaurants and food service establishments, construction companies, real estate investors, healthcare practices, and small manufacturing operations. Our CPA firm provides comprehensive business accounting services including monthly bookkeeping, payroll processing, quarterly tax planning, annual business tax returns, financial statement preparation, and strategic business consulting. We understand the unique challenges facing growing businesses in Owasso and provide customized accounting solutions that scale with your success.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you help aerospace and manufacturing professionals with their taxes?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we have extensive experience working with aerospace engineers, manufacturing professionals, and technical specialists employed by Owasso-area companies. We understand the complex tax situations faced by high-earning professionals, including stock option exercises, restricted stock units (RSUs), employee stock purchase plans (ESPPs), relocation expenses, multi-state tax issues, retirement plan optimization, and professional development expense deductions. Our tax preparation services ensure you maximize every available deduction while maintaining full IRS compliance and minimizing your overall tax liability.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How can you help me start a new business in Owasso?
+                </h3>
+                <p className="text-gray-700">
+                  Starting a business in Owasso requires careful planning and proper financial foundations. Our CPA firm guides entrepreneurs through every step including entity selection and formation, obtaining federal and state tax IDs, setting up business bank accounts, choosing and implementing accounting software like QuickBooks, establishing payroll systems, understanding sales tax obligations, creating financial projections, and developing tax-efficient compensation strategies. We become your trusted financial advisor from day one, helping you avoid costly mistakes and build a solid foundation for long-term business success.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What family financial planning services do you offer for Owasso residents?
+                </h3>
+                <p className="text-gray-700">
+                  We provide comprehensive financial planning services specifically designed for growing Owasso families. Our services include retirement planning and 401(k) optimization, education savings strategies using 529 plans and Coverdell ESAs, tax-efficient investment planning, charitable giving strategies, estate planning coordination, life insurance needs analysis, and multi-generational wealth transfer planning. We help families balance current lifestyle needs with long-term financial security, ensuring you make smart decisions about saving, investing, and tax planning that support your family's future goals.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How does your pricing work for Owasso clients?
+                </h3>
+                <p className="text-gray-700">
+                  We offer transparent, competitive pricing for all our accounting and tax services. Individual tax returns typically range from $250 to $600 depending on complexity, while business tax returns are priced based on entity type, transaction volume, and business structure. Monthly bookkeeping services start at $200 per month, and we offer package deals for clients who need comprehensive services. We provide free initial consultations where we review your specific situation and provide a clear, upfront quote with no hidden fees. Our Owasso clients appreciate knowing exactly what to expect before engaging our services.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Are you accepting new clients from Owasso?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we are actively accepting new clients from Owasso and surrounding communities. Our Tulsa office is conveniently located just 20 minutes from Owasso, and we also offer comprehensive virtual services for clients who prefer remote meetings. We serve both individual taxpayers and businesses of all sizes, from sole proprietors to established corporations. To get started, simply call us to schedule a free consultation, or complete our online contact form. We'll discuss your specific needs, explain how we can help, and outline our services and pricing. Many of our long-term client relationships begin with a simple phone call.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Linking Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              CPA Services in Nearby Communities
+            </h2>
+
+            <p className="text-lg text-gray-700 text-center mb-8">
+              We proudly serve clients throughout the greater Tulsa area. Explore our CPA services in these nearby cities:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link
+                href="/cpa-tulsa"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Tulsa</h3>
+                <p className="text-gray-600 mb-3">
+                  Comprehensive accounting and tax services in downtown Tulsa and surrounding areas.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-broken-arrow"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Broken Arrow</h3>
+                <p className="text-gray-600 mb-3">
+                  Expert CPA services for Broken Arrow families and businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-bixby"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Bixby</h3>
+                <p className="text-gray-600 mb-3">
+                  Professional accounting solutions for the Bixby community.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-jenks"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Jenks</h3>
+                <p className="text-gray-600 mb-3">
+                  Specialized services for Jenks hospitality, retail, and education professionals.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-sand-springs"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Sand Springs</h3>
+                <p className="text-gray-600 mb-3">
+                  Specialized CPA services for Sand Springs manufacturing and industrial businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-collinsville"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Collinsville</h3>
+                <p className="text-gray-600 mb-3">
+                  Trusted accounting services for Collinsville residents and small businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
             </div>
           </div>
         </div>

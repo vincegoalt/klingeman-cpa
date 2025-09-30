@@ -222,13 +222,31 @@ export default function SandSpringsCPAPage() {
               Why Sand Springs Residents Choose Klingeman CPAs
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="prose max-w-none mb-12">
+              <p className="text-lg text-gray-700 mb-6">
+                Sand Springs has a rich industrial heritage rooted in oil and gas production, manufacturing, and heavy industry that continues to drive the local economy today. As a dedicated CPA firm serving Sand Springs businesses and residents, we understand the unique accounting challenges facing industrial operations, manufacturing companies, energy sector businesses, and the hardworking families who call this community home. Our comprehensive tax preparation, business accounting, bookkeeping, and financial consulting services are specifically designed to meet the needs of Sand Springs' diverse economic base.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                The oil and gas industry remains a cornerstone of Sand Springs' economy, with many residents working in exploration, production, refining, and related services. Our accounting firm provides specialized tax services for oil and gas professionals including depletion deductions, intangible drilling cost analysis, working interest versus royalty interest taxation, joint venture accounting, and energy sector retirement planning. We help independent operators, working interest owners, and energy industry employees navigate complex tax regulations while maximizing legitimate deductions and maintaining full compliance with IRS requirements specific to the petroleum industry.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                Manufacturing businesses in Sand Springs face unique accounting challenges including inventory valuation methods, cost accounting systems, equipment depreciation strategies, Section 179 and bonus depreciation optimization, and production tax credits. Our CPA team works extensively with manufacturers to implement robust cost accounting systems that track raw materials, work-in-progress, and finished goods inventory. We help manufacturing clients understand their true production costs, optimize pricing strategies, manage cash flow effectively, and structure their operations to minimize tax liability while supporting business growth and workforce expansion.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                Beyond industrial businesses, Sand Springs is home to construction companies, transportation firms, retail establishments, healthcare providers, and professional service businesses that require expert accounting support. We provide comprehensive business services including monthly bookkeeping and financial statements, payroll processing and tax compliance, sales tax collection and remittance, QuickBooks setup and training, business entity formation and structuring, succession planning for family businesses, and strategic tax planning that keeps more money in your pocket. Our personalized approach means you work directly with experienced CPAs who understand your industry and care about your success, not junior staff or automated software systems.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Close to Home
                 </h3>
                 <p className="text-gray-700">
-                  At just 10 minutes from Sand Springs, we're your closest professional CPA firm, 
+                  At just 10 minutes from Sand Springs, we're your closest professional CPA firm,
                   making it convenient to access expert accounting services when you need them.
                 </p>
               </div>
@@ -238,7 +256,7 @@ export default function SandSpringsCPAPage() {
                   Small Town Understanding
                 </h3>
                 <p className="text-gray-700">
-                  We appreciate Sand Springs' tight-knit community feel and provide the personal 
+                  We appreciate Sand Springs' tight-knit community feel and provide the personal
                   attention and long-term relationships that small town values deserve.
                 </p>
               </div>
@@ -248,7 +266,7 @@ export default function SandSpringsCPAPage() {
                   Industrial & Manufacturing Expertise
                 </h3>
                 <p className="text-gray-700">
-                  With Sand Springs' industrial heritage, we understand manufacturing and 
+                  With Sand Springs' industrial heritage, we understand manufacturing and
                   industrial business accounting needs, from equipment depreciation to inventory management.
                 </p>
               </div>
@@ -258,7 +276,7 @@ export default function SandSpringsCPAPage() {
                   Affordable Professional Service
                 </h3>
                 <p className="text-gray-700">
-                  We provide big-firm expertise with small-town pricing, ensuring Sand Springs 
+                  We provide big-firm expertise with small-town pricing, ensuring Sand Springs
                   residents and businesses get exceptional value for professional CPA services.
                 </p>
               </div>
@@ -266,6 +284,186 @@ export default function SandSpringsCPAPage() {
 
             <div className="mt-12">
               <TrustBadges showAll />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Frequently Asked Questions - Sand Springs CPA Services
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you provide accounting services for manufacturing companies in Sand Springs?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, we specialize in manufacturing accounting and understand the unique challenges facing Sand Springs industrial businesses. Our services include cost accounting system implementation, inventory valuation and tracking (FIFO, LIFO, weighted average), equipment depreciation strategies including Section 179 and bonus depreciation, production overhead allocation, job costing analysis, and manufacturing tax credit identification. We help manufacturers optimize their accounting systems to track production costs accurately, manage inventory efficiently, and maximize tax deductions through strategic planning and proper documentation of all business expenses.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How can your CPA firm help oil and gas industry professionals?
+                </h3>
+                <p className="text-gray-700">
+                  We have extensive experience serving oil and gas professionals in Sand Springs including independent operators, working interest owners, royalty interest holders, and energy sector employees. Our specialized services include depletion deduction calculations, intangible drilling cost (IDC) analysis and optimization, lease operating expense tracking, joint venture accounting and tax reporting, percentage depletion versus cost depletion analysis, and passive activity loss limitation strategies. We understand the complex tax rules governing oil and gas operations and help clients structure their investments and operations to minimize tax liability while maintaining full IRS compliance.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What accounting services do you provide for Sand Springs small businesses?
+                </h3>
+                <p className="text-gray-700">
+                  We provide comprehensive accounting services for Sand Springs small businesses across all industries including monthly bookkeeping and reconciliation, accounts payable and receivable management, payroll processing and quarterly tax filings, sales tax compliance and remittance, financial statement preparation (balance sheet, income statement, cash flow), budget development and variance analysis, QuickBooks setup and ongoing support, year-end tax planning and preparation, and CFO advisory services for growing businesses. Our goal is to handle your accounting needs efficiently and accurately so you can focus on running and growing your business.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Do you help with succession planning for family-owned businesses?
+                </h3>
+                <p className="text-gray-700">
+                  Yes, succession planning is critical for family-owned businesses in Sand Springs, and we provide comprehensive guidance throughout the transition process. Our services include business valuation for estate and gift tax purposes, entity restructuring to facilitate ownership transfers, buy-sell agreement design and implementation, estate tax minimization strategies, gifting strategies using annual exclusions and lifetime exemptions, trust formation and funding, and coordination with attorneys and financial advisors. We help business owners develop tax-efficient succession plans that preserve family wealth, minimize tax burdens, and ensure smooth transitions to the next generation.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  What makes your firm a good fit for Sand Springs businesses?
+                </h3>
+                <p className="text-gray-700">
+                  Our firm combines the expertise of large accounting firms with the personalized service and competitive pricing that Sand Springs businesses expect. We're located just 10 minutes away in Tulsa, making in-person meetings convenient when needed. Our lead CPA has over 20 years of experience including time as an IRS manager, giving us unique insight into tax law interpretation and IRS procedures. We understand Sand Springs' industrial and manufacturing base because we work with these businesses daily. Most importantly, we're committed to building long-term relationships with our clients, not just completing transactions, and we measure our success by your financial success.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  How do I get started with your CPA services?
+                </h3>
+                <p className="text-gray-700">
+                  Getting started is simple and begins with a free consultation. Call our office or complete the contact form on our website to schedule an initial meeting. During this consultation, we'll discuss your specific accounting and tax needs, explain our services in detail, review our pricing structure, and answer all your questions. If we're a good fit, we'll outline next steps including document collection, engagement letter signing, and service timeline. Many Sand Springs businesses and individuals have worked with us for years, and those long-term relationships often begin with a simple phone call. We look forward to learning about your needs and showing you how we can help.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Linking Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              CPA Services in Nearby Communities
+            </h2>
+
+            <p className="text-lg text-gray-700 text-center mb-8">
+              We proudly serve clients throughout the greater Tulsa area. Explore our CPA services in these nearby cities:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link
+                href="/cpa-tulsa"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Tulsa</h3>
+                <p className="text-gray-600 mb-3">
+                  Comprehensive accounting and tax services in downtown Tulsa and surrounding areas.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-broken-arrow"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Broken Arrow</h3>
+                <p className="text-gray-600 mb-3">
+                  Expert CPA services for Broken Arrow families and businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-sapulpa"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Sapulpa</h3>
+                <p className="text-gray-600 mb-3">
+                  Professional accounting solutions for Sapulpa residents and businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-jenks"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Jenks</h3>
+                <p className="text-gray-600 mb-3">
+                  Specialized services for Jenks hospitality, retail, and education professionals.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-owasso"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Owasso</h3>
+                <p className="text-gray-600 mb-3">
+                  Trusted tax and accounting services for Owasso residents and businesses.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+
+              <Link
+                href="/cpa-bixby"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">CPA Bixby</h3>
+                <p className="text-gray-600 mb-3">
+                  Quality accounting and financial planning for Bixby area clients.
+                </p>
+                <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
