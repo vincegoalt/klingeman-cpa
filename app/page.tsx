@@ -140,17 +140,18 @@ export default function HomePage() {
                 <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h2a1 1 0 100-2 2 2 0 00-2 2v11a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v11z" clipRule="evenodd"/>
               </svg>
               <div>
-                <div className="text-2xl font-bold">40+</div>
+                <div className="text-2xl font-bold">225+</div>
                 <div className="text-xs text-gray-600">Years Combined Experience</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4z"/>
+                <path fillRule="evenodd" d="M8 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2V8zm2 0h8v8h-8V8z" clipRule="evenodd"/>
               </svg>
               <div>
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-xs text-gray-600">Happy Clients</div>
+                <div className="text-2xl font-bold">$3B+</div>
+                <div className="text-xs text-gray-600">Client Assets Under Advisory</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -297,7 +298,7 @@ export default function HomePage() {
                 At Klingeman CPAs, we provide big-firm expertise with a personalized approach to help businesses and individuals optimize their finances.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                With over 40 years of combined CPA experience, we specialize in tax strategies, proactive financial planning, and IRS representation, ensuring our clients stay compliant while maximizing tax savings. We are committed to providing personalized attention and tailored advice to each client, ensuring that your financial health and business growth are our top priorities.
+                With over 225 years of combined CPA experience, we specialize in tax strategies, proactive financial planning, and IRS representation, ensuring our clients stay compliant while maximizing tax savings. We are committed to providing personalized attention and tailored advice to each client, ensuring that your financial health and business growth are our top priorities.
               </p>
               
               <div className="space-y-6">

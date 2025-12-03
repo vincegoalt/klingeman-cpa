@@ -49,7 +49,7 @@ export const FOUNDER_INFO = {
 
 export const TRUST_BADGES = [
   'Former IRS Management Experience',
-  'Over 40 Years Combined CPA Experience',
+  'Over 225 Years Combined CPA Experience',
   'Master\'s in Business Taxation',
   'Specialized Small Business Expertise',
   'Proven IRS Audit & Negotiation Success'
@@ -106,17 +106,17 @@ export const SERVICES = [
     icon: '🏠'
   },
   {
-    title: 'Payroll Services',
+    title: 'Payroll & Benefits Administration',
     slug: 'payroll-services',
-    description: 'Comprehensive payroll processing, compliance, and quarterly filings for businesses',
-    fullDescription: 'Our payroll services handle all aspects of payroll processing including tax withholdings, direct deposits, quarterly filings, and year-end W-2/1099 preparation. We ensure complete compliance with federal and state payroll regulations.',
+    description: 'Full-service payroll processing, benefits administration, and compliance - both advisory and complete outsourcing',
+    fullDescription: 'Our comprehensive payroll and benefits administration services handle all aspects of employee compensation. Choose from full-service outsourcing or advisory support for your in-house team. We manage payroll processing, tax withholdings, benefits enrollment, compliance, quarterly filings, and year-end W-2/1099 preparation.',
     icon: '💳'
   },
   {
-    title: 'Bookkeeping Services',
+    title: 'Full Bookkeeping & Record Keeping',
     slug: 'bookkeeping-services',
-    description: 'Day-to-day financial management and accurate record keeping for businesses',
-    fullDescription: 'Our professional bookkeeping services provide accurate, up-to-date financial records essential for business decision-making. We handle accounts payable/receivable, bank reconciliations, and monthly financial reporting.',
+    description: 'Complete bookkeeping and record keeping services - both advisory guidance and full-service options available',
+    fullDescription: 'Our professional bookkeeping services provide complete, accurate financial records essential for business decision-making. Whether you need full-service bookkeeping or advisory support for your team, we handle accounts payable/receivable, bank reconciliations, and monthly financial reporting. Both advisory and full-service options available.',
     icon: '📚'
   },
   {
@@ -146,6 +146,82 @@ export const SERVICES = [
     description: 'Expert QuickBooks setup, integration, and customized training for your team',
     fullDescription: 'Get your QuickBooks set up right from the start, or optimize your existing file for better reporting. Our Tulsa team provides expert setup, custom training, and ongoing support to maximize your QuickBooks investment.',
     icon: '🎓'
+  },
+  {
+    title: 'Audit Services',
+    slug: 'audit-services',
+    description: 'Comprehensive audit services including financial, internal, compliance, and operational audits',
+    fullDescription: 'With a dedicated audit specialist on staff, we provide thorough audit services covering financial audits, internal audits, external audits, compliance audits, operational audits, IT audits, and tax audits. Our experienced team ensures accuracy, compliance, and actionable insights for your organization.',
+    icon: '🔍'
+  },
+  {
+    title: 'Capital Raising & Funding',
+    slug: 'capital-raising-funding',
+    description: 'Expert assistance in raising capital and initiating funding rounds for your startup or business',
+    fullDescription: 'Whether you\'re a startup seeking seed funding or an established business looking to expand, our team provides expert guidance through the capital raising process. We help prepare financial documentation, develop investor presentations, and navigate funding rounds to secure the capital your business needs to grow.',
+    icon: '💼'
+  }
+];
+
+export interface TeamMember {
+  name: string;
+  title: string;
+  bio: string;
+  image?: string;
+  credentials?: string[];
+  featured?: boolean;
+}
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    name: 'Matt Klingeman',
+    title: 'Founder and CPA',
+    bio: 'Matt holds a Master\'s in Business Taxation and is a former IRS manager with over 20 years of experience as a practicing CPA. His leadership and expertise guide our firm\'s day-to-day operations, with a primary focus on consulting and taxes.',
+    image: '/matt-klingeman.png',
+    credentials: ['CPA', 'Former IRS Manager', "Master's in Taxation"],
+    featured: true
+  },
+  {
+    name: 'Ronald J. Saffa',
+    title: 'JD, CPA',
+    bio: 'Ron has been a Certified Public Accountant since 1974. He received his Bachelor of Science and Master of Science in Accounting from Oklahoma State University. After his certification, he worked for 9 years for the Internal Revenue Service. In 1981, he received his Juris Doctor of Law from the University of Tulsa. In 1982, he was admitted to the Oklahoma Bar Association. In 1983, he was also admitted to the U.S. District Court, Northern and Eastern Districts of Oklahoma, the U.S. Court of Appeals, Tenth and Federal Circuits, the U.S. Tax Court and the U.S. Court of Federal Claims. Ronald was then admitted to the Supreme Court in 1985. In 2011, he was named one of the Super Lawyers of Oklahoma. His expertise lies in the areas of Federal Taxation and State Taxation.',
+    credentials: ['Attorney at Law', 'CPA', 'Super Lawyer'],
+    featured: true
+  },
+  {
+    name: 'Jeanette Ross',
+    title: 'EA, CFE',
+    bio: 'As an Enrolled Agent and Certified Fraud Examiner, Jeanette specializes in tax representation and fraud prevention for our clients.',
+    credentials: ['Certified Fraud Examiner', 'Enrolled Agent'],
+    featured: true
+  },
+  {
+    name: 'Patti Hall',
+    title: 'CPA',
+    bio: 'Patti received her BBA, majoring in accounting, from the University of Tulsa. She is a CPA and worked for the IRS for 35 years. Her experience at the IRS included responsibility for small businesses, complex individual returns, large complex partnerships, and multi-national corporations.',
+    credentials: ['CPA', '35+ Years IRS Experience'],
+    featured: true
+  },
+  {
+    name: 'Mitch Ross',
+    title: 'CPA',
+    bio: 'Mitch brings extensive experience in tax preparation and business consulting to our team, helping clients navigate complex financial challenges.',
+    credentials: ['CPA']
+  },
+  {
+    name: 'Taylor Telford',
+    title: 'Accountant and Management for Rodney Carrington',
+    bio: 'Taylor graduated with a Bachelor of Science Degree in Justice Administration and a minor in Psychology from Rogers State University in 2016. Taylor recently expanded her knowledge to include accounting, bookkeeping and payroll services.'
+  },
+  {
+    name: 'Mitch Levinson',
+    title: 'Accountant',
+    bio: 'Mitch graduated with a Bachelor of Economics from the University of Oklahoma in 2016. He provides bookkeeping, payroll and accounts payable services to clients and small businesses. In his spare time, Mitch enjoys supporting the OKC Thunder and OU Sooners.'
+  },
+  {
+    name: 'Brin Bedwell',
+    title: 'Accountant',
+    bio: 'Brin graduated from Oklahoma State University with a Bachelor of Science in Accounting in 2025. He is currently studying to obtain his CPA license.'
   }
 ];
 

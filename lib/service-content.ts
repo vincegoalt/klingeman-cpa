@@ -766,5 +766,113 @@ export const serviceContent: Record<string, ServiceContent> = {
       }
     ],
     relatedServices: ['bookkeeping-services', 'quickbooks-cleanup', 'financial-statements', 'business-tax-accounting']
+  },
+
+  'audit-services': {
+    slug: 'audit-services',
+    title: 'Audit Services',
+    metaTitle: 'Audit Services Tulsa | Financial, Compliance & Internal Audits',
+    metaDescription: 'Comprehensive audit services in Tulsa including financial audits, internal audits, compliance audits, IT audits, and tax audits. Dedicated audit specialist on staff.',
+    h1: 'Professional Audit Services',
+    icon: '🔍',
+    heroDescription: 'With a dedicated audit specialist on staff, we provide thorough audit services covering financial, internal, external, compliance, operational, IT, and tax audits.',
+    overview: 'Audits are essential for ensuring accuracy, compliance, and operational efficiency. Our experienced audit team provides comprehensive services across all audit types, helping organizations identify risks, verify financial accuracy, and maintain regulatory compliance. With a dedicated audit specialist on staff, we bring deep expertise to every engagement, whether you need a financial statement audit, internal controls review, or specialized compliance audit. Our systematic approach delivers actionable insights while minimizing disruption to your operations.',
+    benefits: [
+      'Dedicated audit specialist on staff',
+      'Financial statement audits for lenders and investors',
+      'Internal audit and controls assessment',
+      'External audit coordination and support',
+      'Regulatory compliance audits',
+      'Operational efficiency reviews',
+      'IT systems and security audits',
+      'Tax audit preparation and defense',
+      'Nonprofit and 501(c)(3) audits',
+      'Employee benefit plan audits',
+      'Government grant compliance audits',
+      'Risk assessment and management'
+    ],
+    process: [
+      { step: 'Planning', description: 'Define audit scope, objectives, and timeline' },
+      { step: 'Fieldwork', description: 'Gather evidence, test controls, and analyze data' },
+      { step: 'Review', description: 'Evaluate findings and identify recommendations' },
+      { step: 'Reporting', description: 'Deliver comprehensive audit report with action items' }
+    ],
+    faqs: [
+      {
+        question: 'What types of audits do you perform?',
+        answer: 'We provide comprehensive audit services including financial audits, internal audits, external audits, compliance audits, operational audits, IT audits, and tax audits. We also specialize in nonprofit audits, employee benefit plan audits, and government grant compliance audits.'
+      },
+      {
+        question: 'How long does an audit typically take?',
+        answer: 'Audit duration varies by scope and complexity. A straightforward financial audit may take 2-4 weeks, while comprehensive internal control reviews or large organization audits can take 2-3 months. We provide a detailed timeline during the planning phase.'
+      },
+      {
+        question: 'Do you help prepare for external audits?',
+        answer: 'Yes, we offer audit readiness services to help you prepare for external audits. This includes organizing documentation, testing controls, identifying potential issues, and ensuring your team is prepared for auditor questions.'
+      },
+      {
+        question: 'What industries do you audit?',
+        answer: 'We audit organizations across many industries including construction, restaurants, oil & gas, nonprofits, healthcare, professional services, and manufacturing. Our dedicated audit specialist brings experience across diverse sectors.'
+      },
+      {
+        question: 'Can you help if we failed a previous audit?',
+        answer: 'Absolutely. We specialize in helping organizations remediate audit findings and strengthen controls. We\'ll analyze past audit reports, implement corrective actions, and prepare you for successful future audits.'
+      }
+    ],
+    relatedServices: ['business-tax-accounting', 'financial-statements', 'irs-audit-representation', 'bookkeeping-services']
+  },
+
+  'capital-raising-funding': {
+    slug: 'capital-raising-funding',
+    title: 'Capital Raising & Funding',
+    metaTitle: 'Capital Raising & Funding Tulsa | Startup & Business Financing',
+    metaDescription: 'Expert assistance in raising capital and initiating funding rounds for your startup or business. Financial documentation, investor presentations, and funding strategy.',
+    h1: 'Capital Raising & Funding Advisory',
+    icon: '💼',
+    heroDescription: 'Whether you\'re a startup seeking seed funding or an established business looking to expand, our team provides expert guidance through the capital raising process.',
+    overview: 'Raising capital is a critical milestone for growing businesses. Our experienced team helps you navigate the complex funding landscape, from seed rounds to growth capital. We prepare investor-ready financial documentation, develop compelling financial narratives, assist with due diligence preparation, and provide strategic guidance on funding structures. With deep experience supporting Tulsa-area startups and established businesses, we understand what investors look for and how to position your company for funding success.',
+    benefits: [
+      'Funding strategy development',
+      'Investor-ready financial statements',
+      'Financial projections and models',
+      'Due diligence preparation',
+      'Pitch deck financial sections',
+      'Valuation analysis and support',
+      'Cap table management',
+      'Term sheet review and guidance',
+      'Post-funding accounting setup',
+      'Investor reporting systems',
+      'SBA loan application support',
+      'Grant application financial documentation'
+    ],
+    process: [
+      { step: 'Assessment', description: 'Evaluate funding needs, timeline, and optimal capital sources' },
+      { step: 'Preparation', description: 'Prepare financial documentation, projections, and due diligence materials' },
+      { step: 'Support', description: 'Provide ongoing support during investor meetings and negotiations' },
+      { step: 'Closing', description: 'Assist with transaction closing and post-funding financial setup' }
+    ],
+    faqs: [
+      {
+        question: 'What funding stages do you support?',
+        answer: 'We support all funding stages from pre-seed and seed rounds to Series A, B, and beyond. We also assist with debt financing, SBA loans, lines of credit, and alternative funding sources like revenue-based financing and grants.'
+      },
+      {
+        question: 'How do you help with investor due diligence?',
+        answer: 'We prepare comprehensive due diligence packages including audited or reviewed financials, tax returns, cap tables, financial projections, and supporting documentation. We also provide a data room setup and respond to investor financial questions during the process.'
+      },
+      {
+        question: 'Can you help with SBA loans?',
+        answer: 'Yes, we have extensive experience with SBA loan applications. We prepare the required financial documentation, projections, and business plans that lenders need. Our relationships with local banks help expedite the process.'
+      },
+      {
+        question: 'What financial projections do investors expect?',
+        answer: 'Investors typically want 3-5 year projections including P&L, balance sheet, and cash flow statements with detailed assumptions. We create defensible models that tell your company\'s growth story while withstanding investor scrutiny.'
+      },
+      {
+        question: 'Do you help with grant applications?',
+        answer: 'Yes, we support grant applications for both startups and nonprofits. This includes preparing financial documentation, budgets, and compliance requirements for federal, state, and private foundation grants.'
+      }
+    ],
+    relatedServices: ['business-tax-accounting', 'financial-statements', 'business-entity-selection', 'bookkeeping-services']
   }
 };
