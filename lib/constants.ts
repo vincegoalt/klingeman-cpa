@@ -71,11 +71,11 @@ export const SERVICES = [
     icon: '📋'
   },
   {
-    title: 'Tax Write-Offs & Deductions',
-    slug: 'tax-write-offs-deductions',
-    description: 'Claiming home office deductions, mileage, retirement contributions, and more with full IRS compliance',
-    fullDescription: 'We help you identify and claim all eligible tax write-offs and deductions including home office expenses, business mileage, retirement contributions, and more. Our team ensures full compliance with IRS guidelines while maximizing your tax savings.',
-    icon: '💰'
+    title: 'Audit Services',
+    slug: 'audit-services',
+    description: 'Comprehensive audit services including financial, internal, compliance, and operational audits',
+    fullDescription: 'With a dedicated audit specialist on staff, we provide thorough audit services covering financial audits, internal audits, external audits, compliance audits, operational audits, IT audits, and tax audits. Our experienced team ensures accuracy, compliance, and actionable insights for your organization.',
+    icon: '🔍'
   },
   {
     title: 'IRS Audit Representation',
@@ -99,11 +99,11 @@ export const SERVICES = [
     icon: '🏢'
   },
   {
-    title: 'Real Estate Tax Services',
-    slug: 'real-estate-tax',
-    description: 'Tax strategies for real estate investors including 1031 exchanges & multi-state tax compliance',
-    fullDescription: 'Our real estate tax services cater to property owners and investors with specialized strategies including 1031 exchanges, multi-state tax compliance, and investment property optimization. We help maximize your real estate portfolio\'s tax efficiency.',
-    icon: '🏠'
+    title: 'Capital Raising & Funding',
+    slug: 'capital-raising-funding',
+    description: 'Expert assistance in raising capital and initiating funding rounds for your startup or business',
+    fullDescription: 'Whether you\'re a startup seeking seed funding or an established business looking to expand, our team provides expert guidance through the capital raising process. We help prepare financial documentation, develop investor presentations, and navigate funding rounds to secure the capital your business needs to grow.',
+    icon: '💼'
   },
   {
     title: 'Payroll & Benefits Administration',
@@ -148,18 +148,18 @@ export const SERVICES = [
     icon: '🎓'
   },
   {
-    title: 'Audit Services',
-    slug: 'audit-services',
-    description: 'Comprehensive audit services including financial, internal, compliance, and operational audits',
-    fullDescription: 'With a dedicated audit specialist on staff, we provide thorough audit services covering financial audits, internal audits, external audits, compliance audits, operational audits, IT audits, and tax audits. Our experienced team ensures accuracy, compliance, and actionable insights for your organization.',
-    icon: '🔍'
+    title: 'Tax Write-Offs & Deductions',
+    slug: 'tax-write-offs-deductions',
+    description: 'Claiming home office deductions, mileage, retirement contributions, and more with full IRS compliance',
+    fullDescription: 'We help you identify and claim all eligible tax write-offs and deductions including home office expenses, business mileage, retirement contributions, and more. Our team ensures full compliance with IRS guidelines while maximizing your tax savings.',
+    icon: '💰'
   },
   {
-    title: 'Capital Raising & Funding',
-    slug: 'capital-raising-funding',
-    description: 'Expert assistance in raising capital and initiating funding rounds for your startup or business',
-    fullDescription: 'Whether you\'re a startup seeking seed funding or an established business looking to expand, our team provides expert guidance through the capital raising process. We help prepare financial documentation, develop investor presentations, and navigate funding rounds to secure the capital your business needs to grow.',
-    icon: '💼'
+    title: 'Real Estate Tax Services',
+    slug: 'real-estate-tax',
+    description: 'Tax strategies for real estate investors including 1031 exchanges & multi-state tax compliance',
+    fullDescription: 'Our real estate tax services cater to property owners and investors with specialized strategies including 1031 exchanges, multi-state tax compliance, and investment property optimization. We help maximize your real estate portfolio\'s tax efficiency.',
+    icon: '🏠'
   }
 ];
 
