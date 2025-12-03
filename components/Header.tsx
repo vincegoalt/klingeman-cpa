@@ -40,7 +40,7 @@ export default function Header() {
               Former IRS Management
             </span>
             <span className="hidden sm:inline text-gray-400">•</span>
-            <span className="hidden sm:inline">40+ Years Combined Experience</span>
+            <span className="hidden sm:inline">225+ Years Combined Experience</span>
           </div>
           <a
             href={`tel:${BUSINESS_INFO.phoneRaw}`}

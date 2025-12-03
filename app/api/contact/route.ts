@@ -239,7 +239,7 @@ export async function POST(request: NextRequest) {
 
             <div style="padding: 20px; background-color: #f3f4f6; text-align: center; color: #6b7280; font-size: 12px;">
               <p style="margin: 5px 0;">Klingeman CPAs & Advisors</p>
-              <p style="margin: 5px 0;">Former IRS Management • 40+ Years Combined Experience</p>
+              <p style="margin: 5px 0;">Former IRS Management • 225+ Years Combined Experience</p>
               <p style="margin: 5px 0;">
                 <a href="https://klingemancpas.com" style="color: #1e40af;">klingemancpas.com</a>
               </p>

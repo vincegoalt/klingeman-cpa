@@ -147,7 +147,7 @@ export default function CherryStreetTulsaCPAPage() {
                 <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h2a1 1 0 100-2 2 2 0 00-2 2v11a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v11z" clipRule="evenodd"/>
               </svg>
               <div>
-                <div className="text-2xl font-bold">40+</div>
+                <div className="text-2xl font-bold">225+</div>
                 <div className="text-xs text-gray-600">Years Combined Experience</div>
               </div>
             </div>
