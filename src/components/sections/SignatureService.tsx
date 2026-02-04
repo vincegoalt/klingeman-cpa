@@ -83,12 +83,12 @@ export default function SignatureService() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen overflow-hidden z-30"
+      className="relative w-full min-h-screen lg:h-screen overflow-hidden z-30"
     >
       {/* Left Image */}
       <div
         ref={imageRef}
-        className="absolute left-0 top-0 w-[62vw] h-full"
+        className="relative lg:absolute lg:left-0 lg:top-0 w-full lg:w-[62vw] h-[50vh] lg:h-full"
       >
         <img
           src="/matt-klingeman.png"
@@ -101,24 +101,24 @@ export default function SignatureService() {
       {/* Right Panel */}
       <div
         ref={panelRef}
-        className="absolute right-0 top-0 w-[38vw] h-full bg-[#F4F1EC] flex items-center"
+        className="relative lg:absolute lg:right-0 lg:top-0 w-full lg:w-[38vw] lg:h-full bg-[#F4F1EC] flex items-center"
       >
         <div
           ref={contentRef}
-          className="px-[4vw] py-[10vh]"
+          className="px-4 py-8 md:px-8 md:py-12 lg:px-[4vw] lg:py-[10vh]"
         >
           <span className="animate-text section-label">Tax & Advisory</span>
 
-          <h2 className="animate-text text-[clamp(28px,3vw,44px)] leading-[1.05] text-[#0B1E3C] mb-6">
+          <h2 className="animate-text text-[clamp(28px,3vw,44px)] leading-[1.05] text-[#0B1E3C] mb-4 lg:mb-6">
             A clearer path through complex returns.
           </h2>
 
-          <p className="animate-text text-[#6D727A] text-base leading-relaxed mb-8">
+          <p className="animate-text text-[#6D727A] text-base leading-relaxed mb-6 lg:mb-8">
             We combine technical precision with practical advice—so you file with
             confidence and keep more of what you earn.
           </p>
 
-          <ul className="animate-text space-y-4 mb-10">
+          <ul className="animate-text space-y-3 lg:space-y-4 mb-8 lg:mb-10">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-5 h-5 bg-[#C8A46E] flex items-center justify-center mt-0.5">

@@ -30,7 +30,7 @@ export default function Navigation() {
     <>
       {/* Desktop Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-[100] bg-[#F4F1EC] shadow-sm">
-        <div className="px-[4vw] py-3 flex items-center justify-between">
+        <div className="px-4 lg:px-[4vw] py-2 lg:py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative">
             <Image
@@ -38,7 +38,7 @@ export default function Navigation() {
               alt="Klingeman CPAs"
               width={360}
               height={100}
-              className="h-24 w-auto"
+              className="h-14 md:h-20 lg:h-24 w-auto"
               priority
             />
           </Link>

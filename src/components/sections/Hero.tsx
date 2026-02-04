@@ -125,7 +125,7 @@ export default function Hero() {
       {/* Content Panel */}
       <div
         ref={panelRef}
-        className="absolute left-[7vw] top-[28vh] w-[44vw] max-w-[600px] bg-[rgba(244,241,236,0.95)] p-8 lg:p-10"
+        className="absolute left-4 right-4 top-[20vh] md:left-[7vw] md:right-auto md:top-[28vh] md:w-[44vw] max-w-[600px] bg-[rgba(244,241,236,0.95)] p-6 md:p-8 lg:p-10"
         style={{ opacity: 0 }}
       >
         <span className="section-label">{FOUNDER_INFO.experience}</span>

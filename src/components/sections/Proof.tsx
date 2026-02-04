@@ -93,7 +93,7 @@ export default function Proof() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen overflow-hidden z-50"
+      className="relative w-full min-h-screen lg:h-screen overflow-hidden z-50"
     >
       {/* Background Image */}
       <div
@@ -105,21 +105,21 @@ export default function Proof() {
           alt="Team meeting"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60 lg:bg-black/50" />
       </div>
 
       {/* Content */}
-      <div className="relative w-full h-full flex items-center">
+      <div className="relative w-full h-full flex flex-col lg:flex-row lg:items-center px-4 py-20 lg:py-0 lg:px-0">
         {/* Left Headline */}
         <div
           ref={headlineRef}
-          className="absolute left-[7vw] top-[16vh] w-[38vw] max-w-[480px]"
+          className="lg:absolute lg:left-[7vw] lg:top-[16vh] w-full lg:w-[38vw] lg:max-w-[480px] mb-8 lg:mb-0"
         >
           <span className="section-label text-white">Results</span>
-          <h2 className="text-[clamp(32px,3.6vw,52px)] leading-[1.0] text-white mb-6">
+          <h2 className="text-[clamp(32px,3.6vw,52px)] leading-[1.0] text-white mb-4 lg:mb-6">
             Real outcomes. Real relationships.
           </h2>
-          <p className="text-white/80 text-base leading-relaxed mb-8">
+          <p className="text-white/80 text-base leading-relaxed mb-6 lg:mb-8">
             We measure success by the time we save you, the risk we reduce,
             and the growth we help enable.
           </p>
@@ -135,18 +135,18 @@ export default function Proof() {
         {/* Right Stats */}
         <div
           ref={statsRef}
-          className="absolute left-[56vw] top-[16vh] w-[36vw] max-w-[450px] flex flex-col gap-6"
+          className="lg:absolute lg:left-[56vw] lg:top-[16vh] w-full lg:w-[36vw] lg:max-w-[450px] flex flex-col gap-4 lg:gap-6"
         >
           {/* Big Stat Card */}
-          <div className="stat-card bg-[rgba(244,241,236,0.96)] p-8">
-            <div className="flex items-baseline gap-1 mb-3">
+          <div className="stat-card bg-white lg:bg-[rgba(244,241,236,0.96)] p-6 lg:p-8">
+            <div className="flex items-baseline gap-1 mb-2 lg:mb-3">
               <span
                 ref={counterRef}
-                className="text-[clamp(56px,6vw,84px)] font-['Cormorant_Garamond'] font-bold text-[#0B1E3C] leading-none"
+                className="text-[clamp(48px,6vw,84px)] font-['Cormorant_Garamond'] font-bold text-[#0B1E3C] leading-none"
               >
                 3
               </span>
-              <span className="text-[clamp(36px,4vw,56px)] font-['Cormorant_Garamond'] font-bold text-[#C8A46E] leading-none">
+              <span className="text-[clamp(28px,4vw,56px)] font-['Cormorant_Garamond'] font-bold text-[#C8A46E] leading-none">
                 B+
               </span>
             </div>
@@ -156,9 +156,9 @@ export default function Proof() {
           </div>
 
           {/* Testimonial Card */}
-          <div className="stat-card bg-[rgba(244,241,236,0.96)] p-8">
-            <Quote className="w-8 h-8 text-[#C8A46E] mb-4" />
-            <blockquote className="text-[#0B1E3C] text-lg leading-relaxed mb-6 font-['Cormorant_Garamond'] italic">
+          <div className="stat-card bg-white lg:bg-[rgba(244,241,236,0.96)] p-6 lg:p-8">
+            <Quote className="w-6 h-6 lg:w-8 lg:h-8 text-[#C8A46E] mb-3 lg:mb-4" />
+            <blockquote className="text-[#0B1E3C] text-base lg:text-lg leading-relaxed mb-4 lg:mb-6 font-['Cormorant_Garamond'] italic">
               "They don't just file returns—they help us make better business decisions."
             </blockquote>
             <div className="flex items-center gap-3">

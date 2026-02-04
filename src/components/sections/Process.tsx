@@ -95,7 +95,7 @@ export default function Process() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen overflow-hidden z-40"
+      className="relative w-full min-h-screen lg:h-screen overflow-hidden z-40"
     >
       {/* Background Image */}
       <div
@@ -107,15 +107,15 @@ export default function Process() {
           alt="Modern office corridor"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50 lg:bg-black/40" />
       </div>
 
       {/* Content */}
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full px-4 py-20 lg:py-0 lg:px-0">
         {/* Headline */}
         <div
           ref={headlineRef}
-          className="absolute left-[7vw] top-[12vh] w-[40vw] max-w-[500px]"
+          className="lg:absolute lg:left-[7vw] lg:top-[12vh] w-full lg:w-[40vw] lg:max-w-[500px] mb-8 lg:mb-0"
         >
           <span className="section-label text-white">How We Work</span>
           <h2 className="text-[clamp(32px,3.6vw,52px)] leading-[1.0] text-white">
@@ -126,17 +126,17 @@ export default function Process() {
         {/* Step Cards */}
         <div
           ref={cardsRef}
-          className="absolute left-[7vw] right-[7vw] bottom-[10vh] flex gap-[3vw]"
+          className="lg:absolute lg:left-[7vw] lg:right-[7vw] lg:bottom-[10vh] flex flex-col lg:flex-row gap-4 lg:gap-[3vw]"
         >
           {steps.map((step, index) => (
             <div
               key={index}
-              className="process-card flex-1 bg-[rgba(244,241,236,0.96)] p-8 min-h-[34vh] flex flex-col"
+              className="process-card flex-1 bg-white lg:bg-[rgba(244,241,236,0.96)] p-6 lg:p-8 lg:min-h-[34vh] flex flex-col"
             >
-              <span className="text-[#C8A46E] text-[clamp(48px,5vw,72px)] font-['Cormorant_Garamond'] font-bold leading-none mb-6">
+              <span className="text-[#C8A46E] text-[clamp(36px,5vw,72px)] font-['Cormorant_Garamond'] font-bold leading-none mb-4 lg:mb-6">
                 {step.number}
               </span>
-              <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#0B1E3C] mb-4">
+              <h3 className="font-['Cormorant_Garamond'] text-xl lg:text-2xl font-semibold text-[#0B1E3C] mb-2 lg:mb-4">
                 {step.title}
               </h3>
               <p className="text-[#6D727A] text-sm leading-relaxed flex-grow">
