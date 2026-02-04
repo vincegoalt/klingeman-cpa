@@ -157,7 +157,7 @@ export default function Services() {
             <Link
               key={index}
               href={`/services/${service.slug}`}
-              className="service-card bg-[rgba(244,241,236,0.96)] p-6 flex items-start gap-4 hover:transform hover:-translate-y-1 transition-transform duration-300"
+              className="service-card bg-white p-6 flex items-start gap-4 hover:transform hover:-translate-y-1 transition-transform duration-300 shadow-sm"
             >
               <div className="flex-shrink-0 w-12 h-12 bg-[#0B1E3C] flex items-center justify-center">
                 <service.icon className="w-5 h-5 text-[#C8A46E]" />
