@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChevronRight, Clock, Calendar, ArrowLeft, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -475,8 +476,15 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: post.title, url: `/blog/${slug}` },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

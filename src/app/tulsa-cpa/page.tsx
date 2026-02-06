@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MapPin, Check, ChevronRight, Shield, Clock, Award, Users } from 'lucide-react';
 import { SERVICES, BUSINESS_INFO, SUBURBS, FOUNDER_INFO, TRUST_BADGES } from '@/lib/constants';
+import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schemas';
 
 const faqs = [
   {
@@ -34,9 +35,16 @@ export const metadata: Metadata = {
 
 export default function TulsaCPAPage() {
   const topServices = SERVICES.slice(0, 6);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'CPA Tulsa', url: '/tulsa-cpa' },
+  ]);
+  const faqSchema = generateFAQSchema(faqs);
 
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

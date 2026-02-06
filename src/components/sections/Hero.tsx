@@ -169,7 +169,7 @@ export default function Hero() {
       {/* Scroll Cue */}
       <div
         ref={scrollCueRef}
-        className="absolute right-[6vw] bottom-[6vh] flex flex-col items-center gap-2"
+        className="absolute right-[6vw] bottom-[6vh] flex flex-col items-center gap-2 scroll-cue-pulse"
         style={{ opacity: 0 }}
       >
         <div className="w-8 h-[1px] bg-[#C8A46E]" />

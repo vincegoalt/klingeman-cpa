@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight, Clock, BookOpen, TrendingUp, FileText, Shield } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Tax & Accounting Blog | Tulsa CPA Insights & Tips',
@@ -50,9 +51,14 @@ const blogPosts = [
 export default function BlogPage() {
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+  ]);
 
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

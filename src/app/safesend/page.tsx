@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BUSINESS_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schemas';
 import {
   ShieldCheck,
   Mail,
@@ -97,8 +98,16 @@ const faqs = [
 ];
 
 export default function SafeSendPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'SafeSend Returns', url: '/safesend' },
+  ]);
+  const faqSchema = generateFAQSchema(faqs);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

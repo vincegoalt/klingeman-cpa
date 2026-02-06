@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { SERVICES, BUSINESS_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 import {
   ArrowRight,
   Phone,
@@ -47,8 +48,14 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero Section */}
       <section className="px-[7vw] py-16">
         <span className="section-label">Our Services</span>

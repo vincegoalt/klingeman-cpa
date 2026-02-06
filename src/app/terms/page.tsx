@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight, FileText, Shield, Users } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Klingeman CPAs',
@@ -9,8 +10,14 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Terms of Service', url: '/terms' },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

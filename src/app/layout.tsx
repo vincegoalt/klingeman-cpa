@@ -27,11 +27,13 @@ export const metadata: Metadata = {
     siteName: BUSINESS_INFO.name,
     title: 'Tulsa CPA | Klingeman CPAs - Former IRS Management Experience',
     description: `Professional CPA services in Tulsa, OK. ${FOUNDER_INFO.experience}. Tax preparation, bookkeeping, payroll, and business consulting.`,
+    images: [{ url: 'https://www.klingemancpas.com/hero_office.jpg', width: 1920, height: 1080, alt: 'Klingeman CPAs Office' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tulsa CPA | Klingeman CPAs - Former IRS Management Experience',
     description: `Professional CPA services in Tulsa, OK. ${FOUNDER_INFO.experience}. Tax preparation, bookkeeping, payroll, and business consulting.`,
+    images: ['https://www.klingemancpas.com/hero_office.jpg'],
   },
   robots: {
     index: true,
@@ -45,7 +47,12 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: '',
+  },
+  alternates: {
+    languages: {
+      'es': '/es',
+    },
   },
 };
 
@@ -56,6 +63,7 @@ const organizationSchema = {
   '@id': 'https://www.klingemancpas.com/#organization',
   name: BUSINESS_INFO.name,
   url: 'https://www.klingemancpas.com',
+  logo: 'https://www.klingemancpas.com/KLINGEMANLOGO.png',
   telephone: BUSINESS_INFO.phone,
   email: BUSINESS_INFO.email,
   address: {

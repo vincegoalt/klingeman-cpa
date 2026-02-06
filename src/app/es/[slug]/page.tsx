@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Phone, ChevronRight, ArrowLeft, Check, Mail, MapPin, Clock } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -173,6 +174,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.title} Tulsa | Servicios en Español | Klingeman CPAs`,
     description: service.description,
+    alternates: {
+      languages: {
+        'en': `/services/${slug}`,
+      },
+    },
   };
 }
 
@@ -184,8 +190,15 @@ export default async function SpanishServicePage({ params }: Props) {
     notFound();
   }
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Español', url: '/es' },
+    { name: service.title, url: `/es/${slug}` },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

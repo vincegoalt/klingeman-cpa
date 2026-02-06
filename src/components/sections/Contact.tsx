@@ -21,6 +21,7 @@ export default function Contact() {
     company: '',
     message: '',
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -66,8 +67,40 @@ export default function Contact() {
     return () => ctx.revert();
   }, []);
 
+  const validateField = (name: string, value: string): string => {
+    switch (name) {
+      case 'name':
+        return value.trim() === '' ? 'Name is required.' : '';
+      case 'email':
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Please enter a valid email address.';
+      case 'phone':
+        return value.trim() === '' ? 'Phone number is required.' : '';
+      default:
+        return '';
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const error = validateField(name, value);
+    setErrors(prev => ({ ...prev, [name]: error }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const newErrors: Record<string, string> = {};
+    const fieldsToValidate = ['name', 'email', 'phone'] as const;
+    fieldsToValidate.forEach(field => {
+      const error = validateField(field, formData[field]);
+      if (error) newErrors[field] = error;
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -100,10 +133,14 @@ export default function Contact() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
   };
 
   return (
@@ -172,6 +209,7 @@ export default function Contact() {
           >
             <form
               onSubmit={handleSubmit}
+              noValidate
               className="bg-white p-8 lg:p-10"
             >
               {submitStatus === 'success' && (
@@ -195,10 +233,12 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 border border-[rgba(11,30,60,0.18)] text-[#0B1E3C] focus:outline-none focus:border-[#C8A46E] transition-colors"
+                    className={`w-full px-4 py-3 border ${errors.name ? 'border-red-500' : 'border-[rgba(11,30,60,0.18)]'} text-[#0B1E3C] focus:outline-none focus:border-[#C8A46E] transition-colors`}
                     placeholder="Your name"
                   />
+                  {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                 </div>
                 <div>
                   <label className="block text-[#0B1E3C] text-sm font-medium mb-2">
@@ -209,10 +249,12 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 border border-[rgba(11,30,60,0.18)] text-[#0B1E3C] focus:outline-none focus:border-[#C8A46E] transition-colors"
+                    className={`w-full px-4 py-3 border ${errors.email ? 'border-red-500' : 'border-[rgba(11,30,60,0.18)]'} text-[#0B1E3C] focus:outline-none focus:border-[#C8A46E] transition-colors`}
                     placeholder="your@email.com"
                   />
+                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
               </div>
 
@@ -226,10 +268,12 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 border border-[rgba(11,30,60,0.18)] text-[#0B1E3C] focus:outline-none focus:border-[#C8A46E] transition-colors"
+                    className={`w-full px-4 py-3 border ${errors.phone ? 'border-red-500' : 'border-[rgba(11,30,60,0.18)]'} text-[#0B1E3C] focus:outline-none focus:border-[#C8A46E] transition-colors`}
                     placeholder="(918) 555-0140"
                   />
+                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div>
                   <label className="block text-[#0B1E3C] text-sm font-medium mb-2">

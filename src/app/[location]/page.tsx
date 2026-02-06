@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SUBURBS, SERVICES, BUSINESS_INFO, FOUNDER_INFO, TRUST_BADGES } from '@/lib/constants';
 import { Phone, MapPin, Clock, ChevronRight, Check, Shield } from 'lucide-react';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 type Props = {
   params: Promise<{ location: string }>;
@@ -47,8 +48,14 @@ export default async function LocationPage({ params }: Props) {
 
   const topServices = SERVICES.slice(0, 6);
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: `CPA ${suburb.name}`, url: `/${location}` },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

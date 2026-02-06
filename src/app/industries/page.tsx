@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { INDUSTRIES, BUSINESS_INFO } from '@/lib/constants';
 import { ArrowRight, Phone, HardHat, Utensils, Fuel, Heart, Building, Briefcase } from 'lucide-react';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Industry Expertise | Specialized CPA Services by Sector',
@@ -28,8 +29,14 @@ const industryImages: Record<string, string> = {
 };
 
 export default function IndustriesPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Industries', url: '/industries' },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero Section */}
       <section className="px-[7vw] py-16">
         <span className="section-label">Industry Expertise</span>

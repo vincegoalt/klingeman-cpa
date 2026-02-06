@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { INDUSTRIES, SERVICES, BUSINESS_INFO } from '@/lib/constants';
 import { industryContent } from '@/lib/industry-content';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 import {
   Phone,
   Check,
@@ -104,12 +105,19 @@ export default async function IndustryPage({ params }: Props) {
 
   const IconComponent = industryIcons[slug] || Briefcase;
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Industries', url: '/industries' },
+    { name: industry.title, url: `/industries/${slug}` },
+  ]);
+
   const relatedServices = content.relatedServices
     .map(rs => SERVICES.find(s => s.slug === rs || s.slug.includes(rs.split('-')[0])))
     .filter(Boolean);
 
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

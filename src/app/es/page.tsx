@@ -3,10 +3,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, ChevronRight, Check, Award, Users, Shield, Clock, Star } from 'lucide-react';
 import { BUSINESS_INFO, FOUNDER_INFO } from '@/lib/constants';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'CPA Tulsa en Español | Servicios de Contabilidad e Impuestos',
   description: 'Servicios profesionales de CPA en español en Tulsa. Preparación de impuestos, contabilidad empresarial y planificación fiscal. Ex-gerente del IRS con más de 20 años de experiencia.',
+  alternates: {
+    languages: {
+      'en': '/',
+    },
+  },
 };
 
 const featuredServices = [
@@ -49,8 +55,14 @@ const featuredServices = [
 ];
 
 export default function SpanishHomePage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Español', url: '/es' },
+  ]);
+
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

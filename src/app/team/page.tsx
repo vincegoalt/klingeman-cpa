@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { TEAM_MEMBERS, BUSINESS_INFO, FOUNDER_INFO, TRUST_BADGES } from '@/lib/constants';
 import { Phone, Award, Shield, GraduationCap } from 'lucide-react';
+import { generateBreadcrumbSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
   title: 'Our Team | Meet the CPAs at Klingeman CPAs',
@@ -11,9 +12,14 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   const featuredMembers = TEAM_MEMBERS.filter(m => m.featured);
   const otherMembers = TEAM_MEMBERS.filter(m => !m.featured);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Our Team', url: '/team' },
+  ]);
 
   return (
     <div className="pt-32 bg-[#F4F1EC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero Section */}
       <section className="px-[7vw] py-16">
         <span className="section-label">Our Team</span>
@@ -50,7 +56,7 @@ export default function TeamPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {featuredMembers.map((member, index) => (
-            <div key={index} className="bg-[#F4F1EC] overflow-hidden">
+            <div key={index} className="bg-[#F4F1EC] overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[#C8A46E] border border-transparent">
               <div className="p-8">
                 <div className="flex items-start gap-6">
                   {member.image ? (
@@ -106,7 +112,7 @@ export default function TeamPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {otherMembers.map((member, index) => (
-              <div key={index} className="bg-white p-6">
+              <div key={index} className="bg-white p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-[#C8A46E] border border-transparent">
                 <div className="w-16 h-16 bg-[#0B1E3C] flex items-center justify-center mb-4">
                   <span className="text-white text-lg font-['Cormorant_Garamond'] font-bold">
                     {member.name.split(' ').map(n => n[0]).join('')}
