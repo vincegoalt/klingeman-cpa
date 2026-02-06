@@ -10,6 +10,7 @@ const footerLinks = {
     { label: 'Our Team', href: '/team' },
     { label: 'Blog', href: '/blog' },
     { label: 'Tulsa CPA', href: '/tulsa-cpa' },
+    { label: 'SafeSend Returns', href: '/safesend' },
     { label: 'Contact', href: '/contact' },
   ],
 };

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="pt-24 bg-[#F4F1EC]">
+    <div className="pt-32 bg-[#F4F1EC]">
       {/* Breadcrumb */}
       <div className="px-[7vw] py-4">
         <nav className="flex items-center gap-2 text-sm">

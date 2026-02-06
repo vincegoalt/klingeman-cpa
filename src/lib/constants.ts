@@ -25,6 +25,7 @@ export const BUSINESS_INFO = {
     saturday: 'By Appointment',
     sunday: 'Closed'
   },
+  safeSendPortal: 'https://safesend.com', // TODO: Replace with actual Klingeman SafeSend portal URL
   social: {
     linkedin: '#',
     facebook: '#',

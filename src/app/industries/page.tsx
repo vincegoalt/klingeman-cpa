@@ -29,7 +29,7 @@ const industryImages: Record<string, string> = {
 
 export default function IndustriesPage() {
   return (
-    <div className="pt-24 bg-[#F4F1EC]">
+    <div className="pt-32 bg-[#F4F1EC]">
       {/* Hero Section */}
       <section className="px-[7vw] py-16">
         <span className="section-label">Industry Expertise</span>
