@@ -8,6 +8,7 @@ import { generateBreadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Industry Expertise | Specialized CPA Services by Sector',
   description: 'Specialized CPA services for restaurants, construction, oil & gas, real estate, professional services, and nonprofits in Tulsa. Industry-specific tax and accounting expertise.',
+  alternates: { canonical: '/industries' },
 };
 
 const industryIcons: Record<string, React.ElementType> = {
@@ -66,7 +67,7 @@ export default function IndustriesPage() {
               <Link
                 key={index}
                 href={`/industries/${industry.slug}`}
-                className="group bg-white overflow-hidden border border-[rgba(11,30,60,0.10)] hover:border-[#C8A46E] transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white overflow-hidden border border-[rgba(11,30,60,0.10)] hover:border-[#C8A46E] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="aspect-[16/10] overflow-hidden relative">
                   {image ? (

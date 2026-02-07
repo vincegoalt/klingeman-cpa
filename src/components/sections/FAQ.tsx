@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronRight, MessageCircle } from 'lucide-react';
+import { generateFAQSchema } from '@/lib/schemas';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +30,8 @@ const faqs = [
     answer: 'We can typically schedule an initial consultation within one week. During that meeting, we will learn about your situation and outline a plan. For urgent matters like IRS deadlines or audit responses, we prioritize immediate support.',
   },
 ];
+
+const faqSchema = generateFAQSchema(faqs);
 
 export default function FAQ() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -95,6 +98,7 @@ export default function FAQ() {
       ref={sectionRef}
       className="relative w-full bg-[#F4F1EC] py-[10vh] z-80"
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="px-[7vw]">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Column - Sticky */}

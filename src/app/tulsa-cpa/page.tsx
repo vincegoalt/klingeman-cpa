@@ -31,6 +31,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Tulsa CPA | Expert Tax & Accounting Services | Former IRS Manager',
   description: 'Looking for a CPA in Tulsa? Klingeman CPAs offers expert tax preparation, bookkeeping, and business accounting with former IRS management experience. Call (918) 922-1019.',
+  alternates: { canonical: '/tulsa-cpa' },
 };
 
 export default function TulsaCPAPage() {

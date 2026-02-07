@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     google: '',
   },
   alternates: {
+    canonical: '/',
     languages: {
       'es': '/es',
     },
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
 // Organization Schema
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': ['AccountingService', 'LocalBusiness'],
+  '@type': ['AccountingService', 'ProfessionalService', 'LocalBusiness'],
   '@id': 'https://www.klingemancpas.com/#organization',
   name: BUSINESS_INFO.name,
   url: 'https://www.klingemancpas.com',
@@ -95,6 +96,8 @@ const organizationSchema = {
     { '@type': 'City', name: 'Sand Springs' },
     { '@type': 'State', name: 'Oklahoma' },
   ],
+  image: 'https://www.klingemancpas.com/hero_office.jpg',
+  description: 'Professional CPA services in Tulsa, Oklahoma. Tax preparation, bookkeeping, payroll, IRS representation, and business consulting. Former IRS management experience.',
   founder: {
     '@type': 'Person',
     name: FOUNDER_INFO.name,

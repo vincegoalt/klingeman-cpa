@@ -7,6 +7,7 @@ import { generateBreadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Klingeman CPAs',
   description: 'Privacy policy for Klingeman CPAs. Learn how we protect your personal and financial information in accordance with professional accounting standards.',
+  alternates: { canonical: '/privacy' },
 };
 
 export default function PrivacyPage() {

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'CPA Tulsa en Español | Servicios de Contabilidad e Impuestos',
   description: 'Servicios profesionales de CPA en español en Tulsa. Preparación de impuestos, contabilidad empresarial y planificación fiscal. Ex-gerente del IRS con más de 20 años de experiencia.',
   alternates: {
+    canonical: '/es',
     languages: {
       'en': '/',
     },

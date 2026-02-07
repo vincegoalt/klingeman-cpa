@@ -45,6 +45,7 @@ const serviceIcons: Record<string, LucideIcon> = {
 export const metadata: Metadata = {
   title: 'CPA Services Tulsa | Tax, Accounting & Business Services',
   description: 'Comprehensive CPA services in Tulsa, OK. Tax planning, bookkeeping, payroll, IRS representation, and more. Former IRS management expertise.',
+  alternates: { canonical: '/services' },
 };
 
 export default function ServicesPage() {
@@ -84,7 +85,7 @@ export default function ServicesPage() {
               <Link
                 key={index}
                 href={`/services/${service.slug}`}
-                className="group bg-white p-8 border border-[rgba(11,30,60,0.10)] hover:border-[#C8A46E] transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white p-8 border border-[rgba(11,30,60,0.10)] hover:border-[#C8A46E] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-[#0B1E3C] flex items-center justify-center mb-4">
                   <IconComponent className="w-6 h-6 text-[#C8A46E]" />

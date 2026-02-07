@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: 'SafeSend Returns - Secure Tax Return Delivery',
   description:
     'Receive your tax returns securely with SafeSend Returns. No passwords, no printing — review, e-sign, and download from any device.',
+  alternates: { canonical: '/safesend' },
 };
 
 const steps = [

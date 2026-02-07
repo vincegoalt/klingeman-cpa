@@ -7,6 +7,7 @@ import { generateBreadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Our Team | Meet the CPAs at Klingeman CPAs',
   description: 'Meet the experienced team at Klingeman CPAs in Tulsa. Former IRS management, CPAs, and accounting professionals with 225+ years combined experience.',
+  alternates: { canonical: '/team' },
 };
 
 export default function TeamPage() {

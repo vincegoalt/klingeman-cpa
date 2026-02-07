@@ -7,6 +7,7 @@ import { generateBreadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Terms of Service | Klingeman CPAs',
   description: 'Terms of service for Klingeman CPAs. Understanding our professional service agreement, client responsibilities, and terms for CPA services in Tulsa.',
+  alternates: { canonical: '/terms' },
 };
 
 export default function TermsPage() {

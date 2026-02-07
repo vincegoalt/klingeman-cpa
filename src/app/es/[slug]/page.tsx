@@ -175,6 +175,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.title} Tulsa | Servicios en Español | Klingeman CPAs`,
     description: service.description,
     alternates: {
+      canonical: `/es/${slug}`,
       languages: {
         'en': `/services/${slug}`,
       },

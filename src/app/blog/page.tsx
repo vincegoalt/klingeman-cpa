@@ -7,6 +7,7 @@ import { generateBreadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Tax & Accounting Blog | Tulsa CPA Insights & Tips',
   description: 'Expert tax and accounting insights from Tulsa CPAs. Get tips on tax planning, business finance, IRS updates, and financial strategies for Oklahoma residents and businesses.',
+  alternates: { canonical: '/blog' },
 };
 
 const blogPosts = [
